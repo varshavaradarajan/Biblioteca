@@ -2,16 +2,17 @@
 package com.tw.libsystem;
 
 public class Book {
-    private String bookName;
+    private String bookName, authorName;
 
-    public Book(String bookName) {
+    public Book(String bookName, String authorName) {
         this.bookName = bookName;
+        this.authorName = authorName;
     }
 
     @Override
     public String toString() {
         String bookDetails = "";
-        bookDetails += bookName + "\t";
+        bookDetails += bookName + "\t" + authorName + "\t";
         return bookDetails;
     }
 }

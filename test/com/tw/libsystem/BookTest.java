@@ -7,9 +7,9 @@ import static org.junit.Assert.*;
 public class BookTest {
 
     @Test
-    public void shouldReturnTheBookName() {
-        Book book = new Book("Angels And Demons");
+    public void shouldReturnAuthorNameWithBookName() {
+        Book book = new Book("Angels And Demons", "Dan Brown");
 
-        assertEquals("Angels And Demons\t", book.toString());
+        assertEquals("Angels And Demons\tDan Brown\t", book.toString());
     }
 }
