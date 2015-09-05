@@ -30,5 +30,4 @@ public class DisplayTest {
 
         assertEquals("Welcome to Biblioteca\n", outputStream.toString());
     }
-
 }
