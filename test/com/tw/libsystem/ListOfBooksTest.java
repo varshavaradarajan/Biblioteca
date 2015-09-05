@@ -10,13 +10,13 @@ public class ListOfBooksTest {
 
     @Test
     public void shouldReturnAPreExistingSetOfBooks() {
-        ArrayList<String> listOfBooks = new ArrayList<>();
-        listOfBooks.add("Crime And Punishment");
-        listOfBooks.add("Wuthering Heights");
-        listOfBooks.add("Pragmatic Programmer");
+        ArrayList<Book> listOfBooks = new ArrayList<Book>();
+        listOfBooks.add(new Book("Crime And Punishment", "Fyodor Dostoevsky", 1866));
+        listOfBooks.add(new Book("Wuthering Heights", "Emily Bronte", 1847));
+        listOfBooks.add(new Book("Pragmatic Programmer", "Dave Thomas", 1999));
 
         ListOfBooks bookList = new ListOfBooks(listOfBooks);
 
-        assertEquals("Crime And Punishment\nWuthering Heights\nPragmatic Programmer\n", bookList.toString());
+        assertEquals("Crime And Punishment\tFyodor Dostoevsky\t1866\t\nWuthering Heights\tEmily Bronte\t1847\t\nPragmatic Programmer\tDave Thomas\t1999\t\n", bookList.toString());
     }
 }

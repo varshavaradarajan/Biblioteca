@@ -4,7 +4,7 @@ package com.tw.libsystem;
 import java.util.ArrayList;
 
 public class ListOfBooks {
-    ArrayList<String> listOfBooks;
+    ArrayList<Book> listOfBooks;
 
     public ListOfBooks(ArrayList listOfBooks) {
         this.listOfBooks = listOfBooks;
@@ -13,10 +13,9 @@ public class ListOfBooks {
     @Override
     public String toString() {
         String bookNames = "";
-        for(String names : listOfBooks) {
-            bookNames += names + "\n";
+        for(Book names : listOfBooks) {
+            bookNames += names.toString() + "\n";
         }
         return bookNames;
     }
-
 }
