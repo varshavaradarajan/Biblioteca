@@ -12,7 +12,7 @@ public class ListOfBooks {
 
     @Override
     public String toString() {
-        String bookNames = "";
+        String bookNames = "Book Name\t\t\t\tAuthor Name\t\t\t\tYear\t\t\t\t\n";
         for(Book names : listOfBooks) {
             bookNames += names.toString() + "\n";
         }
