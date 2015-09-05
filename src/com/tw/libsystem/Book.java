@@ -3,16 +3,18 @@ package com.tw.libsystem;
 
 public class Book {
     private String bookName, authorName;
+    private int year;
 
-    public Book(String bookName, String authorName) {
+    public Book(String bookName, String authorName, int year) {
         this.bookName = bookName;
         this.authorName = authorName;
+        this.year = year;
     }
 
     @Override
     public String toString() {
         String bookDetails = "";
-        bookDetails += bookName + "\t" + authorName + "\t";
+        bookDetails += bookName + "\t" + authorName + "\t" + year + "\t";
         return bookDetails;
     }
 }
