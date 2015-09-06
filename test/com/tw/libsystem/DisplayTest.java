@@ -25,7 +25,7 @@ public class DisplayTest {
 
     @Test
     public void shouldDisplayAMessage() {
-        Display display = new Display("Welcome to Biblioteca");
+        Display display = new Display("Welcome to Biblioteca\n");
         display.displayMessage();
 
         assertEquals("Welcome to Biblioteca\n", outputStream.toString());

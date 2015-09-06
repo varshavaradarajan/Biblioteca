@@ -32,10 +32,10 @@ public class ControllerTest {
     }
 
     @Test
-    public void shouldDelegateDisplayingOfWelcomeMessage() {
+    public void shouldDelegateDisplayingMessageToDisplayClass() {
         Controller controller = new Controller();
         controller.run();
-        assertEquals("Welcome to Biblioteca\n", outputStream.toString());
+
+        assertEquals("Welcome to Biblioteca\n1. List Books\n", outputStream.toString());
     }
-    
 }
