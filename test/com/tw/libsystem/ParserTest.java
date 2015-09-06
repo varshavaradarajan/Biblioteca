@@ -9,17 +9,19 @@ import static org.junit.Assert.*;
 public class ParserTest {
 
     @Test
-    public void shouldReturnNullIfInputIsEmpty() {
+    public void shouldReturnInvalidCommandIfInputIsEmpty() {
         Parser parser = new Parser("");
+        InvalidCommand invalidCommand = new InvalidCommand();
 
-        assertEquals(null, parser.parse());
+        assertEquals(invalidCommand.getClass(), parser.parse().getClass());
     }
 
     @Test
-    public void shouldReturnNullIfInputLengthIsMoreThanOne() {
+    public void shouldReturnInvalidIfInputLengthIsMoreThanOne() {
         Parser parser = new Parser("1 2");
+        InvalidCommand invalidCommand = new InvalidCommand();
 
-        assertEquals(null, parser.parse());
+        assertEquals(invalidCommand.getClass(), parser.parse().getClass());
     }
 
     @Test
@@ -30,6 +32,14 @@ public class ParserTest {
         ListOfBooks listOfBooks = new ListOfBooks(list);
 
         assertEquals(listOfBooks.getClass(), parser.parse().getClass());
+    }
+
+    @Test
+    public void shouldReturnInvalidCommandAsOperationForInvalidInput() {
+        Parser parser = new Parser("a");
+        InvalidCommand invalidCommand = new InvalidCommand();
+
+        assertEquals(invalidCommand.getClass(), parser.parse().getClass());
     }
 
 }

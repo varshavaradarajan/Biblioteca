@@ -12,5 +12,4 @@ public class InvalidCommandTest {
 
         assertEquals("Select a valid option!\n", invalidCommand.execute());
     }
-
 }

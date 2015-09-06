@@ -13,15 +13,19 @@ public class Parser {
 
     public Operations parse() {
         if(inputCommand.isEmpty() == false && inputCommand.length() == 1) {
-            if(inputCommand == "1"){
+            if(inputCommand == "1") {
                 ArrayList<Book> list = new ArrayList<>();
                 list.add(new Book("Gone Girl", "Flynn", 2010));
                 ListOfBooks listOfBooks = new ListOfBooks(list);
                 return listOfBooks;
             }
-            return null;
-        }
-        return null;
-    }
+            else {
+                return (new InvalidCommand());
+            }
 
+        }
+        else {
+            return (new InvalidCommand());
+        }
+    }
 }
