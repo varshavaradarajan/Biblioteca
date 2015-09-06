@@ -10,7 +10,7 @@ public class Parser {
     }
 
     public boolean parse() {
-        if(inputCommand.isEmpty() == false) {
+        if(inputCommand.isEmpty() == false && inputCommand.length() == 1) {
             return true;
         }
         return false;
