@@ -8,12 +8,20 @@ public class Controller {
     private Factory factory;
     private Display display;
     private Menu menu;
+    private InputView inputView;
+    private String userInput;
 
     public void run() {
         factory = createFactory();
         delegateWelcomeMessageToBeDisplayed();
         delegateMenuToBeDisplayed();
+        takeInput();
 
+    }
+
+    private void takeInput() {
+        inputView = new InputView();
+        userInput = inputView.input();
     }
 
     private void delegateMenuToBeDisplayed() {
@@ -33,4 +41,5 @@ public class Controller {
     {
         return new Factory();
     }
+
 }
