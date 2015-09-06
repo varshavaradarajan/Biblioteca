@@ -3,7 +3,7 @@ package com.tw.libsystem;
 
 import java.util.ArrayList;
 
-public class ListOfBooks {
+public class ListOfBooks implements Operations {
     ArrayList<Book> listOfBooks;
 
     public ListOfBooks(ArrayList listOfBooks) {
@@ -17,5 +17,10 @@ public class ListOfBooks {
             bookNames += names.toString() + "\n";
         }
         return bookNames;
+    }
+
+    @Override
+    public String execute() {
+        return toString();
     }
 }
