@@ -2,22 +2,34 @@ package com.tw.libsystem;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class ParserTest {
 
     @Test
-    public void shouldReturnTrueIfInputIsNotEmpty() {
-        Parser parser = new Parser("a");
+    public void shouldReturnNullIfInputIsEmpty() {
+        Parser parser = new Parser("");
 
-        assertEquals(true, parser.parse());
+        assertEquals(null, parser.parse());
     }
 
     @Test
-    public void shouldReturnTrueIfInputLengthIsOne() {
-        Parser parser = new Parser("1");
+    public void shouldReturnNullIfInputLengthIsMoreThanOne() {
+        Parser parser = new Parser("1 2");
 
-        assertEquals(true, parser.parse());
+        assertEquals(null, parser.parse());
+    }
+
+    @Test
+    public void shouldReturnAnOperationOnParsingTheInput() {
+        Parser parser = new Parser("1");
+        ArrayList<Book> list = new ArrayList<>();
+        list.add(new Book("Gone Girl", "Flynn", 2010));
+        ListOfBooks listOfBooks = new ListOfBooks(list);
+
+        assertEquals(listOfBooks.getClass(), parser.parse().getClass());
     }
 
 }

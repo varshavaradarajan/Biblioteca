@@ -1,6 +1,8 @@
 //Job of the parser id to covert the user input into a concrete operation.
 package com.tw.libsystem;
 
+import java.util.ArrayList;
+
 public class Parser {
 
     String inputCommand;
@@ -9,11 +11,17 @@ public class Parser {
         this.inputCommand = inputCommand;
     }
 
-    public boolean parse() {
+    public Operations parse() {
         if(inputCommand.isEmpty() == false && inputCommand.length() == 1) {
-            return true;
+            if(inputCommand == "1"){
+                ArrayList<Book> list = new ArrayList<>();
+                list.add(new Book("Gone Girl", "Flynn", 2010));
+                ListOfBooks listOfBooks = new ListOfBooks(list);
+                return listOfBooks;
+            }
+            return null;
         }
-        return false;
+        return null;
     }
 
 }
