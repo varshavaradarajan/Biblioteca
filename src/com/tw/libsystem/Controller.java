@@ -12,12 +12,16 @@ public class Controller {
     public void run() {
         factory = createFactory();
         delegateWelcomeMessageToBeDisplayed();
+        delegateMenuToBeDisplayed();
+
+    }
+
+    private void delegateMenuToBeDisplayed() {
         ArrayList<String> menuOptions = new ArrayList<>();
         menuOptions.add("1. List Books");
         menu = new Menu(menuOptions);
         display = factory.buildDisplay(menu.toString());
         display.displayMessage();
-
     }
 
     public void delegateWelcomeMessageToBeDisplayed() {
