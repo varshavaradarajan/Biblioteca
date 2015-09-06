@@ -7,6 +7,10 @@ public class Controller {
     private Display display;
 
     public void run() {
+        DelegateWelcomeMessageToBeDisplayed();
+    }
+
+    private void DelegateWelcomeMessageToBeDisplayed() {
         factory = createFactory();
         display = factory.buildDisplay("Welcome to Biblioteca");
         display.displayMessage();
