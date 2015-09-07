@@ -29,15 +29,9 @@ public class ControllerTest {
     }
 
     @Test
-    public void shouldCreateAFactoryForManufacturingDisplays() {
-        Controller controller = new Controller();
-
-        assertEquals(Factory.class, controller.createFactory().getClass());
-    }
-
-    @Test
     public void shouldDelegateDisplayingMessageToDisplayClass() {
-        Controller controller = new Controller();
+        Factory factory = new Factory();
+        Controller controller = new Controller(factory);
         controller.run();
 
         assertEquals("Welcome to Biblioteca\n1. List Books\n", outputStream.toString());
@@ -45,7 +39,8 @@ public class ControllerTest {
 
     @Test
     public void shouldDelegateTakingInputToInputView() {
-        Controller controller = new Controller();
+        Factory factory = new Factory();
+        Controller controller = new Controller(factory);
         controller.run();
 
         assertEquals("Welcome to Biblioteca\n1. List Books\n", outputStream.toString());

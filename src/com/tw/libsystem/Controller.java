@@ -11,8 +11,11 @@ public class Controller {
     private InputView inputView;
     private String userInput;
 
+    public Controller(Factory factory) {
+        this.factory = factory;
+    }
+
     public void run() {
-        factory = createFactory();
         delegateWelcomeMessageToBeDisplayed();
         delegateMenuToBeDisplayed();
         takeInput();
@@ -36,15 +39,4 @@ public class Controller {
         display = factory.buildDisplay("Welcome to Biblioteca\n");
         display.displayMessage();
     }
-
-    public Factory createFactory()
-    {
-        return new Factory();
-    }
-
-    public static void main(String[] args) {
-        Controller controller = new Controller();
-        controller.run();
-    }
-
 }

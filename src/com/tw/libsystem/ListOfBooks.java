@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class ListOfBooks implements Operations {
     ArrayList<Book> listOfBooks;
 
-    public ListOfBooks(ArrayList listOfBooks) {
+    public ListOfBooks(ArrayList<Book> listOfBooks) {
         this.listOfBooks = listOfBooks;
     }
 
