@@ -1,6 +1,25 @@
 <?xml version = "1.0"?>
 
-<project name="Calculator" default="run" basedir=".">
+<project name="Biblioteca" default="run" basedir=".">
+
+    <property name="clover.jar" location="lib/clover.jar"/>
+    <taskdef resource="cloverlib.xml" classpath="${clover.jar}"/>
+
+    <target name="with.clover">
+        <clover-setup/>
+    </target>
+
+    <target name="clover.html">
+        <clover-html-report outdir="coverage"/>
+    </target>
+
+    <target name="clover.xml">
+        <clover-report>
+            <current outfile="coverage.xml">
+                <format type="xml"/>
+            </current>
+        </clover-report>
+    </target>
 
     <target name="build" depends="clean">
         <mkdir dir="out"/>
@@ -21,6 +40,7 @@
                 <pathelement location="./lib/junit-4.11.jar"/>
                 <pathelement location="./lib/hamcrest-core-1.3.jar"/>
                 <pathelement location="./lib/mockito-all-1.9.5.jar"/>
+                <pathelement path="${clover.jar}"/>
                 <pathelement location="out"/>
             </classpath>
             <batchtest fork="yes">
