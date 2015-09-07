@@ -42,4 +42,9 @@ public class Controller {
         return new Factory();
     }
 
+    public static void main(String[] args) {
+        Controller controller = new Controller();
+        controller.run();
+    }
+
 }
