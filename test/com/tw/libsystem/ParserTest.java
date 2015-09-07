@@ -42,4 +42,12 @@ public class ParserTest {
         assertEquals(invalidCommand.getClass(), parser.parse().getClass());
     }
 
+    @Test
+    public void shouldReturnExitApplicationAsOperationOnParsingInputValue2() {
+        Parser parser = new Parser("2");
+        ExitApplication exitApplication = new ExitApplication();
+
+        assertEquals(exitApplication.getClass(), parser.parse().getClass());
+    }
+
 }

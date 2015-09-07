@@ -19,6 +19,12 @@ public class Parser {
                 ListOfBooks listOfBooks = new ListOfBooks(list);
                 return listOfBooks;
             }
+
+            else if(inputCommand == "2") {
+                ExitApplication exitApplication = new ExitApplication();
+                return exitApplication;
+            }
+
             else {
                 return (new InvalidCommand());
             }
