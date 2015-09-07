@@ -27,9 +27,8 @@ public class ParserTest {
     @Test
     public void shouldReturnAnOperationOnParsingTheInput() {
         Parser parser = new Parser("1");
-        ArrayList<Book> list = new ArrayList<>();
-        list.add(new Book("Gone Girl", "Flynn", 2010));
-        ListBooks listBooks = new ListBooks(list);
+        Library library = new Library();
+        ListBooks listBooks = new ListBooks(library);
 
         assertEquals(listBooks.getClass(), parser.parse().getClass());
     }
