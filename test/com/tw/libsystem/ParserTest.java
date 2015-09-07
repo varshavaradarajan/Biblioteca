@@ -29,9 +29,9 @@ public class ParserTest {
         Parser parser = new Parser("1");
         ArrayList<Book> list = new ArrayList<>();
         list.add(new Book("Gone Girl", "Flynn", 2010));
-        ListOfBooks listOfBooks = new ListOfBooks(list);
+        ListBooks listBooks = new ListBooks(list);
 
-        assertEquals(listOfBooks.getClass(), parser.parse().getClass());
+        assertEquals(listBooks.getClass(), parser.parse().getClass());
     }
 
     @Test

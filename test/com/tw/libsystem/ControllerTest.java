@@ -9,7 +9,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
 
 public class ControllerTest {
 
@@ -30,15 +29,6 @@ public class ControllerTest {
 
     @Test
     public void shouldDelegateDisplayingMessageToDisplayClass() {
-        Factory factory = new Factory();
-        Controller controller = new Controller(factory);
-        controller.run();
-
-        assertEquals("Welcome to Biblioteca\n1. List Books\n", outputStream.toString());
-    }
-
-    @Test
-    public void shouldDelegateTakingInputToInputView() {
         Factory factory = new Factory();
         Controller controller = new Controller(factory);
         controller.run();

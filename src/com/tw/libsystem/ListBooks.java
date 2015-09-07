@@ -3,10 +3,10 @@ package com.tw.libsystem;
 
 import java.util.ArrayList;
 
-public class ListOfBooks implements Operations {
+public class ListBooks implements Operations {
     ArrayList<Book> listOfBooks;
 
-    public ListOfBooks(ArrayList<Book> listOfBooks) {
+    public ListBooks(ArrayList<Book> listOfBooks) {
         this.listOfBooks = listOfBooks;
     }
 

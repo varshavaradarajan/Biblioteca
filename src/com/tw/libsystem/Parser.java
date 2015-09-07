@@ -16,8 +16,8 @@ public class Parser {
             if(inputCommand == "1") {
                 ArrayList<Book> list = new ArrayList<>();
                 list.add(new Book("Gone Girl", "Flynn", 2010));
-                ListOfBooks listOfBooks = new ListOfBooks(list);
-                return listOfBooks;
+                ListBooks listBooks = new ListBooks(list);
+                return listBooks;
             }
 
             else if(inputCommand == "2") {
