@@ -8,8 +8,9 @@ public class Parser {
     String inputCommand;
     Library library;
 
-    public Parser(String inputCommand) {
+    public Parser(String inputCommand, Library library) {
         this.inputCommand = inputCommand;
+        this.library = library;
     }
 
     public Operations parse() {

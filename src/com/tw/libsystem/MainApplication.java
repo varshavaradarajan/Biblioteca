@@ -3,6 +3,7 @@ package com.tw.libsystem;
 public class MainApplication {
 
     private Factory factory;
+    private Library library;
     private Controller controller;
 
     public static void main(String[] args) {
@@ -12,7 +13,8 @@ public class MainApplication {
 
     public void start() {
         factory = new Factory();
-        controller = new Controller(factory);
+        library = new Library();
+        controller = new Controller(factory, library);
         controller.run();
     }
 }

@@ -2,15 +2,14 @@ package com.tw.libsystem;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.Assert.*;
 
 public class ParserTest {
 
     @Test
     public void shouldReturnInvalidCommandIfInputIsEmpty() {
-        Parser parser = new Parser("");
+        Library library = new Library();
+        Parser parser = new Parser("", library);
         InvalidCommand invalidCommand = new InvalidCommand();
 
         assertEquals(invalidCommand.getClass(), parser.parse().getClass());
@@ -18,7 +17,8 @@ public class ParserTest {
 
     @Test
     public void shouldReturnInvalidIfInputLengthIsMoreThanOne() {
-        Parser parser = new Parser("1 2");
+        Library library = new Library();
+        Parser parser = new Parser("1 2", library);
         InvalidCommand invalidCommand = new InvalidCommand();
 
         assertEquals(invalidCommand.getClass(), parser.parse().getClass());
@@ -26,8 +26,8 @@ public class ParserTest {
 
     @Test
     public void shouldReturnAnOperationOnParsingTheInput() {
-        Parser parser = new Parser("1");
         Library library = new Library();
+        Parser parser = new Parser("1", library);
         ListBooks listBooks = new ListBooks(library);
 
         assertEquals(listBooks.getClass(), parser.parse().getClass());
@@ -35,7 +35,8 @@ public class ParserTest {
 
     @Test
     public void shouldReturnInvalidCommandAsOperationForInvalidInput() {
-        Parser parser = new Parser("a");
+        Library library = new Library();
+        Parser parser = new Parser("a", library);
         InvalidCommand invalidCommand = new InvalidCommand();
 
         assertEquals(invalidCommand.getClass(), parser.parse().getClass());
@@ -43,7 +44,8 @@ public class ParserTest {
 
     @Test
     public void shouldReturnExitApplicationAsOperationOnParsingInputValue2() {
-        Parser parser = new Parser("2");
+        Library library = new Library();
+        Parser parser = new Parser("2", library);
         ExitApplication exitApplication = new ExitApplication();
 
         assertEquals(exitApplication.getClass(), parser.parse().getClass());

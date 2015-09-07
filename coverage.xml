@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1441597682490" clover="4.0.5">
+<coverage generated="1441629918471" clover="4.0.5">
    <project timestamp="1441597672413">
       <metrics conditionals="6" methods="24" classes="12" files="12" packages="1" coveredstatements="57" complexity="28" loc="253" ncloc="184" coveredmethods="23" coveredconditionals="6" statements="60" coveredelements="86" elements="90"/>
       <package name="com.tw.libsystem">

@@ -30,7 +30,8 @@ public class ControllerTest {
     @Test
     public void shouldDelegateDisplayingMessageToDisplayClass() {
         Factory factory = new Factory();
-        Controller controller = new Controller(factory);
+        Library library = new Library();
+        Controller controller = new Controller(factory, library);
         controller.run();
 
         assertEquals("Welcome to Biblioteca\n1. List Books\n", outputStream.toString());

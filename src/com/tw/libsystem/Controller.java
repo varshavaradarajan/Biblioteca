@@ -10,9 +10,11 @@ public class Controller {
     private Menu menu;
     private InputView inputView;
     private String userInput;
+    private Library library;
 
-    public Controller(Factory factory) {
+    public Controller(Factory factory, Library library) {
         this.factory = factory;
+        this.library = library;
     }
 
     public void run() {
@@ -22,7 +24,7 @@ public class Controller {
     }
 
     private void takeInput() {
-        inputView = new InputView();
+        inputView = factory.buildInputView();
         userInput = inputView.input();
     }
 
@@ -34,7 +36,7 @@ public class Controller {
         display.displayMessage();
     }
 
-    public void delegateWelcomeMessageToBeDisplayed() {
+     void delegateWelcomeMessageToBeDisplayed() {
         display = factory.buildDisplay("Welcome to Biblioteca\n");
         display.displayMessage();
     }
