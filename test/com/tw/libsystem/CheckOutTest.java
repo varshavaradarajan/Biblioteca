@@ -8,8 +8,17 @@ public class CheckOutTest {
 
     @Test
     public void shouldReturnAMessageOnCheckingOutABook() {
-        CheckOut checkOut = new CheckOut();
+        Library library = new Library();
+        CheckOut checkOut = new CheckOut(library);
 
-        assertEquals("Successful Checkout", checkOut.execute());
+        assertEquals("Removed Book Successfully", checkOut.execute());
+    }
+
+    @Test
+    public void shouldReturnACheckOutMessageOnCheckingOutAvailableBooks() {
+        Library library = new Library();
+        CheckOut checkOut = new CheckOut(library);
+
+        assertEquals("Removed Book Successfully", checkOut.execute());
     }
 }

@@ -23,8 +23,11 @@ public class Library {
     }
 
     public String removeBook(Book book) {
-        bookList.remove(book);
-        return "Removed Book Successfully";
+        if(has(book)) {
+            bookList.remove(book);
+            return "Removed Book Successfully";
+        }
+        return "Did Not Remove Book";
     }
 
     public boolean has(Book otherBook) {

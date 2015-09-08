@@ -33,7 +33,7 @@ public class LibraryTest {
     @Test
     public void shouldReturnMessageIfBookIsRemoved() {
         Library library = new Library();
-        Book book = new Book("Foo", "Bar", 2015);
+        Book book = new Book("Wuthering Heights", "Bar", 2015);
 
         assertEquals("Removed Book Successfully", library.removeBook(book));
     }
@@ -45,6 +45,14 @@ public class LibraryTest {
         library.removeBook(book);
 
         assertEquals(false, library.has(book));
+    }
+
+    @Test
+    public void shouldReturnAnotherMessageIfBookIsNotRemoved() {
+        Library library = new Library();
+        Book book = new Book("Foo", "Bar", 2015);
+
+        assertEquals("Did Not Remove Book", library.removeBook(book));
     }
 
 }

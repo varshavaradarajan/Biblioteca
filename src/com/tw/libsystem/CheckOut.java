@@ -3,9 +3,17 @@ package com.tw.libsystem;
 
 public class CheckOut implements Operations {
 
+    private Library library;
+    private String checkOutMessage;
+
+    public CheckOut(Library library) {
+        this.library = library;
+    }
+
     @Override
     public String execute() {
-
-        return "Successful Checkout";
+        Book book = new Book("Wuthering Heights", "bar", 2015);
+        checkOutMessage = library.removeBook(book);
+        return checkOutMessage;
     }
 }
