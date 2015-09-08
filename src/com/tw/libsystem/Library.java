@@ -31,6 +31,6 @@ public class Library {
             if(book.equals(otherBook))
                 return true;
         }
-        return true;
+        return false;
     }
 }

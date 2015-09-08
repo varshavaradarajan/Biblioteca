@@ -32,8 +32,9 @@ public class LibraryTest {
     @Test
     public void shouldReturnTrueIfLibraryHasABookEqualToBookBeingSpecified() {
         Library library = new Library();
-        Book book = mock(Book.class);
+        Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
 
         assertEquals(true, library.has(book));
     }
+
 }
