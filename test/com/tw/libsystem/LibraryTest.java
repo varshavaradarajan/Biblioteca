@@ -15,13 +15,6 @@ public class LibraryTest {
     }
 
     @Test
-    public void shouldReturnTrueIfBookIsRemoved() {
-        Library library = new Library();
-
-        assertEquals(true, library.removeBook());
-    }
-
-    @Test
     public void shouldReturnTrueIfLibraryHasABook() {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
@@ -35,6 +28,23 @@ public class LibraryTest {
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
 
         assertEquals(true, library.has(book));
+    }
+
+    @Test
+    public void shouldReturnMessageIfBookIsRemoved() {
+        Library library = new Library();
+        Book book = new Book("Foo", "Bar", 2015);
+
+        assertEquals("Removed Book Successfully", library.removeBook(book));
+    }
+
+    @Test
+    public void shouldReturnFalseWhenLibraryDoesNotHaveABookAfterWeRemoveItFromBookList() {
+        Library library = new Library();
+        Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+        library.removeBook(book);
+
+        assertEquals(false, library.has(book));
     }
 
 }
