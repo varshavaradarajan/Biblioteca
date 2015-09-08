@@ -21,4 +21,8 @@ public class Library {
         }
         return bookNames;
     }
+
+    public boolean removeBook() {
+        return true;
+    }
 }
