@@ -26,7 +26,11 @@ public class Library {
         return true;
     }
 
-    public boolean has(Book book) {
+    public boolean has(Book otherBook) {
+        for(Book book : bookList) {
+            if(book.equals(otherBook))
+                return true;
+        }
         return true;
     }
 }

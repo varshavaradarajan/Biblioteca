@@ -28,4 +28,12 @@ public class LibraryTest {
 
         assertEquals(true, library.has(book));
     }
+
+    @Test
+    public void shouldReturnTrueIfLibraryHasABookEqualToBookBeingSpecified() {
+        Library library = new Library();
+        Book book = mock(Book.class);
+
+        assertEquals(true, library.has(book));
+    }
 }

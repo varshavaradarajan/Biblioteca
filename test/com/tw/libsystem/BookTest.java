@@ -12,4 +12,12 @@ public class BookTest {
 
         assertEquals("Angels And Demons\tDan Brown\t2000\t", book.toString());
     }
+
+    @Test
+    public void shouldReturnTrueIfBookExists() {
+        Book book1 = new Book("Inferno", "Dan Brown", 2012);
+        Book book2 = new Book("Angels And Demons", "Dan Brown", 2007);
+
+        assertEquals(book1, book2);
+    }
 }

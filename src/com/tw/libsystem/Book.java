@@ -17,4 +17,11 @@ public class Book {
         bookDetails += bookName + "\t" + authorName + "\t" + year + "\t";
         return bookDetails;
     }
+
+    @Override
+    public boolean equals(Object otherObject) {
+        if(otherObject != null)
+            return true;
+        return false;
+    }
 }
