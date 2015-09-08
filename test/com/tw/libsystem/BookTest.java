@@ -28,4 +28,11 @@ public class BookTest {
 
         assertEquals(book1, book2);
     }
+
+    @Test
+    public void shouldBeEqualToItself() {
+        Book book1 = new Book("Inferno", "Dan Brown", 2012);
+
+        assertEquals(book1, book1);
+    }
 }

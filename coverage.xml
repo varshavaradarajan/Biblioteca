@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1441693967960" clover="4.0.5">
-   <project timestamp="1441693967736">
-      <metrics conditionals="10" methods="35" classes="16" files="16" packages="1" coveredstatements="77" complexity="42" loc="346" ncloc="258" coveredmethods="32" coveredconditionals="10" statements="86" coveredelements="119" elements="131"/>
+<coverage generated="1441694391773" clover="4.0.5">
+   <project timestamp="1441694391538">
+      <metrics conditionals="12" methods="35" classes="16" files="16" packages="1" coveredstatements="79" complexity="43" loc="350" ncloc="262" coveredmethods="32" coveredconditionals="12" statements="88" coveredelements="123" elements="135"/>
       <package name="com.tw.libsystem">
-         <metrics classes="16" methods="35" conditionals="10" files="16" ncloc="258" coveredstatements="77" coveredmethods="32" complexity="42" coveredconditionals="10" statements="86" loc="346" coveredelements="119" elements="131"/>
+         <metrics classes="16" methods="35" conditionals="12" files="16" ncloc="262" coveredstatements="79" coveredmethods="32" complexity="43" coveredconditionals="12" statements="88" loc="350" coveredelements="123" elements="135"/>
          <file name="Operations.java" path="/Users/varshavs/IdeaProjects/Biblioteca/src/com/tw/libsystem/Operations.java">
             <metrics classes="1" methods="0" conditionals="0" ncloc="4" coveredstatements="0" coveredmethods="0" complexity="0" coveredconditionals="0" statements="0" loc="6" coveredelements="0" elements="0"/>
             <class name="Operations">
@@ -15,11 +15,11 @@
             <class name="InvalidCommand">
                <metrics methods="2" conditionals="0" coveredstatements="3" coveredmethods="2" complexity="2" coveredconditionals="0" statements="3" coveredelements="5" elements="5"/>
             </class>
-            <line num="8" count="9" visibility="public" complexity="1" type="method" signature="toString() : String"/>
-            <line num="10" count="9" type="stmt"/>
-            <line num="11" count="9" type="stmt"/>
-            <line num="14" count="9" visibility="public" complexity="1" type="method" signature="execute() : String"/>
-            <line num="15" count="9" type="stmt"/>
+            <line num="8" count="10" visibility="public" complexity="1" type="method" signature="toString() : String"/>
+            <line num="10" count="10" type="stmt"/>
+            <line num="11" count="10" type="stmt"/>
+            <line num="14" count="10" visibility="public" complexity="1" type="method" signature="execute() : String"/>
+            <line num="15" count="10" type="stmt"/>
          </file>
          <file name="ListOfBooks.java" path="/Users/varshavs/IdeaProjects/Biblioteca/src/com/tw/libsystem/ListOfBooks.java">
             <metrics classes="1" methods="3" conditionals="0" ncloc="20" coveredstatements="6" coveredmethods="3" complexity="3" coveredconditionals="0" statements="6" loc="26" coveredelements="9" elements="9"/>
@@ -41,8 +41,8 @@
             <class name="ExitApplication">
                <metrics methods="2" conditionals="0" coveredstatements="1" coveredmethods="1" complexity="2" coveredconditionals="0" statements="4" coveredelements="2" elements="6"/>
             </class>
-            <line num="8" count="9" visibility="public" complexity="1" type="method" signature="toString() : String"/>
-            <line num="10" count="9" type="stmt"/>
+            <line num="8" count="10" visibility="public" complexity="1" type="method" signature="toString() : String"/>
+            <line num="10" count="10" type="stmt"/>
             <line num="14" count="0" visibility="public" complexity="1" type="method" signature="execute() : String"/>
             <line num="16" count="0" type="stmt"/>
             <line num="17" count="0" type="stmt"/>
@@ -53,132 +53,135 @@
             <class name="Menu">
                <metrics methods="2" conditionals="0" coveredstatements="5" coveredmethods="2" complexity="2" coveredconditionals="0" statements="5" coveredelements="7" elements="7"/>
             </class>
-            <line num="10" count="20" visibility="public" complexity="1" type="method" signature="Menu(ArrayList&lt;String&gt;)"/>
-            <line num="11" count="20" type="stmt"/>
-            <line num="14" count="20" visibility="public" complexity="1" type="method" signature="toString() : String"/>
-            <line num="16" count="20" type="stmt"/>
-            <line num="17" count="20" type="stmt"/>
-            <line num="18" count="20" type="stmt"/>
-            <line num="20" count="20" type="stmt"/>
+            <line num="10" count="22" visibility="public" complexity="1" type="method" signature="Menu(ArrayList&lt;String&gt;)"/>
+            <line num="11" count="22" type="stmt"/>
+            <line num="14" count="22" visibility="public" complexity="1" type="method" signature="toString() : String"/>
+            <line num="16" count="22" type="stmt"/>
+            <line num="17" count="22" type="stmt"/>
+            <line num="18" count="22" type="stmt"/>
+            <line num="20" count="22" type="stmt"/>
          </file>
          <file name="Factory.java" path="/Users/varshavs/IdeaProjects/Biblioteca/src/com/tw/libsystem/Factory.java">
             <metrics classes="1" methods="2" conditionals="0" ncloc="13" coveredstatements="4" coveredmethods="2" complexity="2" coveredconditionals="0" statements="4" loc="18" coveredelements="6" elements="6"/>
             <class name="Factory">
                <metrics methods="2" conditionals="0" coveredstatements="4" coveredmethods="2" complexity="2" coveredconditionals="0" statements="4" coveredelements="6" elements="6"/>
             </class>
-            <line num="9" count="21" visibility="public" complexity="1" type="method" signature="buildDisplay(String) : Display"/>
-            <line num="10" count="21" type="stmt"/>
-            <line num="11" count="21" type="stmt"/>
-            <line num="14" count="14" visibility="public" complexity="1" type="method" signature="buildInputView() : InputView"/>
-            <line num="15" count="14" type="stmt"/>
-            <line num="16" count="14" type="stmt"/>
+            <line num="9" count="24" visibility="public" complexity="1" type="method" signature="buildDisplay(String) : Display"/>
+            <line num="10" count="24" type="stmt"/>
+            <line num="11" count="24" type="stmt"/>
+            <line num="14" count="16" visibility="public" complexity="1" type="method" signature="buildInputView() : InputView"/>
+            <line num="15" count="16" type="stmt"/>
+            <line num="16" count="16" type="stmt"/>
          </file>
          <file name="Controller.java" path="/Users/varshavs/IdeaProjects/Biblioteca/src/com/tw/libsystem/Controller.java">
             <metrics classes="1" methods="5" conditionals="0" ncloc="34" coveredstatements="14" coveredmethods="5" complexity="5" coveredconditionals="0" statements="14" loc="43" coveredelements="19" elements="19"/>
             <class name="Controller">
                <metrics methods="5" conditionals="0" coveredstatements="14" coveredmethods="5" complexity="5" coveredconditionals="0" statements="14" coveredelements="19" elements="19"/>
             </class>
-            <line num="15" count="7" visibility="public" complexity="1" type="method" signature="Controller(Factory,Library)"/>
-            <line num="16" count="7" type="stmt"/>
-            <line num="17" count="7" type="stmt"/>
-            <line num="20" count="7" visibility="public" complexity="1" type="method" signature="run() : void"/>
-            <line num="21" count="7" type="stmt"/>
-            <line num="22" count="7" type="stmt"/>
-            <line num="23" count="7" type="stmt"/>
-            <line num="26" count="7" visibility="private" complexity="1" type="method" signature="takeInput() : void"/>
-            <line num="27" count="7" type="stmt"/>
-            <line num="28" count="7" type="stmt"/>
-            <line num="31" count="7" visibility="private" complexity="1" type="method" signature="delegateMenuToBeDisplayed() : void"/>
-            <line num="32" count="7" type="stmt"/>
-            <line num="33" count="7" type="stmt"/>
-            <line num="34" count="7" type="stmt"/>
-            <line num="35" count="7" type="stmt"/>
-            <line num="36" count="7" type="stmt"/>
-            <line num="39" count="7" visibility="package" complexity="1" type="method" signature="delegateWelcomeMessageToBeDisplayed() : void"/>
-            <line num="40" count="7" type="stmt"/>
-            <line num="41" count="7" type="stmt"/>
+            <line num="15" count="8" visibility="public" complexity="1" type="method" signature="Controller(Factory,Library)"/>
+            <line num="16" count="8" type="stmt"/>
+            <line num="17" count="8" type="stmt"/>
+            <line num="20" count="8" visibility="public" complexity="1" type="method" signature="run() : void"/>
+            <line num="21" count="8" type="stmt"/>
+            <line num="22" count="8" type="stmt"/>
+            <line num="23" count="8" type="stmt"/>
+            <line num="26" count="8" visibility="private" complexity="1" type="method" signature="takeInput() : void"/>
+            <line num="27" count="8" type="stmt"/>
+            <line num="28" count="8" type="stmt"/>
+            <line num="31" count="8" visibility="private" complexity="1" type="method" signature="delegateMenuToBeDisplayed() : void"/>
+            <line num="32" count="8" type="stmt"/>
+            <line num="33" count="8" type="stmt"/>
+            <line num="34" count="8" type="stmt"/>
+            <line num="35" count="8" type="stmt"/>
+            <line num="36" count="8" type="stmt"/>
+            <line num="39" count="8" visibility="package" complexity="1" type="method" signature="delegateWelcomeMessageToBeDisplayed() : void"/>
+            <line num="40" count="8" type="stmt"/>
+            <line num="41" count="8" type="stmt"/>
          </file>
          <file name="Display.java" path="/Users/varshavs/IdeaProjects/Biblioteca/src/com/tw/libsystem/Display.java">
             <metrics classes="1" methods="2" conditionals="0" ncloc="10" coveredstatements="2" coveredmethods="2" complexity="2" coveredconditionals="0" statements="2" loc="17" coveredelements="4" elements="4"/>
             <class name="Display">
                <metrics methods="2" conditionals="0" coveredstatements="2" coveredmethods="2" complexity="2" coveredconditionals="0" statements="2" coveredelements="4" elements="4"/>
             </class>
-            <line num="8" count="40" visibility="public" complexity="1" type="method" signature="Display(String)"/>
-            <line num="10" count="40" type="stmt"/>
-            <line num="13" count="31" visibility="public" complexity="1" type="method" signature="displayMessage() : void"/>
-            <line num="15" count="31" type="stmt"/>
+            <line num="8" count="44" visibility="public" complexity="1" type="method" signature="Display(String)"/>
+            <line num="10" count="44" type="stmt"/>
+            <line num="13" count="34" visibility="public" complexity="1" type="method" signature="displayMessage() : void"/>
+            <line num="15" count="34" type="stmt"/>
          </file>
          <file name="Parser.java" path="/Users/varshavs/IdeaProjects/Biblioteca/src/com/tw/libsystem/Parser.java">
             <metrics classes="1" methods="2" conditionals="6" ncloc="28" coveredstatements="11" coveredmethods="2" complexity="6" coveredconditionals="6" statements="11" loc="37" coveredelements="19" elements="19"/>
             <class name="Parser">
                <metrics methods="2" conditionals="6" coveredstatements="11" coveredmethods="2" complexity="6" coveredconditionals="6" statements="11" coveredelements="19" elements="19"/>
             </class>
-            <line num="11" count="35" visibility="public" complexity="1" type="method" signature="Parser(String,Library)"/>
-            <line num="12" count="35" type="stmt"/>
-            <line num="13" count="35" type="stmt"/>
-            <line num="16" count="35" visibility="public" complexity="5" type="method" signature="parse() : Operations"/>
-            <line num="17" count="35" type="stmt"/>
-            <line num="17" falsecount="14" type="cond" truecount="21"/>
-            <line num="18" count="21" type="stmt"/>
-            <line num="18" falsecount="14" type="cond" truecount="7"/>
-            <line num="19" count="7" type="stmt"/>
-            <line num="20" count="7" type="stmt"/>
-            <line num="23" count="14" type="stmt"/>
-            <line num="23" falsecount="7" type="cond" truecount="7"/>
-            <line num="24" count="7" type="stmt"/>
-            <line num="25" count="7" type="stmt"/>
-            <line num="29" count="7" type="stmt"/>
-            <line num="34" count="14" type="stmt"/>
+            <line num="11" count="40" visibility="public" complexity="1" type="method" signature="Parser(String,Library)"/>
+            <line num="12" count="40" type="stmt"/>
+            <line num="13" count="40" type="stmt"/>
+            <line num="16" count="40" visibility="public" complexity="5" type="method" signature="parse() : Operations"/>
+            <line num="17" count="40" type="stmt"/>
+            <line num="17" falsecount="16" type="cond" truecount="24"/>
+            <line num="18" count="24" type="stmt"/>
+            <line num="18" falsecount="16" type="cond" truecount="8"/>
+            <line num="19" count="8" type="stmt"/>
+            <line num="20" count="8" type="stmt"/>
+            <line num="23" count="16" type="stmt"/>
+            <line num="23" falsecount="8" type="cond" truecount="8"/>
+            <line num="24" count="8" type="stmt"/>
+            <line num="25" count="8" type="stmt"/>
+            <line num="29" count="8" type="stmt"/>
+            <line num="34" count="16" type="stmt"/>
          </file>
          <file name="Book.java" path="/Users/varshavs/IdeaProjects/Biblioteca/src/com/tw/libsystem/Book.java">
-            <metrics classes="1" methods="3" conditionals="2" ncloc="22" coveredstatements="9" coveredmethods="3" complexity="5" coveredconditionals="2" statements="9" loc="27" coveredelements="14" elements="14"/>
+            <metrics classes="1" methods="3" conditionals="4" ncloc="26" coveredstatements="11" coveredmethods="3" complexity="6" coveredconditionals="4" statements="11" loc="31" coveredelements="18" elements="18"/>
             <class name="Book">
-               <metrics methods="3" conditionals="2" coveredstatements="9" coveredmethods="3" complexity="5" coveredconditionals="2" statements="9" coveredelements="14" elements="14"/>
+               <metrics methods="3" conditionals="4" coveredstatements="11" coveredmethods="3" complexity="6" coveredconditionals="4" statements="11" coveredelements="18" elements="18"/>
             </class>
-            <line num="8" count="45" visibility="public" complexity="1" type="method" signature="Book(String,String,int)"/>
-            <line num="9" count="45" type="stmt"/>
-            <line num="10" count="45" type="stmt"/>
-            <line num="11" count="45" type="stmt"/>
+            <line num="8" count="46" visibility="public" complexity="1" type="method" signature="Book(String,String,int)"/>
+            <line num="9" count="46" type="stmt"/>
+            <line num="10" count="46" type="stmt"/>
+            <line num="11" count="46" type="stmt"/>
             <line num="14" count="13" visibility="public" complexity="1" type="method" signature="toString() : String"/>
             <line num="16" count="13" type="stmt"/>
             <line num="17" count="13" type="stmt"/>
             <line num="18" count="13" type="stmt"/>
-            <line num="21" count="6" visibility="public" complexity="3" type="method" signature="equals(Object) : boolean"/>
-            <line num="23" count="6" type="stmt"/>
-            <line num="23" falsecount="3" type="cond" truecount="3"/>
-            <line num="24" count="3" type="stmt"/>
-            <line num="25" count="3" type="stmt"/>
+            <line num="21" count="7" visibility="public" complexity="4" type="method" signature="equals(Object) : boolean"/>
+            <line num="23" count="7" type="stmt"/>
+            <line num="23" falsecount="3" type="cond" truecount="4"/>
+            <line num="24" count="4" type="stmt"/>
+            <line num="24" falsecount="3" type="cond" truecount="1"/>
+            <line num="25" count="1" type="stmt"/>
+            <line num="27" count="3" type="stmt"/>
+            <line num="29" count="3" type="stmt"/>
          </file>
          <file name="InputView.java" path="/Users/varshavs/IdeaProjects/Biblioteca/src/com/tw/libsystem/InputView.java">
             <metrics classes="1" methods="1" conditionals="0" ncloc="10" coveredstatements="3" coveredmethods="1" complexity="1" coveredconditionals="0" statements="3" loc="15" coveredelements="4" elements="4"/>
             <class name="InputView">
                <metrics methods="1" conditionals="0" coveredstatements="3" coveredmethods="1" complexity="1" coveredconditionals="0" statements="3" coveredelements="4" elements="4"/>
             </class>
-            <line num="10" count="20" visibility="public" complexity="1" type="method" signature="input() : String"/>
-            <line num="11" count="20" type="stmt"/>
-            <line num="12" count="20" type="stmt"/>
-            <line num="13" count="20" type="stmt"/>
+            <line num="10" count="22" visibility="public" complexity="1" type="method" signature="input() : String"/>
+            <line num="11" count="22" type="stmt"/>
+            <line num="12" count="22" type="stmt"/>
+            <line num="13" count="22" type="stmt"/>
          </file>
          <file name="WelcomeMessage.java" path="/Users/varshavs/IdeaProjects/Biblioteca/src/com/tw/libsystem/WelcomeMessage.java">
             <metrics classes="1" methods="2" conditionals="0" ncloc="12" coveredstatements="3" coveredmethods="2" complexity="2" coveredconditionals="0" statements="3" loc="16" coveredelements="5" elements="5"/>
             <class name="WelcomeMessage">
                <metrics methods="2" conditionals="0" coveredstatements="3" coveredmethods="2" complexity="2" coveredconditionals="0" statements="3" coveredelements="5" elements="5"/>
             </class>
-            <line num="7" count="9" visibility="public" complexity="1" type="method" signature="WelcomeMessage(String)"/>
-            <line num="8" count="9" type="stmt"/>
-            <line num="11" count="9" visibility="public" complexity="1" type="method" signature="toString() : String"/>
-            <line num="13" count="9" type="stmt"/>
-            <line num="14" count="9" type="stmt"/>
+            <line num="7" count="10" visibility="public" complexity="1" type="method" signature="WelcomeMessage(String)"/>
+            <line num="8" count="10" type="stmt"/>
+            <line num="11" count="10" visibility="public" complexity="1" type="method" signature="toString() : String"/>
+            <line num="13" count="10" type="stmt"/>
+            <line num="14" count="10" type="stmt"/>
          </file>
          <file name="ListBooks.java" path="/Users/varshavs/IdeaProjects/Biblioteca/src/com/tw/libsystem/ListBooks.java">
             <metrics classes="1" methods="2" conditionals="0" ncloc="11" coveredstatements="2" coveredmethods="2" complexity="2" coveredconditionals="0" statements="2" loc="15" coveredelements="4" elements="4"/>
             <class name="ListBooks">
                <metrics methods="2" conditionals="0" coveredstatements="2" coveredmethods="2" complexity="2" coveredconditionals="0" statements="2" coveredelements="4" elements="4"/>
             </class>
-            <line num="7" count="35" visibility="public" complexity="1" type="method" signature="ListBooks(Library)"/>
-            <line num="8" count="35" type="stmt"/>
-            <line num="11" count="21" visibility="public" complexity="1" type="method" signature="execute() : String"/>
-            <line num="13" count="21" type="stmt"/>
+            <line num="7" count="40" visibility="public" complexity="1" type="method" signature="ListBooks(Library)"/>
+            <line num="8" count="40" type="stmt"/>
+            <line num="11" count="24" visibility="public" complexity="1" type="method" signature="execute() : String"/>
+            <line num="13" count="24" type="stmt"/>
          </file>
          <file name="MainApplication.java" path="/Users/varshavs/IdeaProjects/Biblioteca/src/com/tw/libsystem/MainApplication.java">
             <metrics classes="1" methods="2" conditionals="0" ncloc="16" coveredstatements="0" coveredmethods="0" complexity="2" coveredconditionals="0" statements="6" loc="20" coveredelements="0" elements="8"/>
@@ -199,39 +202,39 @@
             <class name="Library">
                <metrics methods="4" conditionals="2" coveredstatements="13" coveredmethods="4" complexity="5" coveredconditionals="2" statements="13" coveredelements="19" elements="19"/>
             </class>
-            <line num="9" count="39" visibility="public" complexity="1" type="method" signature="Library()"/>
-            <line num="10" count="39" type="stmt"/>
-            <line num="11" count="39" type="stmt"/>
-            <line num="12" count="39" type="stmt"/>
-            <line num="13" count="39" type="stmt"/>
-            <line num="16" count="12" visibility="public" complexity="1" type="method" signature="toString() : String"/>
-            <line num="18" count="12" type="stmt"/>
-            <line num="19" count="12" type="stmt"/>
-            <line num="20" count="36" type="stmt"/>
-            <line num="22" count="12" type="stmt"/>
-            <line num="25" count="3" visibility="public" complexity="1" type="method" signature="removeBook() : boolean"/>
-            <line num="26" count="3" type="stmt"/>
-            <line num="29" count="6" visibility="public" complexity="2" type="method" signature="has(Book) : boolean"/>
-            <line num="30" count="6" type="stmt"/>
-            <line num="31" count="12" type="stmt"/>
-            <line num="31" falsecount="9" type="cond" truecount="3"/>
-            <line num="32" count="3" type="stmt"/>
-            <line num="34" count="3" type="stmt"/>
+            <line num="9" count="52" visibility="public" complexity="1" type="method" signature="Library()"/>
+            <line num="10" count="52" type="stmt"/>
+            <line num="11" count="52" type="stmt"/>
+            <line num="12" count="52" type="stmt"/>
+            <line num="13" count="52" type="stmt"/>
+            <line num="16" count="16" visibility="public" complexity="1" type="method" signature="toString() : String"/>
+            <line num="18" count="16" type="stmt"/>
+            <line num="19" count="16" type="stmt"/>
+            <line num="20" count="48" type="stmt"/>
+            <line num="22" count="16" type="stmt"/>
+            <line num="25" count="4" visibility="public" complexity="1" type="method" signature="removeBook() : boolean"/>
+            <line num="26" count="4" type="stmt"/>
+            <line num="29" count="8" visibility="public" complexity="2" type="method" signature="has(Book) : boolean"/>
+            <line num="30" count="8" type="stmt"/>
+            <line num="31" count="16" type="stmt"/>
+            <line num="31" falsecount="12" type="cond" truecount="4"/>
+            <line num="32" count="4" type="stmt"/>
+            <line num="34" count="4" type="stmt"/>
          </file>
          <file name="CheckOut.java" path="/Users/varshavs/IdeaProjects/Biblioteca/src/com/tw/libsystem/CheckOut.java">
             <metrics classes="1" methods="1" conditionals="0" ncloc="7" coveredstatements="1" coveredmethods="1" complexity="1" coveredconditionals="0" statements="1" loc="11" coveredelements="2" elements="2"/>
             <class name="CheckOut">
                <metrics methods="1" conditionals="0" coveredstatements="1" coveredmethods="1" complexity="1" coveredconditionals="0" statements="1" coveredelements="2" elements="2"/>
             </class>
-            <line num="6" count="5" visibility="public" complexity="1" type="method" signature="execute() : String"/>
-            <line num="9" count="5" type="stmt"/>
+            <line num="6" count="6" visibility="public" complexity="1" type="method" signature="execute() : String"/>
+            <line num="9" count="6" type="stmt"/>
          </file>
       </package>
    </project>
-   <testproject timestamp="1441693967736">
-      <metrics conditionals="0" methods="34" classes="14" files="14" packages="1" coveredstatements="100" complexity="34" loc="408" ncloc="277" coveredmethods="34" coveredconditionals="0" statements="100" coveredelements="134" elements="134"/>
+   <testproject timestamp="1441694391538">
+      <metrics conditionals="0" methods="35" classes="14" files="14" packages="1" coveredstatements="102" complexity="35" loc="415" ncloc="282" coveredmethods="35" coveredconditionals="0" statements="102" coveredelements="137" elements="137"/>
       <package name="com.tw.libsystem">
-         <metrics classes="14" methods="34" conditionals="0" files="14" ncloc="277" coveredstatements="100" coveredmethods="34" complexity="34" coveredconditionals="0" statements="100" loc="408" coveredelements="134" elements="134"/>
+         <metrics classes="14" methods="35" conditionals="0" files="14" ncloc="282" coveredstatements="102" coveredmethods="35" complexity="35" coveredconditionals="0" statements="102" loc="415" coveredelements="137" elements="137"/>
          <file name="ListOfBooksTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/ListOfBooksTest.java">
             <metrics classes="1" methods="3" conditionals="0" ncloc="32" coveredstatements="18" coveredmethods="3" complexity="3" coveredconditionals="0" statements="18" loc="44" coveredelements="21" elements="21"/>
             <class name="ListOfBooksTest">
@@ -260,9 +263,9 @@
             <line num="42" count="2" type="stmt"/>
          </file>
          <file name="BookTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/BookTest.java">
-            <metrics classes="1" methods="3" conditionals="0" ncloc="21" coveredstatements="8" coveredmethods="3" complexity="3" coveredconditionals="0" statements="8" loc="31" coveredelements="11" elements="11"/>
+            <metrics classes="1" methods="4" conditionals="0" ncloc="26" coveredstatements="10" coveredmethods="4" complexity="4" coveredconditionals="0" statements="10" loc="38" coveredelements="14" elements="14"/>
             <class name="BookTest">
-               <metrics conditionals="0" methods="3" coveredstatements="8" complexity="3" testpasses="12" testruns="12" coveredmethods="3" coveredconditionals="0" statements="8" testfailures="0" coveredelements="11" testduration="0.08200000000000002" elements="11"/>
+               <metrics conditionals="0" methods="4" coveredstatements="10" complexity="4" testpasses="16" testruns="16" coveredmethods="4" coveredconditionals="0" statements="10" testfailures="0" coveredelements="14" testduration="0.091" elements="14"/>
             </class>
             <line num="9" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.015" signature="shouldReturnBookDetails() : void"/>
             <line num="11" count="1" type="stmt"/>
@@ -275,180 +278,183 @@
             <line num="26" count="1" type="stmt"/>
             <line num="27" count="1" type="stmt"/>
             <line num="29" count="1" type="stmt"/>
+            <line num="32" testsuccess="true" count="1" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldBeEqualToItself() : void"/>
+            <line num="34" count="1" type="stmt"/>
+            <line num="36" count="1" type="stmt"/>
          </file>
          <file name="ExitApplicationTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/ExitApplicationTest.java">
             <metrics classes="1" methods="1" conditionals="0" ncloc="9" coveredstatements="2" coveredmethods="1" complexity="1" coveredconditionals="0" statements="2" loc="17" coveredelements="3" elements="3"/>
             <class name="ExitApplicationTest">
-               <metrics conditionals="0" methods="1" coveredstatements="2" complexity="1" testpasses="9" testruns="9" coveredmethods="1" coveredconditionals="0" statements="2" testfailures="0" coveredelements="3" testduration="0.08299999999999999" elements="3"/>
+               <metrics conditionals="0" methods="1" coveredstatements="2" complexity="1" testpasses="10" testruns="10" coveredmethods="1" coveredconditionals="0" statements="2" testfailures="0" coveredelements="3" testduration="0.09299999999999999" elements="3"/>
             </class>
-            <line num="10" testsuccess="true" count="9" visibility="public" complexity="1" type="method" testduration="0.008" signature="shouldExitApplicationUponExecutionOfThisCommand() : void"/>
-            <line num="12" count="9" type="stmt"/>
-            <line num="14" count="9" type="stmt"/>
+            <line num="10" testsuccess="true" count="10" visibility="public" complexity="1" type="method" testduration="0.008" signature="shouldExitApplicationUponExecutionOfThisCommand() : void"/>
+            <line num="12" count="10" type="stmt"/>
+            <line num="14" count="10" type="stmt"/>
          </file>
          <file name="WelcomeMessageTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/WelcomeMessageTest.java">
             <metrics classes="1" methods="1" conditionals="0" ncloc="9" coveredstatements="2" coveredmethods="1" complexity="1" coveredconditionals="0" statements="2" loc="15" coveredelements="3" elements="3"/>
             <class name="WelcomeMessageTest">
-               <metrics conditionals="0" methods="1" coveredstatements="2" complexity="1" testpasses="9" testruns="9" coveredmethods="1" coveredconditionals="0" statements="2" testfailures="0" coveredelements="3" testduration="0.07100000000000001" elements="3"/>
+               <metrics conditionals="0" methods="1" coveredstatements="2" complexity="1" testpasses="10" testruns="10" coveredmethods="1" coveredconditionals="0" statements="2" testfailures="0" coveredelements="3" testduration="0.08000000000000002" elements="3"/>
             </class>
-            <line num="9" testsuccess="true" count="9" visibility="public" complexity="1" type="method" testduration="0.009" signature="shouldReturnWelcomeMessage() : void"/>
-            <line num="11" count="9" type="stmt"/>
-            <line num="13" count="9" type="stmt"/>
+            <line num="9" testsuccess="true" count="10" visibility="public" complexity="1" type="method" testduration="0.009" signature="shouldReturnWelcomeMessage() : void"/>
+            <line num="11" count="10" type="stmt"/>
+            <line num="13" count="10" type="stmt"/>
          </file>
          <file name="ParserTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/ParserTest.java">
             <metrics classes="1" methods="5" conditionals="0" ncloc="39" coveredstatements="20" coveredmethods="5" complexity="5" coveredconditionals="0" statements="20" loc="54" coveredelements="25" elements="25"/>
             <class name="ParserTest">
-               <metrics conditionals="0" methods="5" coveredstatements="20" complexity="5" testpasses="45" testruns="45" coveredmethods="5" coveredconditionals="0" statements="20" testfailures="0" coveredelements="25" testduration="0.12800000000000003" elements="25"/>
+               <metrics conditionals="0" methods="5" coveredstatements="20" complexity="5" testpasses="50" testruns="50" coveredmethods="5" coveredconditionals="0" statements="20" testfailures="0" coveredelements="25" testduration="0.14300000000000002" elements="25"/>
             </class>
-            <line num="9" testsuccess="true" count="7" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldReturnInvalidCommandIfInputIsEmpty() : void"/>
-            <line num="11" count="7" type="stmt"/>
-            <line num="12" count="7" type="stmt"/>
-            <line num="13" count="7" type="stmt"/>
-            <line num="15" count="7" type="stmt"/>
-            <line num="18" testsuccess="true" count="7" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldReturnInvalidIfInputLengthIsMoreThanOne() : void"/>
-            <line num="20" count="7" type="stmt"/>
-            <line num="21" count="7" type="stmt"/>
-            <line num="22" count="7" type="stmt"/>
-            <line num="24" count="7" type="stmt"/>
-            <line num="27" testsuccess="true" count="7" visibility="public" complexity="1" type="method" testduration="0.001" signature="shouldReturnAnOperationOnParsingTheInput() : void"/>
-            <line num="29" count="7" type="stmt"/>
-            <line num="30" count="7" type="stmt"/>
-            <line num="31" count="7" type="stmt"/>
-            <line num="33" count="7" type="stmt"/>
-            <line num="36" testsuccess="true" count="7" visibility="public" complexity="1" type="method" testduration="0.017" signature="shouldReturnInvalidCommandAsOperationForInvalidInput() : void"/>
-            <line num="38" count="7" type="stmt"/>
-            <line num="39" count="7" type="stmt"/>
-            <line num="40" count="7" type="stmt"/>
-            <line num="42" count="7" type="stmt"/>
-            <line num="45" testsuccess="true" count="7" visibility="public" complexity="1" type="method" testduration="0.001" signature="shouldReturnExitApplicationAsOperationOnParsingInputValue2() : void"/>
-            <line num="47" count="7" type="stmt"/>
-            <line num="48" count="7" type="stmt"/>
-            <line num="49" count="7" type="stmt"/>
-            <line num="51" count="7" type="stmt"/>
+            <line num="9" testsuccess="true" count="8" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldReturnInvalidCommandIfInputIsEmpty() : void"/>
+            <line num="11" count="8" type="stmt"/>
+            <line num="12" count="8" type="stmt"/>
+            <line num="13" count="8" type="stmt"/>
+            <line num="15" count="8" type="stmt"/>
+            <line num="18" testsuccess="true" count="8" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldReturnInvalidIfInputLengthIsMoreThanOne() : void"/>
+            <line num="20" count="8" type="stmt"/>
+            <line num="21" count="8" type="stmt"/>
+            <line num="22" count="8" type="stmt"/>
+            <line num="24" count="8" type="stmt"/>
+            <line num="27" testsuccess="true" count="8" visibility="public" complexity="1" type="method" testduration="0.001" signature="shouldReturnAnOperationOnParsingTheInput() : void"/>
+            <line num="29" count="8" type="stmt"/>
+            <line num="30" count="8" type="stmt"/>
+            <line num="31" count="8" type="stmt"/>
+            <line num="33" count="8" type="stmt"/>
+            <line num="36" testsuccess="true" count="8" visibility="public" complexity="1" type="method" testduration="0.017" signature="shouldReturnInvalidCommandAsOperationForInvalidInput() : void"/>
+            <line num="38" count="8" type="stmt"/>
+            <line num="39" count="8" type="stmt"/>
+            <line num="40" count="8" type="stmt"/>
+            <line num="42" count="8" type="stmt"/>
+            <line num="45" testsuccess="true" count="8" visibility="public" complexity="1" type="method" testduration="0.001" signature="shouldReturnExitApplicationAsOperationOnParsingInputValue2() : void"/>
+            <line num="47" count="8" type="stmt"/>
+            <line num="48" count="8" type="stmt"/>
+            <line num="49" count="8" type="stmt"/>
+            <line num="51" count="8" type="stmt"/>
          </file>
          <file name="DisplayTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/DisplayTest.java">
             <metrics classes="1" methods="3" conditionals="0" ncloc="23" coveredstatements="5" coveredmethods="3" complexity="3" coveredconditionals="0" statements="5" loc="33" coveredelements="8" elements="8"/>
             <class name="DisplayTest">
-               <metrics conditionals="0" methods="3" coveredstatements="5" complexity="3" testpasses="9" testruns="9" coveredmethods="3" coveredconditionals="0" statements="5" testfailures="0" coveredelements="8" testduration="0.076" elements="8"/>
+               <metrics conditionals="0" methods="3" coveredstatements="5" complexity="3" testpasses="10" testruns="10" coveredmethods="3" coveredconditionals="0" statements="5" testfailures="0" coveredelements="8" testduration="0.08499999999999999" elements="8"/>
             </class>
-            <line num="16" count="9" visibility="public" complexity="1" type="method" signature="setOutputStream() : void"/>
-            <line num="18" count="9" type="stmt"/>
-            <line num="21" count="9" visibility="public" complexity="1" type="method" signature="cleanOutputStream() : void"/>
-            <line num="23" count="9" type="stmt"/>
-            <line num="26" testsuccess="true" count="9" visibility="public" complexity="1" type="method" testduration="0.009" signature="shouldDisplayAMessage() : void"/>
-            <line num="28" count="9" type="stmt"/>
-            <line num="29" count="9" type="stmt"/>
-            <line num="31" count="9" type="stmt"/>
+            <line num="16" count="10" visibility="public" complexity="1" type="method" signature="setOutputStream() : void"/>
+            <line num="18" count="10" type="stmt"/>
+            <line num="21" count="10" visibility="public" complexity="1" type="method" signature="cleanOutputStream() : void"/>
+            <line num="23" count="10" type="stmt"/>
+            <line num="26" testsuccess="true" count="10" visibility="public" complexity="1" type="method" testduration="0.009" signature="shouldDisplayAMessage() : void"/>
+            <line num="28" count="10" type="stmt"/>
+            <line num="29" count="10" type="stmt"/>
+            <line num="31" count="10" type="stmt"/>
          </file>
          <file name="FactoryTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/FactoryTest.java">
             <metrics classes="1" methods="2" conditionals="0" ncloc="15" coveredstatements="5" coveredmethods="2" complexity="2" coveredconditionals="0" statements="5" loc="23" coveredelements="7" elements="7"/>
             <class name="FactoryTest">
-               <metrics conditionals="0" methods="2" coveredstatements="5" complexity="2" testpasses="16" testruns="16" coveredmethods="2" coveredconditionals="0" statements="5" testfailures="0" coveredelements="7" testduration="0.096" elements="7"/>
+               <metrics conditionals="0" methods="2" coveredstatements="5" complexity="2" testpasses="18" testruns="18" coveredmethods="2" coveredconditionals="0" statements="5" testfailures="0" coveredelements="7" testduration="0.10699999999999998" elements="7"/>
             </class>
-            <line num="9" testsuccess="true" count="7" visibility="public" complexity="1" type="method" testduration="0.001" signature="shouldReturnNewDisplayObjects() : void"/>
-            <line num="11" count="7" type="stmt"/>
-            <line num="12" count="7" type="stmt"/>
-            <line num="14" count="7" type="stmt"/>
-            <line num="17" testsuccess="true" count="7" visibility="public" complexity="1" type="method" testduration="0.009" signature="shouldReturnNewInputViewObjects() : void"/>
-            <line num="19" count="7" type="stmt"/>
-            <line num="21" count="7" type="stmt"/>
+            <line num="9" testsuccess="true" count="8" visibility="public" complexity="1" type="method" testduration="0.001" signature="shouldReturnNewDisplayObjects() : void"/>
+            <line num="11" count="8" type="stmt"/>
+            <line num="12" count="8" type="stmt"/>
+            <line num="14" count="8" type="stmt"/>
+            <line num="17" testsuccess="true" count="8" visibility="public" complexity="1" type="method" testduration="0.009" signature="shouldReturnNewInputViewObjects() : void"/>
+            <line num="19" count="8" type="stmt"/>
+            <line num="21" count="8" type="stmt"/>
          </file>
          <file name="InvalidCommandTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/InvalidCommandTest.java">
             <metrics classes="1" methods="1" conditionals="0" ncloc="9" coveredstatements="2" coveredmethods="1" complexity="1" coveredconditionals="0" statements="2" loc="15" coveredelements="3" elements="3"/>
             <class name="InvalidCommandTest">
-               <metrics conditionals="0" methods="1" coveredstatements="2" complexity="1" testpasses="9" testruns="9" coveredmethods="1" coveredconditionals="0" statements="2" testfailures="0" coveredelements="3" testduration="0.077" elements="3"/>
+               <metrics conditionals="0" methods="1" coveredstatements="2" complexity="1" testpasses="10" testruns="10" coveredmethods="1" coveredconditionals="0" statements="2" testfailures="0" coveredelements="3" testduration="0.088" elements="3"/>
             </class>
-            <line num="9" testsuccess="true" count="9" visibility="public" complexity="1" type="method" testduration="0.009" signature="shouldReturnAMessageWhenTheOperationIsInvoked() : void"/>
-            <line num="11" count="9" type="stmt"/>
-            <line num="13" count="9" type="stmt"/>
+            <line num="9" testsuccess="true" count="10" visibility="public" complexity="1" type="method" testduration="0.009" signature="shouldReturnAMessageWhenTheOperationIsInvoked() : void"/>
+            <line num="11" count="10" type="stmt"/>
+            <line num="13" count="10" type="stmt"/>
          </file>
          <file name="InputViewTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/InputViewTest.java">
             <metrics classes="1" methods="3" conditionals="0" ncloc="21" coveredstatements="4" coveredmethods="3" complexity="3" coveredconditionals="0" statements="4" loc="31" coveredelements="7" elements="7"/>
             <class name="InputViewTest">
-               <metrics conditionals="0" methods="3" coveredstatements="4" complexity="3" testpasses="9" testruns="9" coveredmethods="3" coveredconditionals="0" statements="4" testfailures="0" coveredelements="7" testduration="0.10299999999999998" elements="7"/>
+               <metrics conditionals="0" methods="3" coveredstatements="4" complexity="3" testpasses="10" testruns="10" coveredmethods="3" coveredconditionals="0" statements="4" testfailures="0" coveredelements="7" testduration="0.11599999999999998" elements="7"/>
             </class>
-            <line num="15" count="9" visibility="public" complexity="1" type="method" signature="setInputStream() : void"/>
-            <line num="17" count="9" type="stmt"/>
-            <line num="20" count="9" visibility="public" complexity="1" type="method" signature="clearInoutStream() : void"/>
-            <line num="22" count="9" type="stmt"/>
-            <line num="25" testsuccess="true" count="9" visibility="public" complexity="1" type="method" testduration="0.012" signature="shouldReturnTheInputValue() : void"/>
-            <line num="27" count="9" type="stmt"/>
-            <line num="29" count="9" type="stmt"/>
+            <line num="15" count="10" visibility="public" complexity="1" type="method" signature="setInputStream() : void"/>
+            <line num="17" count="10" type="stmt"/>
+            <line num="20" count="10" visibility="public" complexity="1" type="method" signature="clearInoutStream() : void"/>
+            <line num="22" count="10" type="stmt"/>
+            <line num="25" testsuccess="true" count="10" visibility="public" complexity="1" type="method" testduration="0.012" signature="shouldReturnTheInputValue() : void"/>
+            <line num="27" count="10" type="stmt"/>
+            <line num="29" count="10" type="stmt"/>
          </file>
          <file name="MenuTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/MenuTest.java">
             <metrics classes="1" methods="1" conditionals="0" ncloc="12" coveredstatements="4" coveredmethods="1" complexity="1" coveredconditionals="0" statements="4" loc="19" coveredelements="5" elements="5"/>
             <class name="MenuTest">
-               <metrics conditionals="0" methods="1" coveredstatements="4" complexity="1" testpasses="9" testruns="9" coveredmethods="1" coveredconditionals="0" statements="4" testfailures="0" coveredelements="5" testduration="0.07800000000000001" elements="5"/>
+               <metrics conditionals="0" methods="1" coveredstatements="4" complexity="1" testpasses="10" testruns="10" coveredmethods="1" coveredconditionals="0" statements="4" testfailures="0" coveredelements="5" testduration="0.088" elements="5"/>
             </class>
-            <line num="11" testsuccess="true" count="9" visibility="public" complexity="1" type="method" testduration="0.008" signature="shouldReturnAListOfOptions() : void"/>
-            <line num="13" count="9" type="stmt"/>
-            <line num="14" count="9" type="stmt"/>
-            <line num="15" count="9" type="stmt"/>
-            <line num="17" count="9" type="stmt"/>
+            <line num="11" testsuccess="true" count="10" visibility="public" complexity="1" type="method" testduration="0.008" signature="shouldReturnAListOfOptions() : void"/>
+            <line num="13" count="10" type="stmt"/>
+            <line num="14" count="10" type="stmt"/>
+            <line num="15" count="10" type="stmt"/>
+            <line num="17" count="10" type="stmt"/>
          </file>
          <file name="ControllerTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/ControllerTest.java">
             <metrics classes="1" methods="3" conditionals="0" ncloc="29" coveredstatements="9" coveredmethods="3" complexity="3" coveredconditionals="0" statements="9" loc="40" coveredelements="12" elements="12"/>
             <class name="ControllerTest">
-               <metrics conditionals="0" methods="3" coveredstatements="9" complexity="3" testpasses="13" testruns="13" coveredmethods="3" coveredconditionals="0" statements="9" testfailures="0" coveredelements="12" testduration="0.161" elements="12"/>
+               <metrics conditionals="0" methods="3" coveredstatements="9" complexity="3" testpasses="14" testruns="14" coveredmethods="3" coveredconditionals="0" statements="9" testfailures="0" coveredelements="12" testduration="0.179" elements="12"/>
             </class>
-            <line num="18" count="7" visibility="public" complexity="1" type="method" signature="setStreams() : void"/>
-            <line num="20" count="7" type="stmt"/>
-            <line num="21" count="7" type="stmt"/>
-            <line num="24" count="7" visibility="public" complexity="1" type="method" signature="clearStreams() : void"/>
-            <line num="26" count="7" type="stmt"/>
-            <line num="27" count="7" type="stmt"/>
-            <line num="30" testsuccess="true" count="7" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldDelegateDisplayingMessageToDisplayClass() : void"/>
-            <line num="32" count="7" type="stmt"/>
-            <line num="33" count="7" type="stmt"/>
-            <line num="34" count="7" type="stmt"/>
-            <line num="35" count="7" type="stmt"/>
-            <line num="37" count="7" type="stmt"/>
+            <line num="18" count="8" visibility="public" complexity="1" type="method" signature="setStreams() : void"/>
+            <line num="20" count="8" type="stmt"/>
+            <line num="21" count="8" type="stmt"/>
+            <line num="24" count="8" visibility="public" complexity="1" type="method" signature="clearStreams() : void"/>
+            <line num="26" count="8" type="stmt"/>
+            <line num="27" count="8" type="stmt"/>
+            <line num="30" testsuccess="true" count="8" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldDelegateDisplayingMessageToDisplayClass() : void"/>
+            <line num="32" count="8" type="stmt"/>
+            <line num="33" count="8" type="stmt"/>
+            <line num="34" count="8" type="stmt"/>
+            <line num="35" count="8" type="stmt"/>
+            <line num="37" count="8" type="stmt"/>
          </file>
          <file name="CheckOutTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/CheckOutTest.java">
             <metrics classes="1" methods="1" conditionals="0" ncloc="9" coveredstatements="2" coveredmethods="1" complexity="1" coveredconditionals="0" statements="2" loc="15" coveredelements="3" elements="3"/>
             <class name="CheckOutTest">
-               <metrics conditionals="0" methods="1" coveredstatements="2" complexity="1" testpasses="7" testruns="7" coveredmethods="1" coveredconditionals="0" statements="2" testfailures="0" coveredelements="3" testduration="0.063" elements="3"/>
+               <metrics conditionals="0" methods="1" coveredstatements="2" complexity="1" testpasses="8" testruns="8" coveredmethods="1" coveredconditionals="0" statements="2" testfailures="0" coveredelements="3" testduration="0.073" elements="3"/>
             </class>
-            <line num="9" testsuccess="true" count="7" visibility="public" complexity="1" type="method" testduration="0.008" signature="shouldReturnAMessageOnCheckingOutABook() : void"/>
-            <line num="11" count="7" type="stmt"/>
-            <line num="13" count="7" type="stmt"/>
+            <line num="9" testsuccess="true" count="8" visibility="public" complexity="1" type="method" testduration="0.008" signature="shouldReturnAMessageOnCheckingOutABook() : void"/>
+            <line num="11" count="8" type="stmt"/>
+            <line num="13" count="8" type="stmt"/>
          </file>
          <file name="ListBooksTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/ListBooksTest.java">
             <metrics classes="1" methods="3" conditionals="0" ncloc="22" coveredstatements="9" coveredmethods="3" complexity="3" coveredconditionals="0" statements="9" loc="32" coveredelements="12" elements="12"/>
             <class name="ListBooksTest">
-               <metrics conditionals="0" methods="3" coveredstatements="9" complexity="3" testpasses="21" testruns="21" coveredmethods="3" coveredconditionals="0" statements="9" testfailures="0" coveredelements="12" testduration="0.08" elements="12"/>
+               <metrics conditionals="0" methods="3" coveredstatements="9" complexity="3" testpasses="24" testruns="24" coveredmethods="3" coveredconditionals="0" statements="9" testfailures="0" coveredelements="12" testduration="0.09299999999999999" elements="12"/>
             </class>
-            <line num="9" testsuccess="true" count="7" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldReturnAPreExistingSetOfBooks() : void"/>
-            <line num="11" count="7" type="stmt"/>
-            <line num="12" count="7" type="stmt"/>
-            <line num="14" count="7" type="stmt"/>
-            <line num="17" testsuccess="true" count="7" visibility="public" complexity="1" type="method" testduration="0.01" signature="shouldReturnBookDetailsWithColumnHeaders() : void"/>
-            <line num="19" count="7" type="stmt"/>
-            <line num="20" count="7" type="stmt"/>
-            <line num="22" count="7" type="stmt"/>
-            <line num="25" testsuccess="true" count="7" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldReturnAllBookDetailsUponCallingExecuteMethod() : void"/>
-            <line num="27" count="7" type="stmt"/>
-            <line num="28" count="7" type="stmt"/>
-            <line num="30" count="7" type="stmt"/>
+            <line num="9" testsuccess="true" count="8" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldReturnAPreExistingSetOfBooks() : void"/>
+            <line num="11" count="8" type="stmt"/>
+            <line num="12" count="8" type="stmt"/>
+            <line num="14" count="8" type="stmt"/>
+            <line num="17" testsuccess="true" count="8" visibility="public" complexity="1" type="method" testduration="0.01" signature="shouldReturnBookDetailsWithColumnHeaders() : void"/>
+            <line num="19" count="8" type="stmt"/>
+            <line num="20" count="8" type="stmt"/>
+            <line num="22" count="8" type="stmt"/>
+            <line num="25" testsuccess="true" count="8" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldReturnAllBookDetailsUponCallingExecuteMethod() : void"/>
+            <line num="27" count="8" type="stmt"/>
+            <line num="28" count="8" type="stmt"/>
+            <line num="30" count="8" type="stmt"/>
          </file>
          <file name="LibraryTest.java" path="/Users/varshavs/IdeaProjects/Biblioteca/test/com/tw/libsystem/LibraryTest.java">
             <metrics classes="1" methods="4" conditionals="0" ncloc="27" coveredstatements="10" coveredmethods="4" complexity="4" coveredconditionals="0" statements="10" loc="39" coveredelements="14" elements="14"/>
             <class name="LibraryTest">
-               <metrics conditionals="0" methods="4" coveredstatements="10" complexity="4" testpasses="21" testruns="21" coveredmethods="4" coveredconditionals="0" statements="10" testfailures="0" coveredelements="14" testduration="0.508" elements="14"/>
+               <metrics conditionals="0" methods="4" coveredstatements="10" complexity="4" testpasses="25" testruns="25" coveredmethods="4" coveredconditionals="0" statements="10" testfailures="0" coveredelements="14" testduration="0.686" elements="14"/>
             </class>
-            <line num="10" testsuccess="true" count="3" visibility="public" complexity="1" type="method" testduration="0.009" signature="shouldReturnTheContentsOfLibrary() : void"/>
-            <line num="12" count="3" type="stmt"/>
-            <line num="14" count="3" type="stmt"/>
-            <line num="17" testsuccess="true" count="3" visibility="public" complexity="1" type="method" testduration="0.001" signature="shouldReturnTrueIfBookIsRemoved() : void"/>
-            <line num="19" count="3" type="stmt"/>
-            <line num="21" count="3" type="stmt"/>
-            <line num="24" testsuccess="true" count="3" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldReturnTrueIfLibraryHasABook() : void"/>
-            <line num="26" count="3" type="stmt"/>
-            <line num="27" count="3" type="stmt"/>
-            <line num="29" count="3" type="stmt"/>
-            <line num="32" testsuccess="true" count="3" visibility="public" complexity="1" type="method" testduration="0.152" signature="shouldReturnTrueIfLibraryHasABookEqualToBookBeingSpecified() : void"/>
-            <line num="34" count="3" type="stmt"/>
-            <line num="35" count="3" type="stmt"/>
-            <line num="37" count="3" type="stmt"/>
+            <line num="10" testsuccess="true" count="4" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldReturnTheContentsOfLibrary() : void"/>
+            <line num="12" count="4" type="stmt"/>
+            <line num="14" count="4" type="stmt"/>
+            <line num="17" testsuccess="true" count="4" visibility="public" complexity="1" type="method" testduration="0.001" signature="shouldReturnTrueIfBookIsRemoved() : void"/>
+            <line num="19" count="4" type="stmt"/>
+            <line num="21" count="4" type="stmt"/>
+            <line num="24" testsuccess="true" count="4" visibility="public" complexity="1" type="method" testduration="0.0" signature="shouldReturnTrueIfLibraryHasABook() : void"/>
+            <line num="26" count="4" type="stmt"/>
+            <line num="27" count="4" type="stmt"/>
+            <line num="29" count="4" type="stmt"/>
+            <line num="32" testsuccess="true" count="4" visibility="public" complexity="1" type="method" testduration="0.178" signature="shouldReturnTrueIfLibraryHasABookEqualToBookBeingSpecified() : void"/>
+            <line num="34" count="4" type="stmt"/>
+            <line num="35" count="4" type="stmt"/>
+            <line num="37" count="4" type="stmt"/>
          </file>
       </package>
    </testproject>
