@@ -43,4 +43,11 @@ public class BookTest {
 
         assertEquals(book1, book2);
     }
+
+    @Test
+    public void shouldHaveSameHashCodeForSameObject() {
+        Book book = new Book("Emma", "Jane Austen", 1832);
+        
+        assertEquals(book.hashCode(), book.hashCode());
+    }
 }
