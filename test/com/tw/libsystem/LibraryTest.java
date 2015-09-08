@@ -3,6 +3,7 @@ package com.tw.libsystem;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
 
 public class LibraryTest {
 
@@ -20,4 +21,11 @@ public class LibraryTest {
         assertEquals(true, library.removeBook());
     }
 
+    @Test
+    public void shouldReturnTrueIfObjectExists() {
+        Library library = new Library();
+        Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+
+        assertEquals(true, library.has(book));
+    }
 }

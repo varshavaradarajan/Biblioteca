@@ -25,4 +25,8 @@ public class Library {
     public boolean removeBook() {
         return true;
     }
+
+    public boolean has(Book book) {
+        return true;
+    }
 }
