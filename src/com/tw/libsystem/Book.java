@@ -20,7 +20,7 @@ public class Book {
 
     @Override
     public boolean equals(Object otherObject) {
-        if(otherObject != null)
+        if(otherObject != null && otherObject.getClass() == this.getClass())
             return true;
         return false;
     }
