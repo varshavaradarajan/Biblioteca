@@ -22,7 +22,7 @@ public class LibraryTest {
     }
 
     @Test
-    public void shouldReturnTrueIfObjectExists() {
+    public void shouldReturnTrueIfLibraryHasABook() {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
 
