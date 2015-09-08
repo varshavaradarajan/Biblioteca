@@ -21,11 +21,19 @@ public class Book {
     @Override
     public boolean equals(Object otherObject) {
         if(otherObject != null && otherObject.getClass() == this.getClass()) {
-            if (this == otherObject) {
+            Book otherBook = (Book)otherObject;
+            if (this == otherBook) {
                 return true;
             }
-            return true;
+            else if(this.bookName == otherBook.bookName) {
+                return true;
+            }
+            else {
+                return false;
+            }
         }
-        return false;
+        else {
+            return false;
+        }
     }
 }

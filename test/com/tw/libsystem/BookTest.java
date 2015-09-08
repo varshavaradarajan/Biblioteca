@@ -15,15 +15,15 @@ public class BookTest {
 
     @Test
     public void shouldReturnTrueIfBookExists() {
-        Book book1 = new Book("Inferno", "Dan Brown", 2012);
+        Book book1 = new Book("Angels And Demons", "Dan Brown", 2012);
         Book book2 = new Book("Angels And Demons", "Dan Brown", 2007);
 
         assertEquals(book1, book2);
     }
 
     @Test
-    public void shouldReturnTrueIfObjectIsOfTheTypeBook() {
-        Book book1 = new Book("Inferno", "Dan Brown", 2012);
+    public void shouldbeEqualToAnotherBookObjectIsOfTheTypeBook() {
+        Book book1 = new Book("Angels And Demons", "Dan Brown", 2012);
         Book book2 = new Book("Angels And Demons", "Dan Brown", 2007);
 
         assertEquals(book1, book2);
@@ -34,5 +34,13 @@ public class BookTest {
         Book book1 = new Book("Inferno", "Dan Brown", 2012);
 
         assertEquals(book1, book1);
+    }
+
+    @Test
+    public void shouldBeEqualToAnotherBookIfBookNamesAreEqual() {
+        Book book1 = new Book("Inferno", "Dan Brown", 2012);
+        Book book2 = new Book("Inferno", "Dan Brown", 2007);
+
+        assertEquals(book1, book2);
     }
 }
