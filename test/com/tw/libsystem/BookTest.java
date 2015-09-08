@@ -50,4 +50,12 @@ public class BookTest {
         
         assertEquals(book.hashCode(), book.hashCode());
     }
+
+    @Test
+    public void shouldHaveDifferentHashCodeForDifferentObjects() {
+        Book book1 = new Book("Inferno", "Dan Brown", 2012);
+        Book book2 = new Book("Emma", "Jane Austen", 1832);
+
+        assertNotEquals(book1.hashCode(), book2.hashCode());
+    }
 }
