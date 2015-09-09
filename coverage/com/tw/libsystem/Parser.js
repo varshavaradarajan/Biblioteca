@@ -1,0 +1,10 @@
+var clover = new Object();
+
+// JSON: {classes : [{name, id, sl, el,  methods : [{sl, el}, ...]}, ...]}
+clover.pageData = {"classes":[{"el":40,"id":915,"methods":[{"el":12,"sc":5,"sl":9},{"el":39,"sc":5,"sl":14}],"name":"Parser","sl":4}]}
+
+// JSON: {test_ID : {"methods": [ID1, ID2, ID3...], "name" : "testXXX() void"}, ...};
+clover.testTargets = {"test_24":{"methods":[{"sl":9},{"sl":14}],"name":"shouldReturnExitApplicationAsOperationOnParsingInputValue3","pass":true,"statements":[{"sl":10},{"sl":11},{"sl":15},{"sl":16},{"sl":21},{"sl":26},{"sl":27},{"sl":28}]},"test_306":{"methods":[{"sl":9}],"name":"shouldReturnNewParserObject","pass":true,"statements":[{"sl":10},{"sl":11}]},"test_356":{"methods":[{"sl":9},{"sl":14}],"name":"shouldReturnAnOperationOnParsingTheInput","pass":true,"statements":[{"sl":10},{"sl":11},{"sl":15},{"sl":16},{"sl":17},{"sl":18}]},"test_411":{"methods":[{"sl":9},{"sl":14}],"name":"shouldReturnInvalidIfInputLengthIsMoreThanOne","pass":true,"statements":[{"sl":10},{"sl":11},{"sl":15},{"sl":37}]},"test_429":{"methods":[{"sl":9},{"sl":14}],"name":"shouldReturnInvalidCommandAsOperationForInvalidInput","pass":true,"statements":[{"sl":10},{"sl":11},{"sl":15},{"sl":16},{"sl":21},{"sl":26},{"sl":32}]},"test_451":{"methods":[{"sl":9},{"sl":14}],"name":"shouldReturnInvalidCommandIfInputIsEmpty","pass":true,"statements":[{"sl":10},{"sl":11},{"sl":15},{"sl":37}]},"test_453":{"methods":[{"sl":9},{"sl":14}],"name":"shouldReturnCheckOutAsOperationOnParsingInputValue2","pass":true,"statements":[{"sl":10},{"sl":11},{"sl":15},{"sl":16},{"sl":21},{"sl":22},{"sl":23}]}}
+
+// JSON: { lines : [{tests : [testid1, testid2, testid3, ...]}, ...]};
+clover.srcFileLines = [[], [], [], [], [], [], [], [], [], [24, 306, 453, 451, 356, 411, 429], [24, 306, 453, 451, 356, 411, 429], [24, 306, 453, 451, 356, 411, 429], [], [], [24, 453, 451, 356, 411, 429], [24, 453, 451, 356, 411, 429], [24, 453, 356, 429], [356], [356], [], [], [24, 453, 429], [453], [453], [], [], [24, 429], [24], [24], [], [], [], [429], [], [], [], [], [451, 411], [], [], []]

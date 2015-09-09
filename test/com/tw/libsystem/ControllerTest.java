@@ -21,12 +21,6 @@ public class ControllerTest {
         System.setIn(inputStream);
     }
 
-    @After
-    public void clearStreams() {
-        System.setOut(System.out);
-        System.setIn(System.in);
-    }
-
     @Test
     public void shouldDelegateDisplayingMessageToDisplayClass() {
         Factory factory = new Factory();
@@ -38,7 +32,7 @@ public class ControllerTest {
     }
 
     @Test
-    public void shouldDisplayAMessageAfterAnOperationIsExecute() {
+    public void shouldDisplayAMessageAfterAnOperationIsExecuted() {
         Factory factory = new Factory();
         Library library = new Library();
         Controller controller = new Controller(factory, library);
@@ -51,6 +45,22 @@ public class ControllerTest {
     }
 
     @Test
+    public void shouldDisplayAMessageAfterListBookOperationIsExecuted() {
+        Factory factory = new Factory();
+        Library library = new Library();
+        Controller controller = new Controller(factory, library);
+        ListBooks listBooks = new ListBooks(library);
+        String output = listBooks.execute();
+        controller.delegateDisplayingOfOutputMessages();
+
+
+        assertEquals("Book Name\t\t\t\tAuthor Name\t\t\t\tYear\t\t\t\t\n" +
+                "Crime And Punishment\tFyodor Dostoevsky\t1866\t\n" +
+                "Wuthering Heights\tEmily Bronte\t1847\t\n" +
+                "Pragmatic Programmer\tDave Thomas\t1999\t\n", output);
+    }
+
+    @Test
     public void shouldDelegateDisplayingOfMenuToDisplayClass() {
         Factory factory = new Factory();
         Library library = new Library();
@@ -58,6 +68,12 @@ public class ControllerTest {
         controller.delegateMenuToBeDisplayed();
 
         assertEquals("1. List Books\n2. Checkout\n3. Exit\n", outputStream.toString());
+    }
+
+    @After
+    public void clearStreams() {
+        System.setOut(System.out);
+        System.setIn(System.in);
     }
 
 }
