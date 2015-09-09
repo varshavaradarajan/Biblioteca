@@ -73,14 +73,6 @@ public class ControllerTest {
         assertEquals("1. List Books\n2. Checkout\n3. Exit\n", outputStream.toString());
     }
 
-    @Test
-    public void shouldDelegateBuildingParserToFactory() {
-        Library library = new Library();
-        Factory factory = mock(Factory.class);
-        Parser parser = mock(Parser.class);
-        when(factory.buildParser("1", library)).thenReturn(parser);
-    }
-
     @After
     public void clearStreams() {
         System.setOut(System.out);
