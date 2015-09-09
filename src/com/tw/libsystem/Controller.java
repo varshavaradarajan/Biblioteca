@@ -45,7 +45,7 @@ public class Controller {
         userInput = inputView.input();
     }
 
-    private void delegateMenuToBeDisplayed() {
+    public void delegateMenuToBeDisplayed() {
         ArrayList<String> menuOptions = new ArrayList<>();
         menuOptions.add("1. List Books");
         menuOptions.add("2. Checkout");

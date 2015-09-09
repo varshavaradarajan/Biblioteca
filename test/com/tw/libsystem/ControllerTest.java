@@ -50,4 +50,14 @@ public class ControllerTest {
         assertEquals("That book is not available.", output);
     }
 
+    @Test
+    public void shouldDelegateDisplayingOfMenuToDisplayClass() {
+        Factory factory = new Factory();
+        Library library = new Library();
+        Controller controller = new Controller(factory, library);
+        controller.delegateMenuToBeDisplayed();
+
+        assertEquals("1. List Books\n2. Checkout\n3. Exit\n", outputStream.toString());
+    }
+
 }
