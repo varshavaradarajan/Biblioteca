@@ -26,13 +26,17 @@ public class Controller {
             takeInput();
             delegateParsingInputToParser();
             output = operations.execute();
-            display = factory.buildDisplay(output);
-            display.displayMessage();
+            delegateDisplayingOfOutputMessages();
         }
     }
 
+    public void delegateDisplayingOfOutputMessages() {
+        display = factory.buildDisplay(output);
+        display.displayMessage();
+    }
+
     private void delegateParsingInputToParser() {
-        parser = new Parser(userInput, library);
+        parser = factory.buildParser(userInput, library);
         operations = parser.parse();
     }
 

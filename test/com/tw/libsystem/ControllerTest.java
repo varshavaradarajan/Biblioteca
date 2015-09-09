@@ -37,4 +37,17 @@ public class ControllerTest {
         assertEquals("Welcome to Biblioteca\n", outputStream.toString());
     }
 
+    @Test
+    public void shouldDisplayAMessageAfterAnOperationIsExecute() {
+        Factory factory = new Factory();
+        Library library = new Library();
+        Controller controller = new Controller(factory, library);
+        CheckOut checkOut = new CheckOut(library);
+        String output = checkOut.execute();
+        controller.delegateDisplayingOfOutputMessages();
+
+
+        assertEquals("That book is not available.", output);
+    }
+
 }
