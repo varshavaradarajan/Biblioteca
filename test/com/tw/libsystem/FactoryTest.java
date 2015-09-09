@@ -20,4 +20,13 @@ public class FactoryTest {
 
         assertEquals(InputView.class, factory.buildInputView().getClass());
     }
+
+    @Test
+    public void shouldReturnNewParserObject() {
+        Factory factory = new Factory();
+        Library library = new Library();
+        String inputMessage = "1";
+
+        assertEquals(Parser.class, factory.buildParser(inputMessage, library).getClass());
+    }
 }
