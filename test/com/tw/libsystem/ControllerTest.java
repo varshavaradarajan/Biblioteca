@@ -32,9 +32,9 @@ public class ControllerTest {
         Factory factory = new Factory();
         Library library = new Library();
         Controller controller = new Controller(factory, library);
-        controller.run();
+        controller.delegateWelcomeMessageToBeDisplayed();
 
-        assertEquals("Welcome to Biblioteca\n1. List Books\n", outputStream.toString());
+        assertEquals("Welcome to Biblioteca\n", outputStream.toString());
     }
 
 }

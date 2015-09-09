@@ -35,7 +35,7 @@ public class LibraryTest {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Bar", 2015);
 
-        assertEquals("Removed Book Successfully", library.removeBook(book));
+        assertEquals("Thank You!Enjoy the book.", library.removeBook(book));
     }
 
     @Test
@@ -52,7 +52,7 @@ public class LibraryTest {
         Library library = new Library();
         Book book = new Book("Foo", "Bar", 2015);
 
-        assertEquals("Did Not Remove Book", library.removeBook(book));
+        assertEquals("That book is not available.", library.removeBook(book));
     }
 
 }

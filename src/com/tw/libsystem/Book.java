@@ -25,7 +25,7 @@ public class Book {
             if (this == otherBook) {
                 return true;
             }
-            else if(this.bookName == otherBook.bookName) {
+            else if(this.bookName.equals(otherBook.bookName)) {
                 return true;
             }
             else {

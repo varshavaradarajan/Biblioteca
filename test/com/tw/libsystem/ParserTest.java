@@ -43,12 +43,21 @@ public class ParserTest {
     }
 
     @Test
-    public void shouldReturnExitApplicationAsOperationOnParsingInputValue2() {
+    public void shouldReturnExitApplicationAsOperationOnParsingInputValue3() {
         Library library = new Library();
-        Parser parser = new Parser("2", library);
+        Parser parser = new Parser("3", library);
         ExitApplication exitApplication = new ExitApplication();
 
         assertEquals(exitApplication.getClass(), parser.parse().getClass());
+    }
+
+    @Test
+    public void shouldReturnCheckOutAsOperationOnParsingInputValue2() {
+        Library library = new Library();
+        Parser parser = new Parser("2", library);
+        CheckOut checkOut = new CheckOut(library);
+
+        assertEquals(checkOut.getClass(), parser.parse().getClass());
     }
 
 }

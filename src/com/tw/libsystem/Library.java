@@ -25,9 +25,9 @@ public class Library {
     public String removeBook(Book book) {
         if(has(book)) {
             bookList.remove(book);
-            return "Removed Book Successfully";
+            return "Thank You!Enjoy the book.";
         }
-        return "Did Not Remove Book";
+        return "That book is not available.";
     }
 
     public boolean has(Book otherBook) {

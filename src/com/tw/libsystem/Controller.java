@@ -9,8 +9,10 @@ public class Controller {
     private Display display;
     private Menu menu;
     private InputView inputView;
-    private String userInput;
+    private String userInput, output;
     private Library library;
+    private Parser parser;
+    private Operations operations;
 
     public Controller(Factory factory, Library library) {
         this.factory = factory;
@@ -19,8 +21,19 @@ public class Controller {
 
     public void run() {
         delegateWelcomeMessageToBeDisplayed();
-        delegateMenuToBeDisplayed();
-        takeInput();
+        while (true) {
+            delegateMenuToBeDisplayed();
+            takeInput();
+            delegateParsingInputToParser();
+            output = operations.execute();
+            display = factory.buildDisplay(output);
+            display.displayMessage();
+        }
+    }
+
+    private void delegateParsingInputToParser() {
+        parser = new Parser(userInput, library);
+        operations = parser.parse();
     }
 
     private void takeInput() {
@@ -31,12 +44,14 @@ public class Controller {
     private void delegateMenuToBeDisplayed() {
         ArrayList<String> menuOptions = new ArrayList<>();
         menuOptions.add("1. List Books");
+        menuOptions.add("2. Checkout");
+        menuOptions.add("3. Exit");
         menu = new Menu(menuOptions);
         display = factory.buildDisplay(menu.toString());
         display.displayMessage();
     }
 
-     void delegateWelcomeMessageToBeDisplayed() {
+     public void delegateWelcomeMessageToBeDisplayed() {
         display = factory.buildDisplay("Welcome to Biblioteca\n");
         display.displayMessage();
     }
