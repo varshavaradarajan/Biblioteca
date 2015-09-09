@@ -35,7 +35,7 @@ public class Controller {
         display.displayMessage();
     }
 
-    private void delegateParsingInputToParser() {
+    public void delegateParsingInputToParser() {
         parser = factory.buildParser(userInput, library);
         operations = parser.parse();
     }

@@ -9,6 +9,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class ControllerTest {
 
@@ -68,6 +71,14 @@ public class ControllerTest {
         controller.delegateMenuToBeDisplayed();
 
         assertEquals("1. List Books\n2. Checkout\n3. Exit\n", outputStream.toString());
+    }
+
+    @Test
+    public void shouldDelegateBuildingParserToFactory() {
+        Library library = new Library();
+        Factory factory = mock(Factory.class);
+        Parser parser = mock(Parser.class);
+        when(factory.buildParser("1", library)).thenReturn(parser);
     }
 
     @After
