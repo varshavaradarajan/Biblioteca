@@ -53,4 +53,17 @@ public class ControllerTest {
 
         verify(display, times(1)).displayMessage();
     }
+
+    @Test
+    public void shouldDelegateTakingInputToInputClass() {
+        Library library = mock(Library.class);
+        Factory factory = mock(Factory.class);
+        InputView inputView = mock(InputView.class);
+        Controller controller = new Controller(factory, library);
+        when(factory.buildInputView()).thenReturn(inputView);
+
+        controller.takeInput();
+
+        verify(inputView, times(1)).input();
+    }
 }
