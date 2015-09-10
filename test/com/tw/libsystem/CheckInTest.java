@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 public class CheckInTest {
 
-    private final ByteArrayInputStream inputStream = new ByteArrayInputStream("Wuthering Heights".getBytes());
+    private final ByteArrayInputStream inputStream = new ByteArrayInputStream("Foo".getBytes());
 
     @Before
     public void setUpStream() {
@@ -38,4 +38,5 @@ public class CheckInTest {
 
         assertEquals("Successfully Returned", checkIn.execute());
     }
+
 }

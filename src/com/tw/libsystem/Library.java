@@ -37,4 +37,8 @@ public class Library {
         }
         return false;
     }
+
+    public String returnBook(Book book) {
+        return "Successfully Returned";
+    }
 }

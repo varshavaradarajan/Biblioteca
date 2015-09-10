@@ -14,7 +14,8 @@ public class CheckIn implements Operations {
 
     @Override
     public String execute() {
-        checkInMessage = "Successfully Returned";
+        String bookName = inputView.input();
+        checkInMessage = library.returnBook(new Book(bookName, "bar", 0));
         return checkInMessage;
     }
 }
