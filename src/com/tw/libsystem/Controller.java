@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class Controller {
 
+    public static final String WELCOME_MESSAGE = "Welcome to Biblioteca\n";
     private Factory factory;
     private Display display;
     private Menu menu;
@@ -56,7 +57,7 @@ public class Controller {
     }
 
     void delegateWelcomeMessageToBeDisplayed() {
-        display = factory.buildDisplay("Welcome to Biblioteca\n");
+        display = factory.buildDisplay(WELCOME_MESSAGE);
         display.displayMessage();
     }
 }

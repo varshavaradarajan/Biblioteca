@@ -1,6 +1,5 @@
 package com.tw.libsystem;
 
-import com.sun.corba.se.spi.orb.Operation;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,14 +22,25 @@ public class ControllerTest {
         System.setIn(inputStream);
     }
 
+    @After
+    public void clearStreams() {
+        System.setOut(System.out);
+        System.setIn(System.in);
+    }
+
     @Test
     public void shouldDelegateDisplayingOfWelcomeMessage() {
         Library library = new Library();
-        Factory factory = new Factory();
-        Controller controller = new Controller(factory,library);
+        Factory factory = mock(Factory.class);
+        Display display = mock(Display.class);
+        Controller controller = new Controller(factory, library);
+        when(factory.buildDisplay("Welcome to Biblioteca\n")).thenReturn(display);
+
         controller.delegateWelcomeMessageToBeDisplayed();
 
-        assertEquals("Welcome to Biblioteca\n", outputStream.toString());
-
+        verify(display, times(1)).displayMessage();
     }
+
+    @Test
+    public void shouldDelegateDisplayingOfMenuToDisplay
 }
