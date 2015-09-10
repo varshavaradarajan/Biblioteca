@@ -40,7 +40,7 @@ public class Controller {
         operations = parser.parse();
     }
 
-    private void takeInput() {
+    public void takeInput() {
         inputView = factory.buildInputView();
         userInput = inputView.input();
     }
