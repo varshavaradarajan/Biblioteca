@@ -30,7 +30,7 @@ public class ControllerTest {
 
     @Test
     public void shouldDelegateDisplayingOfWelcomeMessage() {
-        Library library = new Library();
+        Library library = mock(Library.class);
         Factory factory = mock(Factory.class);
         Display display = mock(Display.class);
         Controller controller = new Controller(factory, library);
@@ -42,5 +42,15 @@ public class ControllerTest {
     }
 
     @Test
-    public void shouldDelegateDisplayingOfMenuToDisplay
+    public void shouldDelegateDisplayingOfMenuToDisplay() {
+        Library library = mock(Library.class);
+        Factory factory = mock(Factory.class);
+        Display display = mock(Display.class);
+        Controller controller = new Controller(factory, library);
+        when(factory.buildDisplay("1. List Books\n2. Checkout\n3. Exit\n")).thenReturn(display);
+
+        controller.delegateMenuToBeDisplayed();
+
+        verify(display, times(1)).displayMessage();
+    }
 }
