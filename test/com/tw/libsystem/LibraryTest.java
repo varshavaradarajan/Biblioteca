@@ -55,4 +55,12 @@ public class LibraryTest {
         assertEquals("That book is not available.", library.removeBook(book));
     }
 
+    @Test
+    public void shouldReturnAMessageIfBookIsAdded() {
+        Library library = new Library();
+        Book book = new Book("Foo", "Bar", 2010);
+
+        assertEquals("Successfully Returned", library.returnBook(book));
+    }
+
 }

@@ -30,22 +30,22 @@ public class Controller {
         }
     }
 
-    public void delegateDisplayingOfOutputMessages() {
+    void delegateDisplayingOfOutputMessages() {
         display = factory.buildDisplay(output);
         display.displayMessage();
     }
 
-    public void delegateParsingInputToParser() {
+    void delegateParsingInputToParser() {
         parser = factory.buildParser(userInput, library);
         operations = parser.parse();
     }
 
-    public void takeInput() {
+    void takeInput() {
         inputView = factory.buildInputView();
         userInput = inputView.input();
     }
 
-    public void delegateMenuToBeDisplayed() {
+    void delegateMenuToBeDisplayed() {
         ArrayList<String> menuOptions = new ArrayList<>();
         menuOptions.add("1. List Books");
         menuOptions.add("2. Checkout");
@@ -55,7 +55,7 @@ public class Controller {
         display.displayMessage();
     }
 
-     public void delegateWelcomeMessageToBeDisplayed() {
+    void delegateWelcomeMessageToBeDisplayed() {
         display = factory.buildDisplay("Welcome to Biblioteca\n");
         display.displayMessage();
     }
