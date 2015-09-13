@@ -39,6 +39,9 @@ public class Library {
     }
 
     public String returnBook(Book book) {
+        if(has(book)) {
+            return "Not a valid book to return.";
+        }
         return "Successfully Returned";
     }
 }

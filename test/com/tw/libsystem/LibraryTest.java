@@ -71,4 +71,12 @@ public class LibraryTest {
         assertEquals(false, library.has(book));
     }
 
+    @Test
+    public void shouldReturnAnotherMessageIfBookIsNotAdded() {
+        Library library = new Library();
+        Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+
+        assertEquals("Not a valid book to return.", library.returnBook(book));
+    }
+
 }
