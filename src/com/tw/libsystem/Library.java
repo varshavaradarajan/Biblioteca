@@ -26,8 +26,9 @@ public class Library {
 
     public String removeBook(Book book) {
         if(has(book, bookList)) {
+            Book tempBook = bookList.get(bookList.indexOf(book));
             bookList.remove(book);
-            checkedOutBooks.add(book);
+            checkedOutBooks.add(tempBook);
             return "Thank You!Enjoy the book.\n";
         }
         return "That book is not available.\n";
@@ -45,6 +46,9 @@ public class Library {
         if(has(book, bookList) || !has(book, checkedOutBooks)) {
             return "Not a valid book to return.\n";
         }
+        Book tempBook = checkedOutBooks.get(checkedOutBooks.indexOf(book));
+        checkedOutBooks.remove(book);
+        bookList.add(tempBook);
         return "Successfully Returned\n";
     }
 }
