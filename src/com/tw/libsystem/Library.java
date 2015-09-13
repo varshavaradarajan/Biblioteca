@@ -28,9 +28,9 @@ public class Library {
         if(has(book, bookList)) {
             bookList.remove(book);
             checkedOutBooks.add(book);
-            return "Thank You!Enjoy the book.";
+            return "Thank You!Enjoy the book.\n";
         }
-        return "That book is not available.";
+        return "That book is not available.\n";
     }
 
     public boolean has(Book otherBook, ArrayList<Book> listOfBooks) {
@@ -43,8 +43,8 @@ public class Library {
 
     public String returnBook(Book book) {
         if(has(book, bookList) || !has(book, checkedOutBooks)) {
-            return "Not a valid book to return.";
+            return "Not a valid book to return.\n";
         }
-        return "Successfully Returned";
+        return "Successfully Returned\n";
     }
 }

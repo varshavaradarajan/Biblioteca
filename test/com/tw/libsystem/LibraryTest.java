@@ -47,7 +47,7 @@ public class LibraryTest {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Bar", 2015);
 
-        assertEquals("Thank You!Enjoy the book.", library.removeBook(book));
+        assertEquals("Thank You!Enjoy the book.\n", library.removeBook(book));
     }
 
     @Test
@@ -67,7 +67,7 @@ public class LibraryTest {
         Library library = new Library();
         Book book = new Book("Foo", "Bar", 2015);
 
-        assertEquals("That book is not available.", library.removeBook(book));
+        assertEquals("That book is not available.\n", library.removeBook(book));
     }
 
     @Test
@@ -75,7 +75,7 @@ public class LibraryTest {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
 
-        assertEquals("Thank You!Enjoy the book.", library.removeBook(book));
+        assertEquals("Thank You!Enjoy the book.\n", library.removeBook(book));
     }
 
     @Test
@@ -83,7 +83,7 @@ public class LibraryTest {
         Library library = new Library();
         Book book = new Book("Foo", "Bar", 2010);
 
-        assertEquals("Not a valid book to return.", library.returnBook(book));
+        assertEquals("Not a valid book to return.\n", library.returnBook(book));
     }
 
     @Test
@@ -103,7 +103,7 @@ public class LibraryTest {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
 
-        assertEquals("Not a valid book to return.", library.returnBook(book));
+        assertEquals("Not a valid book to return.\n", library.returnBook(book));
     }
 
     @Test
@@ -111,7 +111,7 @@ public class LibraryTest {
         Library library = new Library();
         Book book = new Book("Fire", "Emily Bronte", 1847);
 
-        assertEquals("Not a valid book to return.", library.returnBook(book));
+        assertEquals("Not a valid book to return.\n", library.returnBook(book));
     }
 
 }

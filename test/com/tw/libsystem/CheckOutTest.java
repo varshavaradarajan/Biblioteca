@@ -27,7 +27,7 @@ public class CheckOutTest {
         Library library = new Library();
         CheckOut checkOut = new CheckOut(library);
 
-        assertEquals("Thank You!Enjoy the book.", checkOut.execute());
+        assertEquals("Thank You!Enjoy the book.\n", checkOut.execute());
     }
 
     @Test
@@ -35,6 +35,6 @@ public class CheckOutTest {
         Library library = new Library();
         CheckOut checkOut = new CheckOut(library);
 
-        assertEquals("Thank You!Enjoy the book.", checkOut.execute());
+        assertEquals("Thank You!Enjoy the book.\n", checkOut.execute());
     }
 }
