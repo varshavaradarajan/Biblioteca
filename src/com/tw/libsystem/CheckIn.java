@@ -7,9 +7,9 @@ public class CheckIn implements Operations {
     private String checkInMessage;
     private InputView inputView;
 
-    public CheckIn(Library library) {
+    public CheckIn(Library library, InputView inputView) {
         this.library = library;
-        inputView = new InputView();
+        this.inputView = inputView;
     }
 
     @Override

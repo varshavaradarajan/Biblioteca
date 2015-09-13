@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.io.ByteArrayInputStream;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
 public class CheckInTest {
 
@@ -26,7 +27,8 @@ public class CheckInTest {
     @Test
     public void shouldReturnAMessageWhenCheckInIsExecuted() {
         Library library = new Library();
-        CheckIn checkIn = new CheckIn(library);
+        InputView inputView = new InputView();
+        CheckIn checkIn = new CheckIn(library, inputView);
 
         assertEquals("Successfully Returned", checkIn.execute());
     }
@@ -34,9 +36,21 @@ public class CheckInTest {
     @Test
     public void shouldReturnACheckedInMessageAfterCheckingInABook() {
         Library library = new Library();
-        CheckIn checkIn = new CheckIn(library);
+        InputView inputView = new InputView();
+        CheckIn checkIn = new CheckIn(library, inputView);
 
         assertEquals("Successfully Returned", checkIn.execute());
+    }
+
+    @Test
+    public void shouldTakeBookNameAsInput() {
+        Library library = new Library();
+        InputView inputView = mock(InputView.class);
+        CheckIn checkIn = new CheckIn(library, inputView);
+        when(inputView.input()).thenReturn("Foo");
+        checkIn.execute();
+
+        verify(inputView, times(1)).input();
     }
 
 }
