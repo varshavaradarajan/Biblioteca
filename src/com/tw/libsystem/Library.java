@@ -25,7 +25,7 @@ public class Library {
     }
 
     public String removeBook(Book book) {
-        if(has(book)) {
+        if(has(book, bookList)) {
             bookList.remove(book);
             checkedOutBooks.add(book);
             return "Thank You!Enjoy the book.";
@@ -33,8 +33,8 @@ public class Library {
         return "That book is not available.";
     }
 
-    public boolean has(Book otherBook) {
-        for(Book book : bookList) {
+    public boolean has(Book otherBook, ArrayList<Book> listOfBooks) {
+        for(Book book : listOfBooks) {
             if(book.equals(otherBook))
                 return true;
         }
@@ -42,7 +42,7 @@ public class Library {
     }
 
     public String returnBook(Book book) {
-        if(has(book)) {
+        if(has(book, bookList) || !has(book, checkedOutBooks)) {
             return "Not a valid book to return.";
         }
         return "Successfully Returned";

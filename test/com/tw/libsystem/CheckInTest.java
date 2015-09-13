@@ -30,7 +30,7 @@ public class CheckInTest {
         InputView inputView = new InputView();
         CheckIn checkIn = new CheckIn(library, inputView);
 
-        assertEquals("Successfully Returned", checkIn.execute());
+        assertEquals("Not a valid book to return.", checkIn.execute());
     }
 
     @Test
@@ -39,7 +39,7 @@ public class CheckInTest {
         InputView inputView = new InputView();
         CheckIn checkIn = new CheckIn(library, inputView);
 
-        assertEquals("Successfully Returned", checkIn.execute());
+        assertEquals("Not a valid book to return.", checkIn.execute());
     }
 
     @Test

@@ -22,16 +22,24 @@ public class LibraryTest {
     public void shouldReturnTrueIfLibraryHasABook() {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+        ArrayList<Book> listOfBooks = new ArrayList<>();
+        listOfBooks.add(new Book("Crime And Punishment", "Fyodor Dostoevsky", 1866));
+        listOfBooks.add(new Book("Wuthering Heights", "Emily Bronte", 1847));
+        listOfBooks.add(new Book("Pragmatic Programmer", "Dave Thomas", 1999));
 
-        assertEquals(true, library.has(book));
+        assertEquals(true, library.has(book, listOfBooks));
     }
 
     @Test
     public void shouldReturnTrueIfLibraryHasABookEqualToBookBeingSpecified() {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+        ArrayList<Book> listOfBooks = new ArrayList<>();
+        listOfBooks.add(new Book("Crime And Punishment", "Fyodor Dostoevsky", 1866));
+        listOfBooks.add(new Book("Wuthering Heights", "Emily Bronte", 1847));
+        listOfBooks.add(new Book("Pragmatic Programmer", "Dave Thomas", 1999));
 
-        assertEquals(true, library.has(book));
+        assertEquals(true, library.has(book, listOfBooks));
     }
 
     @Test
@@ -46,9 +54,12 @@ public class LibraryTest {
     public void shouldReturnFalseWhenLibraryDoesNotHaveABookAfterWeRemoveItFromBookList() {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+        ArrayList<Book> listOfBooks = new ArrayList<>();
+        listOfBooks.add(new Book("Crime And Punishment", "Fyodor Dostoevsky", 1866));
+        listOfBooks.add(new Book("Pragmatic Programmer", "Dave Thomas", 1999));
         library.removeBook(book);
 
-        assertEquals(false, library.has(book));
+        assertEquals(false, library.has(book, listOfBooks));
     }
 
     @Test
@@ -72,21 +83,33 @@ public class LibraryTest {
         Library library = new Library();
         Book book = new Book("Foo", "Bar", 2010);
 
-        assertEquals("Successfully Returned", library.returnBook(book));
+        assertEquals("Not a valid book to return.", library.returnBook(book));
     }
 
     @Test
     public void shouldReturnFalseIfLibraryDoesNotHaveABookEqualToBookBeingSpecified() {
         Library library = new Library();
         Book book = new Book("Foo", "Emily Bronte", 1847);
+        ArrayList<Book> listOfBooks = new ArrayList<>();
+        listOfBooks.add(new Book("Crime And Punishment", "Fyodor Dostoevsky", 1866));
+        listOfBooks.add(new Book("Wuthering Heights", "Emily Bronte", 1847));
+        listOfBooks.add(new Book("Pragmatic Programmer", "Dave Thomas", 1999));
 
-        assertEquals(false, library.has(book));
+        assertEquals(false, library.has(book, listOfBooks));
     }
 
     @Test
     public void shouldReturnAnotherMessageIfBookIsNotAdded() {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+
+        assertEquals("Not a valid book to return.", library.returnBook(book));
+    }
+
+    @Test
+    public void shouldReturnANotValidMessageIfTheBookSpecifiedIsNotInCheckedOutBookList() {
+        Library library = new Library();
+        Book book = new Book("Fire", "Emily Bronte", 1847);
 
         assertEquals("Not a valid book to return.", library.returnBook(book));
     }
