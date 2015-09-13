@@ -24,6 +24,12 @@ public class Parser {
             }
 
             else if(inputCommand.equals("3")) {
+                InputView inputView = new InputView();
+                CheckIn checkIn = new CheckIn(library, inputView);
+                return checkIn;
+            }
+
+            else if(inputCommand.equals("4")) {
                 ExitApplication exitApplication = new ExitApplication();
                 return exitApplication;
             }

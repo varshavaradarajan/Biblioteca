@@ -43,9 +43,9 @@ public class ParserTest {
     }
 
     @Test
-    public void shouldReturnExitApplicationAsOperationOnParsingInputValue3() {
+    public void shouldReturnExitApplicationAsOperationOnParsingInputValue4() {
         Library library = new Library();
-        Parser parser = new Parser("3", library);
+        Parser parser = new Parser("4", library);
         ExitApplication exitApplication = new ExitApplication();
 
         assertEquals(exitApplication.getClass(), parser.parse().getClass());
@@ -58,6 +58,16 @@ public class ParserTest {
         CheckOut checkOut = new CheckOut(library);
 
         assertEquals(checkOut.getClass(), parser.parse().getClass());
+    }
+
+    @Test
+    public void shouldReturnCheckInAsOperationOnParsingInputValue3() {
+        Library library = new Library();
+        InputView inputView = new InputView();
+        Parser parser = new Parser("3", library);
+        CheckIn checkIn = new CheckIn(library, inputView);
+
+        assertEquals(checkIn.getClass(), parser.parse().getClass());
     }
 
 }
