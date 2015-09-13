@@ -50,7 +50,8 @@ public class Controller {
         ArrayList<String> menuOptions = new ArrayList<>();
         menuOptions.add("1. List Books");
         menuOptions.add("2. Checkout");
-        menuOptions.add("3. Exit");
+        menuOptions.add("3. Check in");
+        menuOptions.add("4. Exit");
         menu = new Menu(menuOptions);
         display = factory.buildDisplay(menu.toString());
         display.displayMessage();

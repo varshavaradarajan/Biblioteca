@@ -49,6 +49,6 @@ public class Library {
         Book tempBook = checkedOutBooks.get(checkedOutBooks.indexOf(book));
         checkedOutBooks.remove(book);
         bookList.add(tempBook);
-        return "Successfully Returned\n";
+        return "Thank you for returning the book.\n";
     }
 }
