@@ -44,13 +44,26 @@ public class CheckInTest {
 
     @Test
     public void shouldTakeBookNameAsInput() {
-        Library library = new Library();
+        Library library = mock(Library.class);
         InputView inputView = mock(InputView.class);
         CheckIn checkIn = new CheckIn(library, inputView);
         when(inputView.input()).thenReturn("Foo");
         checkIn.execute();
 
         verify(inputView, times(1)).input();
+    }
+
+    @Test
+    public void shouldInformTheLibraryToAcceptTheBook() {
+        Library library = mock(Library.class);
+        InputView inputView = mock(InputView.class);
+        CheckIn checkIn = new CheckIn(library, inputView);
+        when(inputView.input()).thenReturn("Foo");
+        Book book = new Book("Foo", "bar", 0);
+        when(library.returnBook(book)).thenReturn("Not a valid book to return.");
+        checkIn.execute();
+
+        verify(library, times(1)).returnBook(book);
     }
 
 }
