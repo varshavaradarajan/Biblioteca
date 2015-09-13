@@ -60,6 +60,14 @@ public class LibraryTest {
     }
 
     @Test
+    public void shouldAddCheckedOutBookToAnotherList() {
+        Library library = new Library();
+        Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+
+        assertEquals("Thank You!Enjoy the book.", library.removeBook(book));
+    }
+
+    @Test
     public void shouldReturnAMessageIfBookIsAdded() {
         Library library = new Library();
         Book book = new Book("Foo", "Bar", 2010);
@@ -82,4 +90,5 @@ public class LibraryTest {
 
         assertEquals("Not a valid book to return.", library.returnBook(book));
     }
+
 }

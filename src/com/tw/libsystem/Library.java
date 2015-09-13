@@ -5,12 +5,14 @@ import java.util.ArrayList;
 public class Library {
 
     ArrayList<Book> bookList;
+    ArrayList<Book> checkedOutBooks;
 
     public Library() {
         bookList = new ArrayList<>();
         bookList.add(new Book("Crime And Punishment", "Fyodor Dostoevsky", 1866));
         bookList.add(new Book("Wuthering Heights", "Emily Bronte", 1847));
         bookList.add(new Book("Pragmatic Programmer", "Dave Thomas", 1999));
+        checkedOutBooks = new ArrayList<>();
     }
 
     @Override
@@ -25,6 +27,7 @@ public class Library {
     public String removeBook(Book book) {
         if(has(book)) {
             bookList.remove(book);
+            checkedOutBooks.add(book);
             return "Thank You!Enjoy the book.";
         }
         return "That book is not available.";
