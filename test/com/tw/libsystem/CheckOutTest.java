@@ -37,5 +37,4 @@ public class CheckOutTest {
 
         assertEquals("Thank You!Enjoy the book.", checkOut.execute());
     }
-
 }

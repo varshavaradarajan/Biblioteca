@@ -63,4 +63,12 @@ public class LibraryTest {
         assertEquals("Successfully Returned", library.returnBook(book));
     }
 
+    @Test
+    public void shouldReturnFalseIfLibraryDoesNotHaveABookEqualToBookBeingSpecified() {
+        Library library = new Library();
+        Book book = new Book("Foo", "Emily Bronte", 1847);
+
+        assertEquals(false, library.has(book));
+    }
+
 }
