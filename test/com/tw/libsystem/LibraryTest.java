@@ -81,9 +81,10 @@ public class LibraryTest {
     @Test
     public void shouldReturnAMessageIfBookIsAdded() {
         Library library = new Library();
-        Book book = new Book("Foo", "Bar", 2010);
+        Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+        library.removeBook(book);
 
-        assertEquals("Not a valid book to return.\n", library.returnBook(book));
+        assertEquals("Thank you for returning the book.\n", library.returnBook(book));
     }
 
     @Test
@@ -103,7 +104,7 @@ public class LibraryTest {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
 
-        assertEquals("Not a valid book to return.\n", library.returnBook(book));
+        assertEquals("That is not a valid book to return.\n", library.returnBook(book));
     }
 
     @Test
@@ -111,7 +112,7 @@ public class LibraryTest {
         Library library = new Library();
         Book book = new Book("Fire", "Emily Bronte", 1847);
 
-        assertEquals("Not a valid book to return.\n", library.returnBook(book));
+        assertEquals("That is not a valid book to return.\n", library.returnBook(book));
     }
 
 }

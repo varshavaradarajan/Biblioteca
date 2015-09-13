@@ -30,7 +30,7 @@ public class CheckInTest {
         InputView inputView = new InputView();
         CheckIn checkIn = new CheckIn(library, inputView);
 
-        assertEquals("Not a valid book to return.\n", checkIn.execute());
+        assertEquals("That is not a valid book to return.\n", checkIn.execute());
     }
 
     @Test
@@ -39,7 +39,7 @@ public class CheckInTest {
         InputView inputView = new InputView();
         CheckIn checkIn = new CheckIn(library, inputView);
 
-        assertEquals("Not a valid book to return.\n", checkIn.execute());
+        assertEquals("That is not a valid book to return.\n", checkIn.execute());
     }
 
     @Test
@@ -60,7 +60,7 @@ public class CheckInTest {
         CheckIn checkIn = new CheckIn(library, inputView);
         when(inputView.input()).thenReturn("Foo");
         Book book = new Book("Foo", "bar", 0);
-        when(library.returnBook(book)).thenReturn("Not a valid book to return.");
+        when(library.returnBook(book)).thenReturn("That is not a valid book to return.");
         checkIn.execute();
 
         verify(library, times(1)).returnBook(book);

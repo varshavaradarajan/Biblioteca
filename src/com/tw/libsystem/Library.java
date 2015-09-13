@@ -44,7 +44,7 @@ public class Library {
 
     public String returnBook(Book book) {
         if(has(book, bookList) || !has(book, checkedOutBooks)) {
-            return "Not a valid book to return.\n";
+            return "That is not a valid book to return.\n";
         }
         Book tempBook = checkedOutBooks.get(checkedOutBooks.indexOf(book));
         checkedOutBooks.remove(book);
