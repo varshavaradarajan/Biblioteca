@@ -45,6 +45,15 @@ public class BookTest {
     }
 
     @Test
+    public void shouldNotBeEqualToAnotherObjectType() {
+        Library library = new Library();
+        Book book1 = new Book("Inferno", "Dan Brown", 2012);
+        ListBooks listBooks = new ListBooks(library);
+
+        assertNotEquals(book1, listBooks);
+    }
+
+    @Test
     public void shouldHaveSameHashCodeForSameObject() {
         Book book = new Book("Emma", "Jane Austen", 1832);
         

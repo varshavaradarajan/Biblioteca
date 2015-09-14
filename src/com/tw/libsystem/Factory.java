@@ -30,7 +30,8 @@ public class Factory {
         menuOptions.add("1. List Books");
         menuOptions.add("2. Checkout");
         menuOptions.add("3. Check in");
-        menuOptions.add("4. Exit");
+        menuOptions.add("4. List Movies");
+        menuOptions.add("5. Exit");
         menu = new Menu(menuOptions);
         return menu;
     }
