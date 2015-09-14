@@ -19,5 +19,4 @@ public class MovieTest {
 
         assertEquals("The Godfather\t1972\tFrancis Ford Cuppola\t10\n", movie.toString());
     }
-
 }
