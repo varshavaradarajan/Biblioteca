@@ -23,6 +23,10 @@ public class Movie {
     @Override
     public boolean equals(Object otherObject) {
         if(otherObject != null && otherObject.getClass() == Movie.class) {
+            Movie otherMovie = (Movie)otherObject;
+            if(this == otherMovie) {
+                return true;
+            }
             return true;
         }
         return false;

@@ -38,7 +38,7 @@ public class MovieTest {
     @Test
     public void shouldReturnTrueIfOtherObjectIsOfTheSameType() {
         Movie movie1 = new Movie("The Departed", 2006, "Martin Scorsese", "9");
-        Movie movie2 = new Movie("The Godfather", 2006, "Martin Scorsese", "9");
+        Movie movie2 = new Movie("The Departed", 2006, "Martin Scorsese", "9");
 
         assertEquals(movie1, movie2);
     }
@@ -49,5 +49,12 @@ public class MovieTest {
         Book book = new Book("Rebecca", "Daphne du Maurier", 1938);
 
         assertNotEquals(movie, book);
+    }
+
+    @Test
+    public void shouldBeEqualToItself() {
+        Movie movie = new Movie("The Godfather", 1972, "Francis Ford Cuppola", "10");
+
+        assertEquals(movie, movie);
     }
 }
