@@ -19,4 +19,12 @@ public class Movie {
         details = movieName + "\t" + year + "\t" + director + "\t" + rating + "\n";
         return details;
     }
+
+    @Override
+    public boolean equals(Object otherObject) {
+        if(otherObject != null) {
+            return true;
+        }
+        return false;
+    }
 }

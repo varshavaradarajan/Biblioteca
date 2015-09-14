@@ -22,7 +22,7 @@ public class BookTest {
     }
 
     @Test
-    public void shouldbeEqualToAnotherBookObjectIsOfTheTypeBook() {
+    public void shouldBeEqualToAnotherBookObjectIsOfTheTypeBook() {
         Book book1 = new Book("Angels And Demons", "Dan Brown", 2012);
         Book book2 = new Book("Angels And Demons", "Dan Brown", 2007);
 

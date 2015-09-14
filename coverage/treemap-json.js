@@ -1,8 +1,8 @@
-var treeMapJson = {"id":"Clover database Mon Sep 14 2015 17:14:49 IST0","name":"","data":{
-    "$area":239.0,"$color":87.86611,"title":
-    " 239 Elements, 87.9% Coverage"},"children":[{"id":"com.tw.libsystem0",
-      "name":"com.tw.libsystem","data":{"$area":239.0,"$color":87.86611,
-        "title":"com.tw.libsystem 239 Elements, 87.9% Coverage"},"children":[
+var treeMapJson = {"id":"Clover database Mon Sep 14 2015 17:21:56 IST0","name":"","data":{
+    "$area":239.0,"$color":88.70293,"title":
+    " 239 Elements, 88.7% Coverage"},"children":[{"id":"com.tw.libsystem0",
+      "name":"com.tw.libsystem","data":{"$area":239.0,"$color":88.70293,
+        "title":"com.tw.libsystem 239 Elements, 88.7% Coverage"},"children":[
         {"id":"Operations21","name":"Operations","data":{"$area":0.0,
             "$color":-100.0,"path":
             "com/tw/libsystem/Operations.html#Operations","title":
@@ -33,9 +33,9 @@ var treeMapJson = {"id":"Clover database Mon Sep 14 2015 17:14:49 IST0","name":"
           "Parser1641","name":"Parser","data":{"$area":36.0,"$color":100.0,
             "path":"com/tw/libsystem/Parser.html#Parser","title":
             "Parser 36 Elements, 100% Coverage"},"children":[]},{"id":
-          "Book939","name":"Book","data":{"$area":30.0,"$color":93.333336,
-            "path":"com/tw/libsystem/Book.html#Book","title":
-            "Book 30 Elements, 93.3% Coverage"},"children":[]},{"id":
+          "Book939","name":"Book","data":{"$area":30.0,"$color":100.0,"path":
+            "com/tw/libsystem/Book.html#Book","title":
+            "Book 30 Elements, 100% Coverage"},"children":[]},{"id":
           "InputView793","name":"InputView","data":{"$area":4.0,"$color":
             100.0,"path":"com/tw/libsystem/InputView.html#InputView","title":
             "InputView 4 Elements, 100% Coverage"},"children":[]},{"id":

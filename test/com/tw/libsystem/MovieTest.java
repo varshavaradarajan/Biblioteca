@@ -19,4 +19,12 @@ public class MovieTest {
 
         assertEquals("The Godfather\t1972\tFrancis Ford Cuppola\t10\n", movie.toString());
     }
+
+    @Test
+    public void shouldReturnTrueIfMovieExists() {
+        Movie movie1 = new Movie("The Departed", 2006, "Martin Scorsese", "9");
+        Movie movie2 = new Movie("The Departed", 2006, "Martin Scorsese", "9");
+
+        assertEquals(movie1, movie2);
+    }
 }
