@@ -27,4 +27,11 @@ public class MovieTest {
 
         assertEquals(movie1, movie2);
     }
+
+    @Test
+    public void shouldReturnFalseIfOtherMovieDoesNotExist() {
+        Movie movie = new Movie("The Godfather", 1972, "Francis Ford Cuppola", "10");
+
+        assertNotEquals(movie, null);
+    }
 }
