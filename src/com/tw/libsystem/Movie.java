@@ -6,10 +6,17 @@ public class Movie {
     private String movieName, director;
     private int year, rating;
 
+    public Movie(String movieName, int year, String director, int rating) {
+        this.movieName = movieName;
+        this.year = year;
+        this.director = director;
+        this.rating = rating;
+    }
+
     @Override
     public String toString() {
         String details = "";
-        details = "The Departed\t2006\tMartin Scorsese\t9";
+        details = movieName + "\t" + year + "\t" + director + "\t" + rating + "\n";
         return details;
     }
 }
