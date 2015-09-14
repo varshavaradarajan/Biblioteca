@@ -1,8 +1,6 @@
 //Job of the controller class is to delegate the various operations to be performed.
 package com.tw.libsystem;
 
-import java.util.ArrayList;
-
 public class Controller {
 
     public static final String WELCOME_MESSAGE = "Welcome to Biblioteca\n";
