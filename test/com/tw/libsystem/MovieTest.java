@@ -42,4 +42,12 @@ public class MovieTest {
 
         assertEquals(movie1, movie2);
     }
+
+    @Test
+    public void shouldReturnFalseIfOtherObjectIsOfADifferentType() {
+        Movie movie = new Movie("The Departed", 2006, "Martin Scorsese", "9");
+        Book book = new Book("Rebecca", "Daphne du Maurier", 1938);
+
+        assertNotEquals(movie, book);
+    }
 }
