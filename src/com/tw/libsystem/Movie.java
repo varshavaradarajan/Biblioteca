@@ -27,7 +27,12 @@ public class Movie {
             if(this == otherMovie) {
                 return true;
             }
-            return true;
+            if(this.movieName == otherMovie.movieName){
+                return true;
+            }
+            else {
+                return false;
+            }
         }
         return false;
     }

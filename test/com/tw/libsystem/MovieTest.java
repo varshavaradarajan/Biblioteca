@@ -57,4 +57,12 @@ public class MovieTest {
 
         assertEquals(movie, movie);
     }
+
+    @Test
+    public void shouldBeEqualToAMovieWithTheSameName() {
+        Movie movie1 = new Movie("The Departed", 2006, "Martin Scorsese", "9");
+        Movie movie2 = new Movie("The Departed", 2006, "Martin Scorsese", "9");
+
+        assertEquals(movie1, movie2);
+    }
 }
