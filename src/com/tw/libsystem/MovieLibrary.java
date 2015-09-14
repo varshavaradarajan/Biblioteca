@@ -15,7 +15,7 @@ public class MovieLibrary {
 
     @Override
     public String toString() {
-        String details = "Movie\tYear\tDirector\tRating\n";
+        String details = "";
         for(Movie movie : movies) {
             details += movie.toString();
         }

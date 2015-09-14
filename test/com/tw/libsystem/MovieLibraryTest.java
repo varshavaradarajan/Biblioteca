@@ -10,6 +10,6 @@ public class MovieLibraryTest {
     public void shouldReturnContentsOfMovieLibrary() {
         MovieLibrary movieLibrary = new MovieLibrary();
 
-        assertEquals("Movie\tYear\tDirector\tRating\nThe Godfather\t1972\tFrancis Ford Cuppola\t10\nThe Departed\t2006\tMartin Scorsese\t9\n", movieLibrary.toString());
+        assertEquals("The Godfather\t1972\tFrancis Ford Cuppola\t10\nThe Departed\t2006\tMartin Scorsese\t9\n", movieLibrary.toString());
     }
 }
