@@ -46,8 +46,10 @@ public class ControllerTest {
         Library library = mock(Library.class);
         Factory factory = mock(Factory.class);
         Display display = mock(Display.class);
+        Menu menu = mock(Menu.class);
         Controller controller = new Controller(factory, library);
-        when(factory.buildDisplay("1. List Books\n2. Checkout\n3. Check in\n4. Exit\n")).thenReturn(display);
+        when(factory.buildMenu()).thenReturn(menu);
+        when(factory.buildDisplay(menu.toString())).thenReturn(display);
 
         controller.delegateMenuToBeDisplayed();
 

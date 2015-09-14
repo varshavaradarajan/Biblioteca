@@ -29,4 +29,11 @@ public class FactoryTest {
 
         assertEquals(Parser.class, factory.buildParser(inputMessage, library).getClass());
     }
+
+    @Test
+    public void shouldReturnNewMenus() {
+        Factory factory = new Factory();
+
+        assertEquals(Menu.class, factory.buildMenu().getClass());
+    }
 }
