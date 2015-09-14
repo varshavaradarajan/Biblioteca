@@ -25,7 +25,7 @@ public class Library {
     }
 
     public String removeBook(Book book) {
-        if(has(book, bookList)) {
+        if(bookList.contains(book)) {
             Book tempBook = bookList.get(bookList.indexOf(book));
             bookList.remove(book);
             checkedOutBooks.add(tempBook);
@@ -43,7 +43,7 @@ public class Library {
     }
 
     public String returnBook(Book book) {
-        if(has(book, bookList) || !has(book, checkedOutBooks)) {
+        if(bookList.contains(book) || !checkedOutBooks.contains(book)) {
             return "That is not a valid book to return.\n";
         }
         Book tempBook = checkedOutBooks.get(checkedOutBooks.indexOf(book));

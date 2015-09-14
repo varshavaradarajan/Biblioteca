@@ -1,7 +1,7 @@
-var treeMapJson = {"id":"Clover database Wed Sep 9 2015 15:21:12 IST0","name":"","data":{
-    "$area":177.0,"$color":84.18079,"title":
-    " 177 Elements, 84.2% Coverage"},"children":[{"id":"com.tw.libsystem0",
-      "name":"com.tw.libsystem","data":{"$area":177.0,"$color":84.18079,
-        "title":"com.tw.libsystem 177 Elements, 84.2% Coverage"},"children":[]}]}
+var treeMapJson = {"id":"Clover database Mon Sep 14 2015 12:48:05 IST0","name":"","data":{
+    "$area":206.0,"$color":86.40777,"title":
+    " 206 Elements, 86.4% Coverage"},"children":[{"id":"com.tw.libsystem0",
+      "name":"com.tw.libsystem","data":{"$area":206.0,"$color":86.40777,
+        "title":"com.tw.libsystem 206 Elements, 86.4% Coverage"},"children":[]}]}
 ;
 processTreeMapDashJson (treeMapJson);
