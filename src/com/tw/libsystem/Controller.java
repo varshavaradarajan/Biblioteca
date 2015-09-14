@@ -10,12 +10,14 @@ public class Controller {
     private InputView inputView;
     private String userInput, output;
     private Library library;
+    private MovieLibrary movieLibrary;
     private Parser parser;
     private Operations operations;
 
-    public Controller(Factory factory, Library library) {
+    public Controller(Factory factory, Library library, MovieLibrary movieLibrary) {
         this.factory = factory;
         this.library = library;
+        this.movieLibrary = movieLibrary;
     }
 
     public void run() {
@@ -35,7 +37,7 @@ public class Controller {
     }
 
     void delegateParsingInputToParser() {
-        parser = factory.buildParser(userInput, library);
+        parser = factory.buildParser(userInput, library, movieLibrary);
         operations = parser.parse();
     }
 

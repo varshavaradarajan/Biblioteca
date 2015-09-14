@@ -4,6 +4,7 @@ public class MainApplication {
 
     private Factory factory;
     private Library library;
+    private MovieLibrary movieLibrary;
     private Controller controller;
 
     public static void main(String[] args) {
@@ -14,7 +15,8 @@ public class MainApplication {
     public void start() {
         factory = new Factory();
         library = new Library();
-        controller = new Controller(factory, library);
+        movieLibrary = new MovieLibrary();
+        controller = new Controller(factory, library, movieLibrary);
         controller.run();
     }
 }

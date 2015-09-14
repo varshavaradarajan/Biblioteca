@@ -30,9 +30,10 @@ public class ControllerTest {
     @Test
     public void shouldDelegateDisplayingOfWelcomeMessage() {
         Library library = mock(Library.class);
+        MovieLibrary movieLibrary = mock(MovieLibrary.class);
         Factory factory = mock(Factory.class);
         Display display = mock(Display.class);
-        Controller controller = new Controller(factory, library);
+        Controller controller = new Controller(factory, library, movieLibrary);
         when(factory.buildDisplay("Welcome to Biblioteca\n")).thenReturn(display);
 
         controller.delegateWelcomeMessageToBeDisplayed();
@@ -43,10 +44,11 @@ public class ControllerTest {
     @Test
     public void shouldDelegateDisplayingOfMenuToDisplay() {
         Library library = mock(Library.class);
+        MovieLibrary movieLibrary = mock(MovieLibrary.class);
         Factory factory = mock(Factory.class);
         Display display = mock(Display.class);
         Menu menu = mock(Menu.class);
-        Controller controller = new Controller(factory, library);
+        Controller controller = new Controller(factory, library, movieLibrary);
         when(factory.buildMenu()).thenReturn(menu);
         when(factory.buildDisplay(menu.toString())).thenReturn(display);
 
@@ -58,9 +60,10 @@ public class ControllerTest {
     @Test
     public void shouldDelegateTakingInputToInputClass() {
         Library library = mock(Library.class);
+        MovieLibrary movieLibrary = mock(MovieLibrary.class);
         Factory factory = mock(Factory.class);
         InputView inputView = mock(InputView.class);
-        Controller controller = new Controller(factory, library);
+        Controller controller = new Controller(factory, library, movieLibrary);
         when(factory.buildInputView()).thenReturn(inputView);
 
         controller.takeInput();

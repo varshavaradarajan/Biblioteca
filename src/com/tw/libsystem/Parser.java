@@ -5,10 +5,12 @@ public class Parser {
 
     String inputCommand;
     Library library;
+    MovieLibrary movieLibrary;
 
-    public Parser(String inputCommand, Library library) {
+    public Parser(String inputCommand, Library library, MovieLibrary movieLibrary) {
         this.inputCommand = inputCommand;
         this.library = library;
+        this.movieLibrary = movieLibrary;
     }
 
     public Operations parse() {
@@ -30,6 +32,11 @@ public class Parser {
             }
 
             else if(inputCommand.equals("4")) {
+                ListMovies listMovies = new ListMovies(movieLibrary);
+                return listMovies;
+            }
+
+            else if(inputCommand.equals("5")) {
                 ExitApplication exitApplication = new ExitApplication();
                 return exitApplication;
             }

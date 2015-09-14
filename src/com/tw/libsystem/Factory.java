@@ -20,8 +20,8 @@ public class Factory {
         return inputView;
     }
 
-    public Parser buildParser(String inputMessage, Library library) {
-        parser = new Parser(inputMessage, library);
+    public Parser buildParser(String inputMessage, Library library, MovieLibrary movieLibrary) {
+        parser = new Parser(inputMessage, library, movieLibrary);
         return parser;
     }
 

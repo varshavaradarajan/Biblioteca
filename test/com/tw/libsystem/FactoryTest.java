@@ -25,9 +25,10 @@ public class FactoryTest {
     public void shouldReturnNewParserObject() {
         Factory factory = new Factory();
         Library library = new Library();
+        MovieLibrary movieLibrary = new MovieLibrary();
         String inputMessage = "1";
 
-        assertEquals(Parser.class, factory.buildParser(inputMessage, library).getClass());
+        assertEquals(Parser.class, factory.buildParser(inputMessage, library, movieLibrary).getClass());
     }
 
     @Test
