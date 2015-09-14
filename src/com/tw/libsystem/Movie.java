@@ -22,7 +22,7 @@ public class Movie {
 
     @Override
     public boolean equals(Object otherObject) {
-        if(otherObject != null) {
+        if(otherObject != null && otherObject.getClass() == Movie.class) {
             return true;
         }
         return false;
