@@ -3,10 +3,10 @@ package com.tw.libsystem;
 
 public class Movie {
 
-    private String movieName, director;
-    private int year, rating;
+    private String movieName, director, rating;
+    private int year;
 
-    public Movie(String movieName, int year, String director, int rating) {
+    public Movie(String movieName, int year, String director, String rating) {
         this.movieName = movieName;
         this.year = year;
         this.director = director;

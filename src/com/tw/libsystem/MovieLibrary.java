@@ -9,13 +9,13 @@ public class MovieLibrary {
 
     public MovieLibrary() {
         movies = new ArrayList<>();
-        movies.add(new Movie("The Godfather", 1972, "Francis Ford Cuppola", 10));
-        movies.add(new Movie("The Departed", 2006, "Martin Scorsese", 9));
+        movies.add(new Movie("The Godfather", 1972, "Francis Ford Cuppola", "10"));
+        movies.add(new Movie("The Departed", 2006, "Martin Scorsese", "9"));
     }
 
     @Override
     public String toString() {
-        String details = "";
+        String details = "Movie\tYear\tDirector\tRating\n";
         for(Movie movie : movies) {
             details += movie.toString();
         }
