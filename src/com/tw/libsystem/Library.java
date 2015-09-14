@@ -1,3 +1,4 @@
+//Job of this class is to hold a set of pre-existing books so that the user can borrow and return books.
 package com.tw.libsystem;
 
 import java.util.ArrayList;

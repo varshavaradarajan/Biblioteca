@@ -1,4 +1,4 @@
-//Job of the List of books is to hold a preexisting set of books.
+//Job of this class is to inform the library to return a list of books in the required format.
 package com.tw.libsystem;
 
 public class ListBooks implements Operations {
