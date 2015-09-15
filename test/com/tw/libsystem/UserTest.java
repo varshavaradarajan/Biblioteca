@@ -24,7 +24,7 @@ public class UserTest {
     @Test
     public void shouldNotBeEqualToAnotherObjectOfADifferentType() {
         User user1 = new User("123-4567", "qwerty");
-        Book book = new Book("Villete", "Charlotte Bronte", 1842);
+        Book book = new Book("Vilette", "Charlotte Bronte", 1842);
 
         assertNotEquals(user1, book);
     }
@@ -50,6 +50,13 @@ public class UserTest {
         User user = new User("123-4567", "qwerty");
 
         assertEquals(user, user);
+    }
+
+    @Test
+    public void shouldReturnSameHashCodeForSameObjects() {
+        User user = new User("123-4567", "qwerty");
+
+        assertEquals(user.hashCode(), user.hashCode());
     }
 
 }

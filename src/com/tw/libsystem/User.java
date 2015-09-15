@@ -28,4 +28,10 @@ public class User {
         return false;
     }
 
+    @Override
+    public int hashCode() {
+        int result = libraryNumber != null ? libraryNumber.hashCode() : 0;
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        return result;
+    }
 }
