@@ -3,6 +3,7 @@ package com.tw.libsystem;
 
 public class Login implements Operations{
 
+    private String username, password;
     private String loginMessage = "Invalid username/password.\n";
     private InputView inputView;
 
@@ -12,7 +13,16 @@ public class Login implements Operations{
 
     @Override
     public String execute() {
-        String username = inputView.input();
+        acceptUsernameFromUser();
+        acceptPasswordFromUser();
         return loginMessage;
+    }
+
+    void acceptPasswordFromUser() {
+        password = inputView.input();
+    }
+
+    void acceptUsernameFromUser() {
+        username = inputView.input();
     }
 }

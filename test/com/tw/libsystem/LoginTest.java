@@ -20,7 +20,17 @@ public class LoginTest {
         InputView inputView = mock(InputView.class);
         Login login = new Login(inputView);
         when(inputView.input()).thenReturn("123-4567");
-        login.execute();
+        login.acceptUsernameFromUser();
+
+        verify(inputView, times(1)).input();
+    }
+
+    @Test
+    public void shouldAcceptPasswordAsInputFromUser() {
+        InputView inputView = mock(InputView.class);
+        Login login = new Login(inputView);
+        when(inputView.input()).thenReturn("qwerty");
+        login.acceptPasswordFromUser();
 
         verify(inputView, times(1)).input();
     }
