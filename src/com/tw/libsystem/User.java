@@ -3,11 +3,12 @@ package com.tw.libsystem;
 
 public class User {
 
-    private String libraryNumber, password;
+    private String libraryNumber, password, role;
 
-    public User(String libraryNumber, String password) {
+    public User(String libraryNumber, String password, String role) {
         this.libraryNumber = libraryNumber;
         this.password = password;
+        this.role = role;
     }
 
     @Override
@@ -33,5 +34,9 @@ public class User {
         int result = libraryNumber != null ? libraryNumber.hashCode() : 0;
         result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;
+    }
+
+    public String roleOfUser() {
+        return role;
     }
 }
