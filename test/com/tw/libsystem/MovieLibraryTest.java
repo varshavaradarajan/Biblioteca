@@ -20,4 +20,12 @@ public class MovieLibraryTest {
 
         assertEquals("Thank You! Enjoy the movie.\n", movieLibrary.removeMovie(movie));
     }
+
+    @Test
+    public void shouldReturnADifferentMessageIfMovieIsNotRemoved() {
+        MovieLibrary movieLibrary = new MovieLibrary();
+        Movie movie = new Movie("The Departeddd", 2006, "Martin Scorsese", "9");
+
+        assertEquals("That movie is not available.\n", movieLibrary.removeMovie(movie));
+    }
 }

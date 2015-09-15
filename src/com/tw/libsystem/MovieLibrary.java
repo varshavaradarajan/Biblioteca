@@ -23,6 +23,10 @@ public class MovieLibrary {
     }
 
     public String removeMovie(Movie movie) {
-        return "Thank You! Enjoy the movie.\n";
+        if (movies.contains(movie)) {
+            movies.remove(movie);
+            return "Thank You! Enjoy the movie.\n";
+        }
+        return "That movie is not available.\n";
     }
 }
