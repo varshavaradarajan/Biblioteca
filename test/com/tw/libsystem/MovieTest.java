@@ -65,4 +65,12 @@ public class MovieTest {
 
         assertEquals(movie1, movie2);
     }
+
+    @Test
+    public void shouldNotBeEqualToAMovieWithADifferentName() {
+        Movie movie1 = new Movie("The Departed", 2006, "Martin Scorsese", "9");
+        Movie movie2 = new Movie("The Godfather", 2006, "Martin Scorsese", "9");
+
+        assertNotEquals(movie1, movie2);
+    }
 }
