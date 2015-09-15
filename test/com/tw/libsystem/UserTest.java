@@ -45,4 +45,11 @@ public class UserTest {
         assertEquals(user1, user2);
     }
 
+    @Test
+    public void shouldBeEqualToItself() {
+        User user = new User("123-4567", "qwerty");
+
+        assertEquals(user, user);
+    }
+
 }
