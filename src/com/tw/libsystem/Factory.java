@@ -27,11 +27,12 @@ public class Factory {
 
     public Menu buildMenu() {
         ArrayList<String> menuOptions = new ArrayList<>();
+        menuOptions.add("0. Exit");
         menuOptions.add("1. List Books");
-        menuOptions.add("2. Checkout");
-        menuOptions.add("3. Check in");
+        menuOptions.add("2. Checkout Book");
+        menuOptions.add("3. Check in Book");
         menuOptions.add("4. List Movies");
-        menuOptions.add("5. Exit");
+        menuOptions.add("5. Checkout Movie");
         menu = new Menu(menuOptions);
         return menu;
     }
