@@ -21,4 +21,8 @@ public class MovieLibrary {
         }
         return details;
     }
+
+    public String removeMovie(Movie movie) {
+        return "Thank You! Enjoy the movie.\n";
+    }
 }
