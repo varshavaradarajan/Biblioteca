@@ -1,8 +1,8 @@
-var treeMapJson = {"id":"Clover database Tue Sep 15 2015 17:05:16 IST0","name":"","data":{
-    "$area":325.0,"$color":91.692314,"title":
-    " 325 Elements, 91.7% Coverage"},"children":[{"id":"com.tw.libsystem0",
-      "name":"com.tw.libsystem","data":{"$area":325.0,"$color":91.692314,
-        "title":"com.tw.libsystem 325 Elements, 91.7% Coverage"},"children":[
+var treeMapJson = {"id":"Clover database Tue Sep 15 2015 19:52:50 IST0","name":"","data":{
+    "$area":327.0,"$color":91.74312,"title":
+    " 327 Elements, 91.7% Coverage"},"children":[{"id":"com.tw.libsystem0",
+      "name":"com.tw.libsystem","data":{"$area":327.0,"$color":91.74312,
+        "title":"com.tw.libsystem 327 Elements, 91.7% Coverage"},"children":[
         {"id":"Operations21","name":"Operations","data":{"$area":0.0,
             "$color":-100.0,"path":
             "com/tw/libsystem/Operations.html#Operations","title":
@@ -82,6 +82,9 @@ var treeMapJson = {"id":"Clover database Tue Sep 15 2015 17:05:16 IST0","name":"
             "Authenticator 10 Elements, 100% Coverage"},"children":[]},{"id":
           "Session2124","name":"Session","data":{"$area":4.0,"$color":
             100.0,"path":"com/tw/libsystem/Session.html#Session","title":
-            "Session 4 Elements, 100% Coverage"},"children":[]}]}]}
+            "Session 4 Elements, 100% Coverage"},"children":[]},{"id":
+          "Login2131","name":"Login","data":{"$area":2.0,"$color":100.0,
+            "path":"com/tw/libsystem/Login.html#Login","title":
+            "Login 2 Elements, 100% Coverage"},"children":[]}]}]}
 ;
 processTreeMapJson (treeMapJson);
