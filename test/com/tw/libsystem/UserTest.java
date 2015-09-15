@@ -68,6 +68,13 @@ public class UserTest {
     }
 
     @Test
+    public void shouldReturnHashCodeAsZeroIfLoginDetailsAreNull() {
+        User user = new User(null, null, "guest");
+
+        assertEquals(0, user.hashCode());
+    }
+
+    @Test
     public void shouldReturnRoleOfUser() {
         User user = new User("123-4567", "qwerty", "customer");
 
