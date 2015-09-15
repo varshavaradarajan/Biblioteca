@@ -14,4 +14,12 @@ public class AuthenticatorTest {
         assertEquals(user, authenticator.authenticate(user));
     }
 
+    @Test
+    public void shouldReturnRegisteredUserIfAuthenticationSucceeds() {
+        Authenticator authenticator = new Authenticator();
+        User user = new User("123-4567", "qwerty", "customer");
+
+        assertEquals(user, authenticator.authenticate(user));
+    }
+
 }

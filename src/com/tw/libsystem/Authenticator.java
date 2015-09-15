@@ -14,6 +14,9 @@ public class Authenticator {
     }
 
     public User authenticate(User user) {
+        if(registeredUsers.contains(user)) {
+            return registeredUsers.get(registeredUsers.indexOf(user));
+        }
         return new User("000-0000", "000-0000", "guest");
     }
 }
