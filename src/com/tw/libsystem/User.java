@@ -13,7 +13,13 @@ public class User {
     @Override
     public boolean equals(Object otherObject) {
         if (otherObject != null && otherObject.getClass() == User.class) {
-            return true;
+            User otherUser = (User)otherObject;
+            if(this.libraryNumber.equals(otherUser.libraryNumber)){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
         return false;
     }
