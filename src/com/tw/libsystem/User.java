@@ -12,7 +12,7 @@ public class User {
 
     @Override
     public boolean equals(Object otherObject) {
-        if (otherObject != null) {
+        if (otherObject != null && otherObject.getClass() == User.class) {
             return true;
         }
         return false;

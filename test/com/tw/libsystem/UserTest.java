@@ -14,4 +14,19 @@ public class UserTest {
         assertEquals(user1, user2);
     }
 
+    @Test
+    public void shouldReturnFalseIfObjectDoesNotExist() {
+        User user = new User("123-4567", "qwerty");
+
+        assertNotEquals(user, null);
+    }
+
+    @Test
+    public void shouldNotBeEqualToAnotherObjectOfADifferentType() {
+        User user1 = new User("123-4567", "qwerty");
+        Book book = new Book("Villete", "Charlotte Bronte", 1842);
+
+        assertNotEquals(user1, book);
+    }
+
 }
