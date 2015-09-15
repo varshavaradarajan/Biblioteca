@@ -73,4 +73,11 @@ public class MovieTest {
 
         assertNotEquals(movie1, movie2);
     }
+
+    @Test
+    public void shouldHaveSameHashCodeForSameObject() {
+        Movie movie = new Movie("The Godfather", 1972, "Francis Ford Cuppola", "10");
+
+        assertEquals(movie.hashCode(), movie.hashCode());
+    }
 }
