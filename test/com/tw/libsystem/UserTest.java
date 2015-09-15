@@ -59,4 +59,12 @@ public class UserTest {
         assertEquals(user.hashCode(), user.hashCode());
     }
 
+    @Test
+    public void shouldReturnDifferentHashCodeForDifferentObjects() {
+        User user1 = new User("123-4567", "qwerty");
+        User user2 = new User("123-4567", "qwert");
+
+        assertNotEquals(user1.hashCode(), user2.hashCode());
+    }
+
 }
