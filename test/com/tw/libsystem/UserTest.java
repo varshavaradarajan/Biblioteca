@@ -9,7 +9,7 @@ public class UserTest {
     @Test
     public void shouldReturnTrueIfObjectExists() {
         User user1 = new User("123-4567", "qwerty");
-        User user2 = new User("123-4567", "asdf");
+        User user2 = new User("123-4567", "qwerty");
 
         assertEquals(user1, user2);
     }
@@ -32,7 +32,15 @@ public class UserTest {
     @Test
     public void shouldBeEqualToUserWithSameLibraryNumber() {
         User user1 = new User("123-4567", "qwerty");
-        User user2 = new User("123-4567", "asdf");
+        User user2 = new User("123-4567", "qwerty");
+
+        assertEquals(user1, user2);
+    }
+
+    @Test
+    public void shouldBeEqualToUserWithSamePasswordWithSameLogin() {
+        User user1 = new User("123-4567", "qwerty");
+        User user2 = new User("123-4567", "qwerty");
 
         assertEquals(user1, user2);
     }
