@@ -13,8 +13,11 @@ public class Authenticator {
         registeredUsers.add(new User("765-4321", "qwerasdf", "librarian"));
     }
 
-    public String authenticate(User user) {
+    public String authenticate(User user, Session session) {
         if(registeredUsers.contains(user)) {
+            User tempUser = registeredUsers.get(registeredUsers.indexOf(user));
+            Session tempSession = new Session(tempUser);
+            session = tempSession;
             return "Successful login.\n";
         }
         return "Invalid username/password.\n";
