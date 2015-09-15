@@ -13,7 +13,10 @@ public class Authenticator {
         registeredUsers.add(new User("765-4321", "qwerasdf", "librarian"));
     }
 
-    public String authenticate() {
+    public String authenticate(User user) {
+        if(registeredUsers.contains(user)) {
+            return "Successful login.\n";
+        }
         return "Invalid username/password.\n";
     }
 }
