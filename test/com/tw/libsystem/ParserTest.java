@@ -47,10 +47,10 @@ public class ParserTest {
     }
 
     @Test
-    public void shouldReturnExitApplicationAsOperationOnParsingInputValue5() {
+    public void shouldReturnExitApplicationAsOperationOnParsingInputValue0() {
         Library library = new Library();
         MovieLibrary movieLibrary = new MovieLibrary();
-        Parser parser = new Parser("5", library, movieLibrary);
+        Parser parser = new Parser("0", library, movieLibrary);
         ExitApplication exitApplication = new ExitApplication();
 
         assertEquals(exitApplication.getClass(), parser.parse().getClass());
@@ -84,6 +84,15 @@ public class ParserTest {
         Parser parser = new Parser("4", library, movieLibrary);
 
         assertEquals(ListMovies.class, parser.parse().getClass());
+    }
+
+    @Test
+    public void shouldReturnCheckOutMoviesAsOperationOnParsingInputValue5() {
+        MovieLibrary movieLibrary = new MovieLibrary();
+        Library library = new Library();
+        Parser parser = new Parser("5", library, movieLibrary);
+
+        assertEquals(CheckOutMovie.class, parser.parse().getClass());
     }
 
 }

@@ -37,6 +37,11 @@ public class Parser {
             }
 
             else if(inputCommand.equals("5")) {
+                CheckOutMovie checkOutMovie = new CheckOutMovie(movieLibrary);
+                return checkOutMovie;
+            }
+
+            else if(inputCommand.equals("0")) {
                 ExitApplication exitApplication = new ExitApplication();
                 return exitApplication;
             }
