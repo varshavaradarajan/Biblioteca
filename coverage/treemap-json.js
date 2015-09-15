@@ -1,14 +1,13 @@
-var treeMapJson = {"id":"Clover database Tue Sep 15 2015 20:10:20 IST0","name":"","data":{
-    "$area":335.0,"$color":91.94029,"title":
-    " 335 Elements, 91.9% Coverage"},"children":[{"id":"com.tw.libsystem0",
-      "name":"com.tw.libsystem","data":{"$area":335.0,"$color":91.94029,
-        "title":"com.tw.libsystem 335 Elements, 91.9% Coverage"},"children":[
-        {"id":"Operations21","name":"Operations","data":{"$area":0.0,
-            "$color":-100.0,"path":
-            "com/tw/libsystem/Operations.html#Operations","title":
-            "Operations 0 Elements,  -  Coverage"},"children":[]},{"id":
-          "InvalidCommand21","name":"InvalidCommand","data":{"$area":5.0,
-            "$color":100.0,"path":
+var treeMapJson = {"id":"Clover database Tue Sep 15 2015 20:16:07 IST0","name":"","data":{
+    "$area":331.0,"$color":91.8429,"title":" 331 Elements, 91.8% Coverage"},
+  "children":[{"id":"com.tw.libsystem0","name":"com.tw.libsystem","data":{
+        "$area":331.0,"$color":91.8429,"title":
+        "com.tw.libsystem 331 Elements, 91.8% Coverage"},"children":[{"id":
+          "Operations21","name":"Operations","data":{"$area":0.0,"$color":
+            -100.0,"path":"com/tw/libsystem/Operations.html#Operations",
+            "title":"Operations 0 Elements,  -  Coverage"},"children":[]},{
+          "id":"InvalidCommand21","name":"InvalidCommand","data":{"$area":
+            5.0,"$color":100.0,"path":
             "com/tw/libsystem/InvalidCommand.html#InvalidCommand","title":
             "InvalidCommand 5 Elements, 100% Coverage"},"children":[]},{"id":
           "ListOfBooks32","name":"ListOfBooks","data":{"$area":9.0,"$color":
@@ -76,10 +75,10 @@ var treeMapJson = {"id":"Clover database Tue Sep 15 2015 20:10:20 IST0","name":"
           "User2002","name":"User","data":{"$area":29.0,"$color":100.0,
             "path":"com/tw/libsystem/User.html#User","title":
             "User 29 Elements, 100% Coverage"},"children":[]},{"id":
-          "Authenticator2067","name":"Authenticator","data":{"$area":10.0,
+          "Authenticator2184","name":"Authenticator","data":{"$area":6.0,
             "$color":100.0,"path":
             "com/tw/libsystem/Authenticator.html#Authenticator","title":
-            "Authenticator 10 Elements, 100% Coverage"},"children":[]},{"id":
+            "Authenticator 6 Elements, 100% Coverage"},"children":[]},{"id":
           "Session2124","name":"Session","data":{"$area":4.0,"$color":
             100.0,"path":"com/tw/libsystem/Session.html#Session","title":
             "Session 4 Elements, 100% Coverage"},"children":[]},{"id":
