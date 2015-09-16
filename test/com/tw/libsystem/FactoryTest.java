@@ -30,9 +30,10 @@ public class FactoryTest {
         MovieLibrary movieLibrary = new MovieLibrary();
         Session session = mock(Session.class);
         OperationsFactory operationsFactory = new OperationsFactory();
+        Authenticator authenticator = mock(Authenticator.class);
         String inputMessage = "1";
 
-        assertEquals(Parser.class, factory.buildParser(inputMessage, library, movieLibrary, session, operationsFactory).getClass());
+        assertEquals(Parser.class, factory.buildParser(inputMessage, library, movieLibrary, session, operationsFactory, authenticator, factory).getClass());
     }
 
     @Test
@@ -40,5 +41,12 @@ public class FactoryTest {
         Factory factory = new Factory();
 
         assertEquals(Menu.class, factory.buildMenu().getClass());
+    }
+
+    @Test
+    public void shouldReturnNewAuthenticatorObjects() {
+        Factory factory = new Factory();
+
+        assertEquals(Authenticator.class, factory.buildAuthenticator().getClass());
     }
 }

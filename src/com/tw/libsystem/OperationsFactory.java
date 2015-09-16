@@ -41,8 +41,8 @@ public class OperationsFactory {
         return login;
     }
 
-    public CheckOut returnNewCheckOutObjects(Library library, Session session) {
-        checkOut = new CheckOut(library, session);
+    public CheckOut returnNewCheckOutObjects(Library library, Session session, Authenticator authenticator, OperationsFactory operationsFactory, InputView inputView) {
+        checkOut = new CheckOut(library, session, authenticator, operationsFactory, inputView);
         return checkOut;
     }
 

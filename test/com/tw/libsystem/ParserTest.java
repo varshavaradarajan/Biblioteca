@@ -13,7 +13,9 @@ public class ParserTest {
         MovieLibrary movieLibrary = new MovieLibrary();
         Session session = mock(Session.class);
         OperationsFactory operationsFactory = new OperationsFactory();
-        Parser parser = new Parser("", library, movieLibrary, session, operationsFactory);
+        Factory factory = mock(Factory.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        Parser parser = new Parser("", library, movieLibrary, session, operationsFactory, authenticator, factory);
         InvalidCommand invalidCommand = new InvalidCommand();
 
         assertEquals(invalidCommand.getClass(), parser.parse().getClass());
@@ -25,7 +27,9 @@ public class ParserTest {
         MovieLibrary movieLibrary = new MovieLibrary();
         Session session = mock(Session.class);
         OperationsFactory operationsFactory = new OperationsFactory();
-        Parser parser = new Parser("1 2", library, movieLibrary, session, operationsFactory);
+        Factory factory = mock(Factory.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        Parser parser = new Parser("1 2", library, movieLibrary, session, operationsFactory, authenticator, factory);
         InvalidCommand invalidCommand = new InvalidCommand();
 
         assertEquals(invalidCommand.getClass(), parser.parse().getClass());
@@ -37,7 +41,9 @@ public class ParserTest {
         MovieLibrary movieLibrary = new MovieLibrary();
         Session session = mock(Session.class);
         OperationsFactory operationsFactory = new OperationsFactory();
-        Parser parser = new Parser("1", library, movieLibrary, session, operationsFactory);
+        Factory factory = mock(Factory.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        Parser parser = new Parser("1", library, movieLibrary, session, operationsFactory, authenticator, factory);
         ListBooks listBooks = new ListBooks(library);
 
         assertEquals(listBooks.getClass(), parser.parse().getClass());
@@ -49,7 +55,9 @@ public class ParserTest {
         MovieLibrary movieLibrary = new MovieLibrary();
         Session session = mock(Session.class);
         OperationsFactory operationsFactory = new OperationsFactory();
-        Parser parser = new Parser("a", library, movieLibrary, session, operationsFactory);
+        Factory factory = mock(Factory.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        Parser parser = new Parser("a", library, movieLibrary, session, operationsFactory, authenticator, factory);
         InvalidCommand invalidCommand = new InvalidCommand();
 
         assertEquals(invalidCommand.getClass(), parser.parse().getClass());
@@ -61,7 +69,9 @@ public class ParserTest {
         MovieLibrary movieLibrary = new MovieLibrary();
         Session session = mock(Session.class);
         OperationsFactory operationsFactory = new OperationsFactory();
-        Parser parser = new Parser("0", library, movieLibrary, session, operationsFactory);
+        Factory factory = mock(Factory.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        Parser parser = new Parser("0", library, movieLibrary, session, operationsFactory, authenticator, factory);
         ExitApplication exitApplication = new ExitApplication();
 
         assertEquals(exitApplication.getClass(), parser.parse().getClass());
@@ -73,8 +83,11 @@ public class ParserTest {
         MovieLibrary movieLibrary = new MovieLibrary();
         Session session = mock(Session.class);
         OperationsFactory operationsFactory = new OperationsFactory();
-        Parser parser = new Parser("2", library, movieLibrary, session, operationsFactory);
-        CheckOut checkOut = new CheckOut(library, session);
+        Factory factory = mock(Factory.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        InputView inputView = mock(InputView.class);
+        Parser parser = new Parser("2", library, movieLibrary, session, operationsFactory, authenticator, factory);
+        CheckOut checkOut = new CheckOut(library, session, authenticator, operationsFactory, inputView);
 
         assertEquals(checkOut.getClass(), parser.parse().getClass());
     }
@@ -86,7 +99,9 @@ public class ParserTest {
         InputView inputView = new InputView();
         Session session = mock(Session.class);
         OperationsFactory operationsFactory = new OperationsFactory();
-        Parser parser = new Parser("3", library, movieLibrary, session, operationsFactory);
+        Factory factory = mock(Factory.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        Parser parser = new Parser("3", library, movieLibrary, session, operationsFactory, authenticator, factory);
         CheckIn checkIn = new CheckIn(library, inputView);
 
         assertEquals(checkIn.getClass(), parser.parse().getClass());
@@ -98,7 +113,9 @@ public class ParserTest {
         Library library = new Library();
         Session session = mock(Session.class);
         OperationsFactory operationsFactory = new OperationsFactory();
-        Parser parser = new Parser("4", library, movieLibrary, session, operationsFactory);
+        Factory factory = mock(Factory.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        Parser parser = new Parser("4", library, movieLibrary, session, operationsFactory, authenticator, factory);
 
         assertEquals(ListMovies.class, parser.parse().getClass());
     }
@@ -109,7 +126,9 @@ public class ParserTest {
         Library library = new Library();
         Session session = mock(Session.class);
         OperationsFactory operationsFactory = new OperationsFactory();
-        Parser parser = new Parser("5", library, movieLibrary, session, operationsFactory);
+        Factory factory = mock(Factory.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        Parser parser = new Parser("5", library, movieLibrary, session, operationsFactory, authenticator, factory);
 
         assertEquals(CheckOutMovie.class, parser.parse().getClass());
     }
@@ -120,7 +139,9 @@ public class ParserTest {
         Library library = new Library();
         Session session = mock(Session.class);
         OperationsFactory operationsFactory = new OperationsFactory();
-        Parser parser = new Parser("6", library, movieLibrary, session, operationsFactory);
+        Factory factory = mock(Factory.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        Parser parser = new Parser("6", library, movieLibrary, session, operationsFactory, authenticator, factory);
 
         assertEquals(Login.class, parser.parse().getClass());
     }

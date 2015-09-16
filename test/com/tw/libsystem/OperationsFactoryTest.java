@@ -62,8 +62,10 @@ public class OperationsFactoryTest {
         OperationsFactory operationsFactory = new OperationsFactory();
         Library library = mock(Library.class);
         Session session = mock(Session.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        InputView inputView = mock(InputView.class);
 
-        assertEquals(CheckOut.class, operationsFactory.returnNewCheckOutObjects(library, session).getClass());
+        assertEquals(CheckOut.class, operationsFactory.returnNewCheckOutObjects(library, session, authenticator, operationsFactory, inputView).getClass());
     }
 
     @Test

@@ -3,14 +3,20 @@ package com.tw.libsystem;
 
 public class CheckOut implements Operations {
 
-    private InputView inputView = new InputView();
+    private InputView inputView;
     private Library library;
     private Session session;
+    private OperationsFactory operationsFactory;
+    private Authenticator authenticator;
     private String checkOutMessage = "That book is not available.\n", bookName;
+    private Book book;
 
-    public CheckOut(Library library, Session session) {
+    public CheckOut(Library library, Session session, Authenticator authenticator, OperationsFactory operationsFactory, InputView inputView) {
         this.library = library;
         this.session = session;
+        this.authenticator = authenticator;
+        this.operationsFactory = operationsFactory;
+        this.inputView = inputView;
     }
 
     @Override
@@ -19,12 +25,17 @@ public class CheckOut implements Operations {
             delegateUserLoginToLoginOperation();
         }
         bookName = inputView.input();
-        Book book = new Book(bookName, "bar", 2015);
+        createBook();
         checkOutMessage = library.removeBook(book);
         return checkOutMessage;
     }
 
-    void delegateUserLoginToLoginOperation() {
+    void createBook() {
+        book = new Book(bookName, "bar", 2015);
+    }
 
+    void delegateUserLoginToLoginOperation() {
+        Login login = operationsFactory.returnNewLoginObject(inputView, authenticator, session);
+        login.execute();
     }
 }

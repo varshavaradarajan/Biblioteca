@@ -41,7 +41,8 @@ public class Controller {
     }
 
     void delegateParsingInputToParser() {
-        parser = factory.buildParser(userInput, library, movieLibrary, session, operationsFactory);
+        Authenticator authenticator = factory.buildAuthenticator();
+        parser = factory.buildParser(userInput, library, movieLibrary, session, operationsFactory, authenticator, factory);
         operations = parser.parse();
     }
 

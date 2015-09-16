@@ -8,13 +8,17 @@ public class Parser {
     private MovieLibrary movieLibrary;
     private Session session;
     private OperationsFactory operationsFactory;
+    private Authenticator authenticator;
+    private Factory factory;
 
-    public Parser(String inputCommand, Library library, MovieLibrary movieLibrary, Session session, OperationsFactory operationsFactory) {
+    public Parser(String inputCommand, Library library, MovieLibrary movieLibrary, Session session, OperationsFactory operationsFactory, Authenticator authenticator, Factory factory) {
         this.inputCommand = inputCommand;
         this.library = library;
         this.movieLibrary = movieLibrary;
         this.session = session;
         this.operationsFactory = operationsFactory;
+        this.authenticator = authenticator;
+        this.factory = factory;
     }
 
     public Operations parse() {
@@ -25,7 +29,8 @@ public class Parser {
             }
 
             else if(inputCommand.equals("2")) {
-                CheckOut checkOut = operationsFactory.returnNewCheckOutObjects(library, session);
+                InputView inputView = factory.buildInputView();
+                CheckOut checkOut = operationsFactory.returnNewCheckOutObjects(library, session, authenticator, operationsFactory, inputView);
                 return checkOut;
             }
 
@@ -47,7 +52,6 @@ public class Parser {
 
             else if(inputCommand.equals("6")) {
                 InputView inputView = new InputView();
-                Authenticator authenticator = new Authenticator();
                 Login login = operationsFactory.returnNewLoginObject(inputView, authenticator, session);
                 return login;
             }

@@ -7,8 +7,7 @@ import org.junit.Test;
 import java.io.ByteArrayInputStream;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class CheckOutTest {
 
@@ -25,22 +24,19 @@ public class CheckOutTest {
     }
 
     @Test
-    public void shouldReturnAMessageOnCheckingOutABook() {
-        Library library = new Library();
+    public void shouldDelegateTheUserLoginToLoginOperation() {
+        Library library = mock(Library.class);
         Session session = mock(Session.class);
-        when(session.typeOfUser()).thenReturn("librarian");
-        CheckOut checkOut = new CheckOut(library, session);
+        InputView inputView = mock(InputView.class);
+        Login login = mock(Login.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        OperationsFactory operationsFactory = mock(OperationsFactory.class);
+        when(session.typeOfUser()).thenReturn("guest");
+        when(operationsFactory.returnNewLoginObject(inputView, authenticator, session)).thenReturn(login);
+        CheckOut checkOut = new CheckOut(library, session, authenticator, operationsFactory, inputView);
 
-        assertEquals("Thank You!Enjoy the book.\n", checkOut.execute());
-    }
+        checkOut.delegateUserLoginToLoginOperation();
 
-    @Test
-    public void shouldReturnACheckOutMessageOnCheckingOutAvailableBooks() {
-        Library library = new Library();
-        Session session = mock(Session.class);
-        when(session.typeOfUser()).thenReturn("librarian");
-        CheckOut checkOut = new CheckOut(library, session);
-
-        assertEquals("Thank You!Enjoy the book.\n", checkOut.execute());
+        verify(login, times(1)).execute();
     }
 }

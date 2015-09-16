@@ -9,6 +9,7 @@ public class Factory {
     private InputView inputView;
     private Parser parser;
     private Menu menu;
+    private Authenticator authenticator;
 
     public Display buildDisplay(String message) {
         display = new Display(message);
@@ -20,8 +21,8 @@ public class Factory {
         return inputView;
     }
 
-    public Parser buildParser(String inputMessage, Library library, MovieLibrary movieLibrary, Session session, OperationsFactory operationsFactory) {
-        parser = new Parser(inputMessage, library, movieLibrary, session, operationsFactory);
+    public Parser buildParser(String inputMessage, Library library, MovieLibrary movieLibrary, Session session, OperationsFactory operationsFactory, Authenticator authenticator, Factory factory) {
+        parser = new Parser(inputMessage, library, movieLibrary, session, operationsFactory, authenticator, factory);
         return parser;
     }
 
@@ -36,5 +37,10 @@ public class Factory {
         menuOptions.add("6. Login");
         menu = new Menu(menuOptions);
         return menu;
+    }
+
+    public Authenticator buildAuthenticator() {
+        authenticator = new Authenticator();
+        return authenticator;
     }
 }
