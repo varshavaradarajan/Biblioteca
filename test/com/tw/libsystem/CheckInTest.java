@@ -23,61 +23,6 @@ public class CheckInTest {
         System.setIn(System.in);
     }
 
-
-    @Test
-    public void shouldReturnAMessageWhenCheckInIsExecuted() {
-        Library library = new Library();
-        InputView inputView = new InputView();
-        Session session = mock(Session.class);
-        Authenticator authenticator = mock(Authenticator.class);
-        OperationsFactory operationsFactory = mock(OperationsFactory.class);
-        CheckIn checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView);
-
-        assertEquals("That is not a valid book to return.\n", checkIn.execute());
-    }
-
-    @Test
-    public void shouldReturnACheckedInMessageAfterCheckingInABook() {
-        Library library = new Library();
-        InputView inputView = new InputView();
-        Session session = mock(Session.class);
-        Authenticator authenticator = mock(Authenticator.class);
-        OperationsFactory operationsFactory = mock(OperationsFactory.class);
-        CheckIn checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView);
-
-        assertEquals("That is not a valid book to return.\n", checkIn.execute());
-    }
-
-    @Test
-    public void shouldTakeBookNameAsInput() {
-        Library library = mock(Library.class);
-        InputView inputView = mock(InputView.class);
-        Session session = mock(Session.class);
-        Authenticator authenticator = mock(Authenticator.class);
-        OperationsFactory operationsFactory = mock(OperationsFactory.class);
-        CheckIn checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView);
-        when(inputView.input()).thenReturn("Foo");
-        checkIn.execute();
-
-        verify(inputView, times(1)).input();
-    }
-
-    @Test
-    public void shouldInformTheLibraryToAcceptTheBook() {
-        Library library = mock(Library.class);
-        InputView inputView = mock(InputView.class);
-        Session session = mock(Session.class);
-        Authenticator authenticator = mock(Authenticator.class);
-        OperationsFactory operationsFactory = mock(OperationsFactory.class);
-        CheckIn checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView);
-        when(inputView.input()).thenReturn("Foo");
-        Book book = new Book("Foo", "bar", 0);
-        when(library.returnBook(book)).thenReturn("That is not a valid book to return.");
-        checkIn.execute();
-
-        verify(library, times(1)).returnBook(book);
-    }
-
     @Test
     public void shouldDelegateTheUserLoginToLoginOperation() {
         Library library = mock(Library.class);

@@ -4,7 +4,7 @@ package com.tw.libsystem;
 public class CheckIn implements Operations {
 
     private Library library;
-    private String checkInMessage;
+    private String checkInMessage, loginMessage;
     private InputView inputView;
     private OperationsFactory operationsFactory;
     private Session session;
@@ -20,14 +20,20 @@ public class CheckIn implements Operations {
 
     @Override
     public String execute() {
-        String bookName = inputView.input();
-        Book book = new Book(bookName, "bar", 0);
-        checkInMessage = library.returnBook(book);
-        return checkInMessage;
+        if(session.typeOfUser().equals("guest")) {
+            delegateUserLoginToLoginOperation();
+        }
+        if(session.typeOfUser().equals("librarian") || session.typeOfUser().equals("customer")) {
+            String bookName = inputView.input();
+            Book book = new Book(bookName, "bar", 0);
+            checkInMessage = library.returnBook(book);
+            return checkInMessage;
+        }
+        return loginMessage;
     }
 
     public void delegateUserLoginToLoginOperation() {
         Login login = operationsFactory.returnNewLoginObject(inputView, authenticator, session);
-        login.execute();
+        loginMessage = login.execute();
     }
 }
