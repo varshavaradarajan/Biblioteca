@@ -102,7 +102,7 @@ public class ParserTest {
         Factory factory = mock(Factory.class);
         Authenticator authenticator = mock(Authenticator.class);
         Parser parser = new Parser("3", library, movieLibrary, session, operationsFactory, authenticator, factory);
-        CheckIn checkIn = new CheckIn(library, inputView);
+        CheckIn checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView);
 
         assertEquals(checkIn.getClass(), parser.parse().getClass());
     }

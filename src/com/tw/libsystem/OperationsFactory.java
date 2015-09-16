@@ -46,8 +46,8 @@ public class OperationsFactory {
         return checkOut;
     }
 
-    public CheckIn returnNewCheckInObject(Library library, InputView inputView) {
-        checkIn = new CheckIn(library, inputView);
+    public CheckIn returnNewCheckInObject(Library library, InputView inputView, Authenticator authenticator, OperationsFactory operationsFactory, Session session) {
+        checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView);
         return checkIn;
     }
 }

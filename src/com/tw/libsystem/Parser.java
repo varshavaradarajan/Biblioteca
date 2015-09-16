@@ -36,7 +36,7 @@ public class Parser {
 
             else if(inputCommand.equals("3")) {
                 InputView inputView = new InputView();
-                CheckIn checkIn = operationsFactory.returnNewCheckInObject(library, inputView);
+                CheckIn checkIn = operationsFactory.returnNewCheckInObject(library, inputView, authenticator, operationsFactory, session);
                 return checkIn;
             }
 
