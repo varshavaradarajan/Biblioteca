@@ -66,4 +66,13 @@ public class OperationsFactoryTest {
 
         assertEquals(CheckOut.class, operationsFactory.returnNewCheckOutObjects(library, session).getClass());
     }
+
+    @Test
+    public void shouldReturnNewCheckInObjects() {
+        OperationsFactory operationsFactory = new OperationsFactory();
+        Library library = mock(Library.class);
+        InputView inputView = mock(InputView.class);
+
+        assertEquals(CheckIn.class, operationsFactory.returnNewCheckInObject(library, inputView).getClass());
+    }
 }

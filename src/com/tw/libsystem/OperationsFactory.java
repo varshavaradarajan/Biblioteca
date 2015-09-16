@@ -9,6 +9,7 @@ public class OperationsFactory {
     private InvalidCommand invalidCommand;
     private Login login;
     private CheckOut checkOut;
+    private CheckIn checkIn;
 
     public ListBooks returnNewListBooksObject(Library library) {
         listBooks = new ListBooks(library);
@@ -43,5 +44,10 @@ public class OperationsFactory {
     public CheckOut returnNewCheckOutObjects(Library library, Session session) {
         checkOut = new CheckOut(library, session);
         return checkOut;
+    }
+
+    public CheckIn returnNewCheckInObject(Library library, InputView inputView) {
+        checkIn = new CheckIn(library, inputView);
+        return checkIn;
     }
 }
