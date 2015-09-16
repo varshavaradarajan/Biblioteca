@@ -7,6 +7,8 @@ import org.junit.Test;
 import java.io.ByteArrayInputStream;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class CheckOutTest {
 
@@ -25,7 +27,9 @@ public class CheckOutTest {
     @Test
     public void shouldReturnAMessageOnCheckingOutABook() {
         Library library = new Library();
-        CheckOut checkOut = new CheckOut(library);
+        Session session = mock(Session.class);
+        when(session.typeOfUser()).thenReturn("librarian");
+        CheckOut checkOut = new CheckOut(library, session);
 
         assertEquals("Thank You!Enjoy the book.\n", checkOut.execute());
     }
@@ -33,7 +37,9 @@ public class CheckOutTest {
     @Test
     public void shouldReturnACheckOutMessageOnCheckingOutAvailableBooks() {
         Library library = new Library();
-        CheckOut checkOut = new CheckOut(library);
+        Session session = mock(Session.class);
+        when(session.typeOfUser()).thenReturn("librarian");
+        CheckOut checkOut = new CheckOut(library, session);
 
         assertEquals("Thank You!Enjoy the book.\n", checkOut.execute());
     }

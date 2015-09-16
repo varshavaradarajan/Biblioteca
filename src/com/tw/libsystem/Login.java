@@ -19,7 +19,6 @@ public class Login implements Operations {
         String userName = acceptUsernameFromUser();
         String password = acceptPasswordFromUser();
         loginMessage = authenticator.authenticate(userName, password, session);
-        System.out.println(session.typeOfUser());
         return loginMessage;
     }
 

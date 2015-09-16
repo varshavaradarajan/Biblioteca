@@ -23,7 +23,7 @@ public class Parser {
             }
 
             else if(inputCommand.equals("2")) {
-                CheckOut checkOut = new CheckOut(library);
+                CheckOut checkOut = new CheckOut(library, session);
                 return checkOut;
             }
 

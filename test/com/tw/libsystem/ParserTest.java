@@ -68,7 +68,7 @@ public class ParserTest {
         MovieLibrary movieLibrary = new MovieLibrary();
         Session session = mock(Session.class);
         Parser parser = new Parser("2", library, movieLibrary, session);
-        CheckOut checkOut = new CheckOut(library);
+        CheckOut checkOut = new CheckOut(library, session);
 
         assertEquals(checkOut.getClass(), parser.parse().getClass());
     }
