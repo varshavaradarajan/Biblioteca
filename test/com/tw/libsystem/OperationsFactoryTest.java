@@ -33,4 +33,11 @@ public class OperationsFactoryTest {
         assertEquals(CheckOutMovie.class, operationsFactory.returnNewCheckOutMoviesObjects(movieLibrary).getClass());
     }
 
+    @Test
+    public void shouldReturnNewExitApplicationObjects() {
+        OperationsFactory operationsFactory = new OperationsFactory();
+
+        assertEquals(ExitApplication.class, operationsFactory.returnNewExitApplicationObjects().getClass());
+    }
+
 }
