@@ -12,4 +12,8 @@ public class Session {
     public String typeOfUser() {
         return currentUser.roleOfUser();
     }
+
+    public void setUser(User user) {
+        currentUser = user;
+    }
 }
