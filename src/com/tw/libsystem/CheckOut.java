@@ -8,7 +8,7 @@ public class CheckOut implements Operations {
     private Session session;
     private OperationsFactory operationsFactory;
     private Authenticator authenticator;
-    private String checkOutMessage = "That book is not available.\n", bookName;
+    private String checkOutMessage = "That book is not available.\n", bookName, loginMessage;
     private Book book;
 
     public CheckOut(Library library, Session session, Authenticator authenticator, OperationsFactory operationsFactory, InputView inputView) {
@@ -24,10 +24,13 @@ public class CheckOut implements Operations {
         if (session.typeOfUser().equals("guest")) {
             delegateUserLoginToLoginOperation();
         }
-        bookName = inputView.input();
-        createBook();
-        checkOutMessage = library.removeBook(book);
-        return checkOutMessage;
+        if(session.typeOfUser().equals("librarian") || session.typeOfUser().equals("customer")) {
+            bookName = inputView.input();
+            createBook();
+            checkOutMessage = library.removeBook(book);
+            return checkOutMessage;
+        }
+        return loginMessage;
     }
 
     void createBook() {
@@ -36,6 +39,6 @@ public class CheckOut implements Operations {
 
     void delegateUserLoginToLoginOperation() {
         Login login = operationsFactory.returnNewLoginObject(inputView, authenticator, session);
-        login.execute();
+        loginMessage = login.execute();
     }
 }
