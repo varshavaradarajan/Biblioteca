@@ -8,6 +8,7 @@ public class OperationsFactory {
     private ExitApplication exitApplication;
     private InvalidCommand invalidCommand;
     private Login login;
+    private CheckOut checkOut;
 
     public ListBooks returnNewListBooksObject(Library library) {
         listBooks = new ListBooks(library);
@@ -37,5 +38,10 @@ public class OperationsFactory {
     public Login returnNewLoginObject(InputView inputView, Authenticator authenticator, Session session) {
         login = new Login(inputView, authenticator, session);
         return login;
+    }
+
+    public CheckOut returnNewCheckOutObjects(Library library, Session session) {
+        checkOut = new CheckOut(library, session);
+        return checkOut;
     }
 }

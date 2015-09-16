@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.mockingDetails;
 
 public class OperationsFactoryTest {
 
@@ -55,5 +56,14 @@ public class OperationsFactoryTest {
         Session session = mock(Session.class);
 
         assertEquals(Login.class, operationsFactory.returnNewLoginObject(inputView, authenticator, session).getClass());
+    }
+
+    @Test
+    public void shouldReturnNewCheckOutObjects() {
+        OperationsFactory operationsFactory = new OperationsFactory();
+        Library library = mock(Library.class);
+        Session session = mock(Session.class);
+
+        assertEquals(CheckOut.class, operationsFactory.returnNewCheckOutObjects(library, session).getClass());
     }
 }
