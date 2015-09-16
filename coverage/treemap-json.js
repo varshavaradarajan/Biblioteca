@@ -1,13 +1,14 @@
-var treeMapJson = {"id":"Clover database Tue Sep 15 2015 20:16:07 IST0","name":"","data":{
-    "$area":331.0,"$color":91.8429,"title":" 331 Elements, 91.8% Coverage"},
-  "children":[{"id":"com.tw.libsystem0","name":"com.tw.libsystem","data":{
-        "$area":331.0,"$color":91.8429,"title":
-        "com.tw.libsystem 331 Elements, 91.8% Coverage"},"children":[{"id":
-          "Operations21","name":"Operations","data":{"$area":0.0,"$color":
-            -100.0,"path":"com/tw/libsystem/Operations.html#Operations",
-            "title":"Operations 0 Elements,  -  Coverage"},"children":[]},{
-          "id":"InvalidCommand21","name":"InvalidCommand","data":{"$area":
-            5.0,"$color":100.0,"path":
+var treeMapJson = {"id":"Clover database Wed Sep 16 2015 14:01:38 IST0","name":"","data":{
+    "$area":354.0,"$color":92.37288,"title":
+    " 354 Elements, 92.4% Coverage"},"children":[{"id":"com.tw.libsystem0",
+      "name":"com.tw.libsystem","data":{"$area":354.0,"$color":92.37288,
+        "title":"com.tw.libsystem 354 Elements, 92.4% Coverage"},"children":[
+        {"id":"Operations21","name":"Operations","data":{"$area":0.0,
+            "$color":-100.0,"path":
+            "com/tw/libsystem/Operations.html#Operations","title":
+            "Operations 0 Elements,  -  Coverage"},"children":[]},{"id":
+          "InvalidCommand21","name":"InvalidCommand","data":{"$area":5.0,
+            "$color":100.0,"path":
             "com/tw/libsystem/InvalidCommand.html#InvalidCommand","title":
             "InvalidCommand 5 Elements, 100% Coverage"},"children":[]},{"id":
           "ListOfBooks32","name":"ListOfBooks","data":{"$area":9.0,"$color":
@@ -20,18 +21,18 @@ var treeMapJson = {"id":"Clover database Tue Sep 15 2015 20:16:07 IST0","name":"
           "id":"Menu80","name":"Menu","data":{"$area":7.0,"$color":100.0,
             "path":"com/tw/libsystem/Menu.html#Menu","title":
             "Menu 7 Elements, 100% Coverage"},"children":[]},{"id":
-          "Factory1742","name":"Factory","data":{"$area":19.0,"$color":
+          "Factory2452","name":"Factory","data":{"$area":20.0,"$color":
             100.0,"path":"com/tw/libsystem/Factory.html#Factory","title":
-            "Factory 19 Elements, 100% Coverage"},"children":[]},{"id":
-          "Controller1598","name":"Controller","data":{"$area":28.0,"$color":
-            50.0,"path":"com/tw/libsystem/Controller.html#Controller",
-            "title":"Controller 28 Elements, 50% Coverage"},"children":[]},{
-          "id":"Display113","name":"Display","data":{"$area":4.0,"$color":
+            "Factory 20 Elements, 100% Coverage"},"children":[]},{"id":
+          "Controller2346","name":"Controller","data":{"$area":29.0,"$color":
+            51.724136,"path":"com/tw/libsystem/Controller.html#Controller",
+            "title":"Controller 29 Elements, 51.7% Coverage"},"children":[]},
+        {"id":"Display113","name":"Display","data":{"$area":4.0,"$color":
             100.0,"path":"com/tw/libsystem/Display.html#Display","title":
             "Display 4 Elements, 100% Coverage"},"children":[]},{"id":
-          "Parser1955","name":"Parser","data":{"$area":41.0,"$color":100.0,
+          "Parser2375","name":"Parser","data":{"$area":49.0,"$color":100.0,
             "path":"com/tw/libsystem/Parser.html#Parser","title":
-            "Parser 41 Elements, 100% Coverage"},"children":[]},{"id":
+            "Parser 49 Elements, 100% Coverage"},"children":[]},{"id":
           "Book939","name":"Book","data":{"$area":30.0,"$color":100.0,"path":
             "com/tw/libsystem/Book.html#Book","title":
             "Book 30 Elements, 100% Coverage"},"children":[]},{"id":
@@ -75,15 +76,15 @@ var treeMapJson = {"id":"Clover database Tue Sep 15 2015 20:16:07 IST0","name":"
           "User2002","name":"User","data":{"$area":29.0,"$color":100.0,
             "path":"com/tw/libsystem/User.html#User","title":
             "User 29 Elements, 100% Coverage"},"children":[]},{"id":
-          "Authenticator2184","name":"Authenticator","data":{"$area":6.0,
+          "Authenticator2542","name":"Authenticator","data":{"$area":13.0,
             "$color":100.0,"path":
             "com/tw/libsystem/Authenticator.html#Authenticator","title":
-            "Authenticator 6 Elements, 100% Coverage"},"children":[]},{"id":
-          "Session2124","name":"Session","data":{"$area":4.0,"$color":
+            "Authenticator 13 Elements, 100% Coverage"},"children":[]},{"id":
+          "Session2521","name":"Session","data":{"$area":6.0,"$color":
             100.0,"path":"com/tw/libsystem/Session.html#Session","title":
-            "Session 4 Elements, 100% Coverage"},"children":[]},{"id":
-          "Login2174","name":"Login","data":{"$area":10.0,"$color":100.0,
+            "Session 6 Elements, 100% Coverage"},"children":[]},{"id":
+          "Login2498","name":"Login","data":{"$area":14.0,"$color":100.0,
             "path":"com/tw/libsystem/Login.html#Login","title":
-            "Login 10 Elements, 100% Coverage"},"children":[]}]}]}
+            "Login 14 Elements, 100% Coverage"},"children":[]}]}]}
 ;
 processTreeMapJson (treeMapJson);

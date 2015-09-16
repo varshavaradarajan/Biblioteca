@@ -17,8 +17,7 @@ public class Authenticator {
         User user = new User(username, password, "guest");
         if(registeredUsers.contains(user)) {
             User currentUser = registeredUsers.get(registeredUsers.indexOf(user));
-            Session currentSession = new Session(currentUser);
-
+            session.setUser(currentUser);
             return "Successful login.\n";
         }
         return "Invalid username/password.\n";
