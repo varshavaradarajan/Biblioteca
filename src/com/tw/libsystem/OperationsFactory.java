@@ -6,6 +6,7 @@ public class OperationsFactory {
     private ListMovies listMovies;
     private CheckOutMovie checkOutMovie;
     private ExitApplication exitApplication;
+    private InvalidCommand invalidCommand;
 
     public ListBooks returnNewListBooks(Library library) {
         listBooks = new ListBooks(library);
@@ -25,5 +26,10 @@ public class OperationsFactory {
     public ExitApplication returnNewExitApplicationObjects() {
         exitApplication = new ExitApplication();
         return exitApplication;
+    }
+
+    public InvalidCommand returnNewInvalidCommandObjects() {
+        invalidCommand = new InvalidCommand();
+        return invalidCommand;
     }
 }

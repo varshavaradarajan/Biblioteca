@@ -40,4 +40,11 @@ public class OperationsFactoryTest {
         assertEquals(ExitApplication.class, operationsFactory.returnNewExitApplicationObjects().getClass());
     }
 
+    @Test
+    public void shouldReturnInvalidOperationObjects() {
+        OperationsFactory operationsFactory = new OperationsFactory();
+
+        assertEquals(InvalidCommand.class, operationsFactory.returnNewInvalidCommandObjects().getClass());
+    }
+
 }
