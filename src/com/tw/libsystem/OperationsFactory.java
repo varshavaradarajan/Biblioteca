@@ -7,29 +7,35 @@ public class OperationsFactory {
     private CheckOutMovie checkOutMovie;
     private ExitApplication exitApplication;
     private InvalidCommand invalidCommand;
+    private Login login;
 
-    public ListBooks returnNewListBooks(Library library) {
+    public ListBooks returnNewListBooksObject(Library library) {
         listBooks = new ListBooks(library);
         return listBooks;
     }
 
-    public ListMovies returnNewListMoviesObjects(MovieLibrary movieLibrary) {
+    public ListMovies returnNewListMoviesObject(MovieLibrary movieLibrary) {
         listMovies = new ListMovies(movieLibrary);
         return listMovies;
     }
 
-    public CheckOutMovie returnNewCheckOutMoviesObjects(MovieLibrary movieLibrary) {
+    public CheckOutMovie returnNewCheckOutMoviesObject(MovieLibrary movieLibrary) {
         checkOutMovie = new CheckOutMovie(movieLibrary);
         return checkOutMovie;
     }
 
-    public ExitApplication returnNewExitApplicationObjects() {
+    public ExitApplication returnNewExitApplicationObject() {
         exitApplication = new ExitApplication();
         return exitApplication;
     }
 
-    public InvalidCommand returnNewInvalidCommandObjects() {
+    public InvalidCommand returnNewInvalidCommandObject() {
         invalidCommand = new InvalidCommand();
         return invalidCommand;
+    }
+
+    public Login returnNewLoginObject(InputView inputView, Authenticator authenticator, Session session) {
+        login = new Login(inputView, authenticator, session);
+        return login;
     }
 }

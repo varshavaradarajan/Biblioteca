@@ -13,7 +13,7 @@ public class OperationsFactoryTest {
         Library library = mock(Library.class);
 
 
-        assertEquals(ListBooks.class, operationsFactory.returnNewListBooks(library).getClass());
+        assertEquals(ListBooks.class, operationsFactory.returnNewListBooksObject(library).getClass());
     }
 
     @Test
@@ -22,7 +22,7 @@ public class OperationsFactoryTest {
         MovieLibrary movieLibrary = mock(MovieLibrary.class);
 
 
-        assertEquals(ListMovies.class, operationsFactory.returnNewListMoviesObjects(movieLibrary).getClass());
+        assertEquals(ListMovies.class, operationsFactory.returnNewListMoviesObject(movieLibrary).getClass());
     }
 
     @Test
@@ -30,21 +30,30 @@ public class OperationsFactoryTest {
         OperationsFactory operationsFactory = new OperationsFactory();
         MovieLibrary movieLibrary = mock(MovieLibrary.class);
 
-        assertEquals(CheckOutMovie.class, operationsFactory.returnNewCheckOutMoviesObjects(movieLibrary).getClass());
+        assertEquals(CheckOutMovie.class, operationsFactory.returnNewCheckOutMoviesObject(movieLibrary).getClass());
     }
 
     @Test
     public void shouldReturnNewExitApplicationObjects() {
         OperationsFactory operationsFactory = new OperationsFactory();
 
-        assertEquals(ExitApplication.class, operationsFactory.returnNewExitApplicationObjects().getClass());
+        assertEquals(ExitApplication.class, operationsFactory.returnNewExitApplicationObject().getClass());
     }
 
     @Test
     public void shouldReturnInvalidOperationObjects() {
         OperationsFactory operationsFactory = new OperationsFactory();
 
-        assertEquals(InvalidCommand.class, operationsFactory.returnNewInvalidCommandObjects().getClass());
+        assertEquals(InvalidCommand.class, operationsFactory.returnNewInvalidCommandObject().getClass());
     }
 
+    @Test
+    public void shouldReturnNewLoginObjects() {
+        OperationsFactory operationsFactory = new OperationsFactory();
+        InputView inputView = mock(InputView.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        Session session = mock(Session.class);
+
+        assertEquals(Login.class, operationsFactory.returnNewLoginObject(inputView, authenticator, session).getClass());
+    }
 }
