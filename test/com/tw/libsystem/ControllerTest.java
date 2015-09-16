@@ -33,7 +33,8 @@ public class ControllerTest {
         MovieLibrary movieLibrary = mock(MovieLibrary.class);
         Factory factory = mock(Factory.class);
         Display display = mock(Display.class);
-        Controller controller = new Controller(factory, library, movieLibrary);
+        OperationsFactory operationsFactory = mock(OperationsFactory.class);
+        Controller controller = new Controller(factory, library, movieLibrary, operationsFactory);
         when(factory.buildDisplay("Welcome to Biblioteca\n")).thenReturn(display);
 
         controller.delegateWelcomeMessageToBeDisplayed();
@@ -48,7 +49,9 @@ public class ControllerTest {
         Factory factory = mock(Factory.class);
         Display display = mock(Display.class);
         Menu menu = mock(Menu.class);
-        Controller controller = new Controller(factory, library, movieLibrary);
+        OperationsFactory operationsFactory = mock(OperationsFactory.class);
+
+        Controller controller = new Controller(factory, library, movieLibrary, operationsFactory);
         when(factory.buildMenu()).thenReturn(menu);
         when(factory.buildDisplay(menu.toString())).thenReturn(display);
 
@@ -63,7 +66,8 @@ public class ControllerTest {
         MovieLibrary movieLibrary = mock(MovieLibrary.class);
         Factory factory = mock(Factory.class);
         InputView inputView = mock(InputView.class);
-        Controller controller = new Controller(factory, library, movieLibrary);
+        OperationsFactory operationsFactory = mock(OperationsFactory.class);
+        Controller controller = new Controller(factory, library, movieLibrary, operationsFactory);
         when(factory.buildInputView()).thenReturn(inputView);
 
         controller.takeInput();

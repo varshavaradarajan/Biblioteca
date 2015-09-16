@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
 
 public class FactoryTest {
 
@@ -28,9 +29,10 @@ public class FactoryTest {
         Library library = new Library();
         MovieLibrary movieLibrary = new MovieLibrary();
         Session session = mock(Session.class);
+        OperationsFactory operationsFactory = new OperationsFactory();
         String inputMessage = "1";
 
-        assertEquals(Parser.class, factory.buildParser(inputMessage, library, movieLibrary, session).getClass());
+        assertEquals(Parser.class, factory.buildParser(inputMessage, library, movieLibrary, session, operationsFactory).getClass());
     }
 
     @Test
