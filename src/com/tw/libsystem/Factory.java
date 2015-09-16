@@ -33,6 +33,7 @@ public class Factory {
         menuOptions.add("3. Check in Book");
         menuOptions.add("4. List Movies");
         menuOptions.add("5. Checkout Movie");
+        menuOptions.add("6. Login");
         menu = new Menu(menuOptions);
         return menu;
     }
