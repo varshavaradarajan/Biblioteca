@@ -13,11 +13,13 @@ public class Controller {
     private MovieLibrary movieLibrary;
     private Parser parser;
     private Operations operations;
+    private Session session;
 
     public Controller(Factory factory, Library library, MovieLibrary movieLibrary) {
         this.factory = factory;
         this.library = library;
         this.movieLibrary = movieLibrary;
+        session = new Session(new User("000-0000", "000-0000", "guest"));
     }
 
     public void run() {
@@ -37,7 +39,7 @@ public class Controller {
     }
 
     void delegateParsingInputToParser() {
-        parser = factory.buildParser(userInput, library, movieLibrary);
+        parser = factory.buildParser(userInput, library, movieLibrary, session);
         operations = parser.parse();
     }
 

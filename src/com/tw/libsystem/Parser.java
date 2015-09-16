@@ -3,14 +3,16 @@ package com.tw.libsystem;
 
 public class Parser {
 
-    String inputCommand;
-    Library library;
-    MovieLibrary movieLibrary;
+    private String inputCommand;
+    private Library library;
+    private MovieLibrary movieLibrary;
+    private Session session;
 
-    public Parser(String inputCommand, Library library, MovieLibrary movieLibrary) {
+    public Parser(String inputCommand, Library library, MovieLibrary movieLibrary, Session session) {
         this.inputCommand = inputCommand;
         this.library = library;
         this.movieLibrary = movieLibrary;
+        this.session = session;
     }
 
     public Operations parse() {
@@ -39,6 +41,12 @@ public class Parser {
             else if(inputCommand.equals("5")) {
                 CheckOutMovie checkOutMovie = new CheckOutMovie(movieLibrary);
                 return checkOutMovie;
+            }
+            else if(inputCommand.equals("6")) {
+                InputView inputView = new InputView();
+                Authenticator authenticator = new Authenticator();
+                Login login = new Login(inputView, authenticator, session);
+                return login;
             }
 
             else if(inputCommand.equals("0")) {

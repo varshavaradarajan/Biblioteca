@@ -12,7 +12,7 @@ public class AuthenticatorTest {
         User user = new User("123-4567", "dumb", "customer");
         Session session = new Session(user);
 
-        assertEquals("Invalid username/password.\n", authenticator.authenticate(user, session));
+        assertEquals("Invalid username/password.\n", authenticator.authenticate("123-4567", "dumb", session));
     }
 
     @Test
@@ -21,7 +21,7 @@ public class AuthenticatorTest {
         User user = new User("123-4567", "qwerty", "customer");
         Session session = new Session(user);
 
-        assertEquals("Successful login.\n", authenticator.authenticate(user, session));
+        assertEquals("Successful login.\n", authenticator.authenticate("123-4567", "qwerty", session));
     }
 
     @Test
@@ -30,7 +30,7 @@ public class AuthenticatorTest {
         User user = new User("123-4567", "qwerty", "customer");
         Session session = new Session(user);
 
-        assertEquals("Successful login.\n", authenticator.authenticate(user, session));
+        assertEquals("Successful login.\n", authenticator.authenticate("123-4567", "qwerty", session));
     }
 
 }

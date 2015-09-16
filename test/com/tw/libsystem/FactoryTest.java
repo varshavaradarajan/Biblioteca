@@ -3,6 +3,7 @@ package com.tw.libsystem;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
 
 public class FactoryTest {
 
@@ -26,9 +27,10 @@ public class FactoryTest {
         Factory factory = new Factory();
         Library library = new Library();
         MovieLibrary movieLibrary = new MovieLibrary();
+        Session session = mock(Session.class);
         String inputMessage = "1";
 
-        assertEquals(Parser.class, factory.buildParser(inputMessage, library, movieLibrary).getClass());
+        assertEquals(Parser.class, factory.buildParser(inputMessage, library, movieLibrary, session).getClass());
     }
 
     @Test
