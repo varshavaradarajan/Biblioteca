@@ -25,4 +25,12 @@ public class OperationsFactoryTest {
         assertEquals(ListMovies.class, operationsFactory.returnNewListMoviesObjects(movieLibrary).getClass());
     }
 
+    @Test
+    public void shouldReturnNewCheckoutMoviesObjects() {
+        OperationsFactory operationsFactory = new OperationsFactory();
+        MovieLibrary movieLibrary = mock(MovieLibrary.class);
+
+        assertEquals(CheckOutMovie.class, operationsFactory.returnNewCheckOutMoviesObjects(movieLibrary).getClass());
+    }
+
 }
