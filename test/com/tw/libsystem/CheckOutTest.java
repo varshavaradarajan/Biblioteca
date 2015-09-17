@@ -24,6 +24,21 @@ public class CheckOutTest {
     }
 
     @Test
+    public void shouldReturnAMessageUponExecution() {
+        Library library = mock(Library.class);
+        Session session = mock(Session.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        OperationsFactory operationsFactory = mock(OperationsFactory.class);
+        InputView inputView = mock(InputView.class);
+
+        when(session.typeOfUser()).thenReturn("librarian");
+        when(inputView.input()).thenReturn("Wuthering Heights");
+
+        CheckOut checkOut = new CheckOut(library, session, authenticator, operationsFactory, inputView);
+
+        assertNotEquals("Thank You! Enjoy the book.\n", checkOut.execute());
+    }
+    @Test
     public void shouldDelegateTheUserLoginToLoginOperation() {
         Library library = mock(Library.class);
         Session session = mock(Session.class);
