@@ -66,6 +66,11 @@ public class Parser {
                 return logout;
             }
 
+            else if(inputCommand.equals("8") && session.typeOfUser().equals("librarian")) {
+                ListBorrowerDetails listBorrowerDetails = new ListBorrowerDetails(library);
+                return listBorrowerDetails;
+            }
+
             else if(inputCommand.equals("0")) {
                 ExitApplication exitApplication = operationsFactory.returnNewExitApplicationObject();
                 return exitApplication;

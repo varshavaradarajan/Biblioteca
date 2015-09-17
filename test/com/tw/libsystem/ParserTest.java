@@ -149,7 +149,7 @@ public class ParserTest {
     }
 
     @Test
-    public void shouldReturnLoginAsOperationOnParsingInputValue6AndSessionIsNotGuest() {
+    public void shouldReturnUserDetailsAsOperationOnParsingInputValue6AndSessionIsNotGuest() {
         MovieLibrary movieLibrary = new MovieLibrary();
         Library library = new Library();
         Session session = mock(Session.class);
@@ -174,6 +174,20 @@ public class ParserTest {
         when(session.typeOfUser()).thenReturn("customer");
 
         assertEquals(Logout.class, parser.parse().getClass());
+    }
+
+    @Test
+    public void shouldReturnListBorrowerDetailsAsOperationOnParsingInput8WhenLoggedInAsLibrarian() {
+        MovieLibrary movieLibrary = new MovieLibrary();
+        Library library = new Library();
+        Session session = mock(Session.class);
+        OperationsFactory operationsFactory = new OperationsFactory();
+        Factory factory = mock(Factory.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        Parser parser = new Parser("8", library, movieLibrary, session, operationsFactory, authenticator, factory);
+        when(session.typeOfUser()).thenReturn("librarian");
+
+        assertEquals(ListBorrowerDetails.class, parser.parse().getClass());
     }
 
 }
