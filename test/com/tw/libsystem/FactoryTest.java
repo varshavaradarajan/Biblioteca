@@ -56,6 +56,15 @@ public class FactoryTest {
     }
 
     @Test
+    public void shouldReturnNewLibrarianMenu() {
+        Factory factory = new Factory();
+        Session session = mock(Session.class);
+        when(session.typeOfUser()).thenReturn("librarian");
+
+        assertEquals(Menu.class, factory.buildMenu(session).getClass());
+    }
+
+    @Test
     public void shouldReturnNewAuthenticatorObjects() {
         Factory factory = new Factory();
 
