@@ -159,4 +159,18 @@ public class LibraryTest {
         assertEquals("Thank you for returning the book.\n", library.returnBook(book, session));
     }
 
+    @Test
+    public void shouldNotAllowAnotherUserToReturnAParticularBook() {
+        Library library = new Library();
+        Session session = mock(Session.class);
+        Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
+        String otherDetails = String.format("%-25s %-25s %s\n", "Al", "su@gmail.com", "555-555-5555");
+        when(session.currentUserDetails()).thenReturn(details);
+        library.removeBook(book, session);
+        when(session.currentUserDetails()).thenReturn(otherDetails);
+
+        assertEquals("That is not a valid book to be returned by you.\n", library.returnBook(book, session));
+    }
+
 }

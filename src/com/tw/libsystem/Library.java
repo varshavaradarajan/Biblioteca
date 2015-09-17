@@ -49,7 +49,7 @@ public class Library {
 
     public String returnBook(Book book, Session session) {
         if(!compareDetails(session)) {
-            return "That is not a valid book to be returned by you.";
+            return "That is not a valid book to be returned by you.\n";
         }
         if(bookList.contains(book) || !checkedOutBooks.contains(book)) {
             return "That is not a valid book to return.\n";
