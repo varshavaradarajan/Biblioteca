@@ -82,9 +82,9 @@ public class UserTest {
     }
 
     @Test
-    public void shouldReturnDetailsOfUser() {
+    public void shouldReturnEmailAlongWithNameOfUser() {
         User user = new User("123-4567", "qwerty", "role", "Su", "su@gmail.com", "555-555-5555");
-        String details = String.format("%-40s\n", "Su");
+        String details = String.format("%-40s %-40s\n", "Su", "su@gmail.com");
 
         assertEquals(details, user.toString());
     }
