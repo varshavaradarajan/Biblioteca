@@ -144,7 +144,22 @@ public class ParserTest {
         Authenticator authenticator = mock(Authenticator.class);
         Parser parser = new Parser("6", library, movieLibrary, session, operationsFactory, authenticator, factory);
         when(session.typeOfUser()).thenReturn("guest");
+
         assertEquals(Login.class, parser.parse().getClass());
+    }
+
+    @Test
+    public void shouldReturnLogoutAsOperationOnParsingInput7AndSessionIsNotGuest() {
+        MovieLibrary movieLibrary = new MovieLibrary();
+        Library library = new Library();
+        Session session = mock(Session.class);
+        OperationsFactory operationsFactory = new OperationsFactory();
+        Factory factory = mock(Factory.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        Parser parser = new Parser("7", library, movieLibrary, session, operationsFactory, authenticator, factory);
+        when(session.typeOfUser()).thenReturn("customer");
+
+        assertEquals(Logout.class, parser.parse().getClass());
     }
 
 }

@@ -51,9 +51,14 @@ public class Parser {
             }
 
             else if(inputCommand.equals("6") && session.typeOfUser().equals("guest")) {
-                InputView inputView = new InputView();
+                InputView inputView = factory.buildInputView();
                 Login login = operationsFactory.returnNewLoginObject(inputView, authenticator, session);
                 return login;
+            }
+
+            else if(inputCommand.equals("7") && !session.typeOfUser().equals("guest")) {
+                Logout logout = new Logout(session);
+                return logout;
             }
 
             else if(inputCommand.equals("0")) {
