@@ -36,8 +36,8 @@ public class SessionTest {
     public void shouldReturnCurrentUserDetails() {
         User user = new User("123-4567", "qwerty", "librarian", "Su", "su@gmail.com", "555-555-5555");
         Session session = new Session(user);
-        String columns = String.format("%-40s %-40s %s\n", "Name", "Email", "Phone Number");
-        String details = String.format("%-40s %-40s %s\n", "Su", "su@gmail.com", "555-555-5555");
+        String columns = String.format("%-25s %-25s %s\n", "Name", "Email", "Phone Number");
+        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
 
         assertEquals(columns + details, session.currentUserDetails());
     }
@@ -46,8 +46,8 @@ public class SessionTest {
     public void shouldReturnCurrentDetailsInColumns() {
         User user = new User("123-4567", "qwerty", "librarian", "Su", "su@gmail.com", "555-555-5555");
         Session session = new Session(user);
-        String columns = String.format("%-40s %-40s %s\n", "Name", "Email", "Phone Number");
-        String details = String.format("%-40s %-40s %s\n", "Su", "su@gmail.com", "555-555-5555");
+        String columns = String.format("%-25s %-25s %s\n", "Name", "Email", "Phone Number");
+        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
 
         assertEquals(columns + details, session.currentUserDetails());
     }

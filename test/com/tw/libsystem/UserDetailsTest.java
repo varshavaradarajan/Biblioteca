@@ -12,8 +12,8 @@ public class UserDetailsTest {
     public void shouldReturnTheDetailsOfTheUserInCurrentSession() {
         Session session = mock(Session.class);
         UserDetails userDetails = new UserDetails(session);
-        String columns = String.format("%-40s %-40s %s\n", "Name", "Email", "Phone Number");
-        String details = String.format("%-40s %-40s %s\n", "Su", "su@gmail.com", "555-555-5555");
+        String columns = String.format("%-25s %-25s %s\n", "Name", "Email", "Phone Number");
+        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
         when(session.currentUserDetails()).thenReturn(columns+details);
 
         assertEquals(columns + details, userDetails.execute());

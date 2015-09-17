@@ -14,8 +14,8 @@ public class LibraryTest {
     @Test
     public void shouldReturnTheContentsOfLibrary() {
         Library library = new Library();
-        String columns = String.format("%-40s %-40s %s \n", "Bookname", "Author Name", "Year");
-        assertEquals(columns + String.format("%-40s %-40s %s\n", "Crime And Punishment", "Fyodor Dostoevsky", "1866") + String.format("%-40s %-40s %s\n", "Wuthering Heights", "Emily Bronte", "1847") + String.format("%-40s %-40s %s\n", "Pragmatic Programmer", "Dave Thomas", "1999"), library.toString());
+        String columns = String.format("%-25s %-25s %s \n", "Bookname", "Author Name", "Year");
+        assertEquals(columns + String.format("%-25s %-25s %s\n", "Crime And Punishment", "Fyodor Dostoevsky", "1866") + String.format("%-25s %-25s %s\n", "Wuthering Heights", "Emily Bronte", "1847") + String.format("%-25s %-25s %s\n", "Pragmatic Programmer", "Dave Thomas", "1999"), library.toString());
     }
 
     @Test

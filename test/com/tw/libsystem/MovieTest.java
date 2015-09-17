@@ -9,7 +9,7 @@ public class MovieTest {
     @Test
     public void shouldReturnMovieDetails() {
         Movie movie = new Movie("The Departed", 2006, "Martin Scorsese", "9");
-        String details = String.format("%-40s %-40s %-40s %s\n", "The Departed", "2006", "Martin Scorsese", "9");
+        String details = String.format("%-25s %-25s %-25s %s\n", "The Departed", "2006", "Martin Scorsese", "9");
 
         assertEquals(details, movie.toString());
     }
@@ -17,7 +17,7 @@ public class MovieTest {
     @Test
     public void shouldReturnDetailsOfAnyMovie() {
         Movie movie = new Movie("The Godfather", 1972, "Francis Ford Cuppola", "10");
-        String details = String.format("%-40s %-40s %-40s %s\n", "The Godfather", "1972", "Francis Ford Cuppola", "10");
+        String details = String.format("%-25s %-25s %-25s %s\n", "The Godfather", "1972", "Francis Ford Cuppola", "10");
 
         assertEquals(details, movie.toString());
     }
