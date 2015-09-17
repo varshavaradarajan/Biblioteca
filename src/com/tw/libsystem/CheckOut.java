@@ -26,7 +26,7 @@ public class CheckOut implements Operations {
         if(session.typeOfUser().equals("librarian") || session.typeOfUser().equals("customer")) {
             bookName = inputView.input();
             Book book = createBook();
-            checkOutMessage = library.removeBook(book);
+            checkOutMessage = library.removeBook(book, session);
             return checkOutMessage;
         }
         return loginMessage;

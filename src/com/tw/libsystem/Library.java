@@ -2,11 +2,13 @@
 package com.tw.libsystem;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Library {
 
     ArrayList<Book> bookList;
     ArrayList<Book> checkedOutBooks;
+    HashMap<String, String> borrowerDetails;
 
     public Library() {
         bookList = new ArrayList<>();
@@ -14,6 +16,7 @@ public class Library {
         bookList.add(new Book("Wuthering Heights", "Emily Bronte", 1847));
         bookList.add(new Book("Pragmatic Programmer", "Dave Thomas", 1999));
         checkedOutBooks = new ArrayList<>();
+        borrowerDetails = new HashMap<>();
     }
 
     @Override
@@ -25,11 +28,12 @@ public class Library {
         return bookNames;
     }
 
-    public String removeBook(Book book) {
+    public String removeBook(Book book, Session session) {
         if(bookList.contains(book)) {
-            Book tempBook = bookList.get(bookList.indexOf(book));
+            Book currentBook = bookList.get(bookList.indexOf(book));
             bookList.remove(book);
-            checkedOutBooks.add(tempBook);
+            checkedOutBooks.add(currentBook);
+            borrowerDetails.put(currentBook.toString(), session.currentUserDetails());
             return "Thank You!Enjoy the book.\n";
         }
         return "That book is not available.\n";
@@ -47,9 +51,9 @@ public class Library {
         if(bookList.contains(book) || !checkedOutBooks.contains(book)) {
             return "That is not a valid book to return.\n";
         }
-        Book tempBook = checkedOutBooks.get(checkedOutBooks.indexOf(book));
+        Book currentBook = checkedOutBooks.get(checkedOutBooks.indexOf(book));
         checkedOutBooks.remove(book);
-        bookList.add(tempBook);
+        bookList.add(currentBook);
         return "Thank you for returning the book.\n";
     }
 }

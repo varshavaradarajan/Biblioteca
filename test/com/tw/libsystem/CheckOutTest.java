@@ -37,7 +37,7 @@ public class CheckOutTest {
         when(session.typeOfUser()).thenReturn("librarian");
         when(inputView.input()).thenReturn("Wuthering Heights");
         when(checkOut.createBook()).thenReturn(book);
-        when(library.removeBook(book)).thenReturn("Thank You! Enjoy the book.\n");
+        when(library.removeBook(book, session)).thenReturn("Thank You! Enjoy the book.\n");
 
         assertEquals("Thank You! Enjoy the book.\n", checkOut.execute());
     }
