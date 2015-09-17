@@ -23,4 +23,13 @@ public class SessionTest {
         assertEquals("customer", session.typeOfUser());
     }
 
+    @Test
+    public void shouldSetCurrentUserToDefaultUserOnceSessionEnds() {
+        User user = new User("123-4567", "qwerty", "librarian");
+        Session session = new Session(user);
+        session.setUser();
+
+        assertEquals("guest", session.typeOfUser());
+    }
+
 }

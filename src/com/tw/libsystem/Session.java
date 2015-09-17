@@ -16,4 +16,8 @@ public class Session {
     public void setUser(User user) {
         currentUser = user;
     }
+
+    public void setUser() {
+        currentUser = new User("000-0000", "000-0000", "guest");
+    }
 }
