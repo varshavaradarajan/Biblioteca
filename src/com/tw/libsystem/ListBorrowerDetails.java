@@ -10,6 +10,10 @@ public class ListBorrowerDetails implements Operations {
     }
     @Override
     public String execute() {
-        return library.returnBorrowerDetails();
+        String details =library.returnBorrowerDetails();
+        if(details.isEmpty()) {
+            details = "No borrowers.\n";
+        }
+        return details;
     }
 }

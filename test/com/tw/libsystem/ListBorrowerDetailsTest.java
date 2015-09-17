@@ -19,4 +19,13 @@ public class ListBorrowerDetailsTest {
         assertEquals(columns + borrowerDetails, listBorrowerDetails.execute());
     }
 
+    @Test
+    public void shouldReturnNoBorrowerMessageUponExecutionWhenNoUserHasBorrowedBooks() {
+        Library library = mock(Library.class);
+        ListBorrowerDetails listBorrowerDetails = new ListBorrowerDetails(library);
+        when(library.returnBorrowerDetails()).thenReturn("");
+
+        assertEquals("No borrowers.\n", listBorrowerDetails.execute());
+    }
+
 }
