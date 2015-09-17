@@ -59,7 +59,7 @@ public class Library {
         Book currentBook = checkedOutBooks.get(checkedOutBooks.indexOf(book));
         checkedOutBooks.remove(book);
         bookList.add(currentBook);
-        borrowerDetails.remove(currentBook);
+        borrowerDetails.remove(currentBook.toString());
         return "Thank you for returning the book.\n";
     }
 
