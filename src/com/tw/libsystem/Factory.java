@@ -26,7 +26,7 @@ public class Factory {
         return parser;
     }
 
-    public Menu buildMenu() {
+    public Menu buildMenu(Session session) {
         ArrayList<String> menuOptions = new ArrayList<>();
         menuOptions.add("0. Exit");
         menuOptions.add("1. List Books");
@@ -34,7 +34,16 @@ public class Factory {
         menuOptions.add("3. Check in Book");
         menuOptions.add("4. List Movies");
         menuOptions.add("5. Checkout Movie");
-        menuOptions.add("6. Login");
+        if(session.typeOfUser().equals("guest")) {
+            menuOptions.add("6. Login");
+        }
+        if(session.typeOfUser().equals("customer") || session.typeOfUser().equals("librarian")) {
+            menuOptions.add("6. User Details");
+            menuOptions.add("7. Logout");
+        }
+        if(session.typeOfUser().equals("librarian")) {
+            menuOptions.add("8. Check Borrowers' Details");
+        }
         menu = new Menu(menuOptions);
         return menu;
     }

@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.when;
 
 public class FactoryTest {
 
@@ -39,8 +40,10 @@ public class FactoryTest {
     @Test
     public void shouldReturnNewMenus() {
         Factory factory = new Factory();
+        Session session = mock(Session.class);
+        when(session.typeOfUser()).thenReturn("guest");
 
-        assertEquals(Menu.class, factory.buildMenu().getClass());
+        assertEquals(Menu.class, factory.buildMenu(session).getClass());
     }
 
     @Test

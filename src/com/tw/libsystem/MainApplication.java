@@ -7,6 +7,7 @@ public class MainApplication {
     private MovieLibrary movieLibrary;
     private Controller controller;
     private OperationsFactory operationsFactory;
+    private Session session;
 
     public static void main(String[] args) {
         MainApplication mainApplication = new MainApplication();
@@ -18,8 +19,8 @@ public class MainApplication {
         library = new Library();
         operationsFactory = new OperationsFactory();
         movieLibrary = new MovieLibrary();
-
-        controller = new Controller(factory, library, movieLibrary, operationsFactory);
+        session = new Session(new User("000-0000", "000-0000", "guest"));
+        controller = new Controller(factory, library, movieLibrary, operationsFactory, session);
         controller.run();
     }
 }

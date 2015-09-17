@@ -16,12 +16,12 @@ public class Controller {
     private Session session;
     private OperationsFactory operationsFactory;
 
-    public Controller(Factory factory, Library library, MovieLibrary movieLibrary, OperationsFactory operationsFactory) {
+    public Controller(Factory factory, Library library, MovieLibrary movieLibrary, OperationsFactory operationsFactory, Session session) {
         this.factory = factory;
         this.library = library;
         this.movieLibrary = movieLibrary;
         this.operationsFactory = operationsFactory;
-        session = new Session(new User("000-0000", "000-0000", "guest"));
+        this.session = session;
     }
 
     public void run() {
@@ -52,7 +52,7 @@ public class Controller {
     }
 
     void delegateMenuToBeDisplayed() {
-        menu = factory.buildMenu();
+        menu = factory.buildMenu(session);
         display = factory.buildDisplay(menu.toString());
         display.displayMessage();
     }
