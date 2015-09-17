@@ -9,8 +9,8 @@ public class MovieLibraryTest {
     @Test
     public void shouldReturnContentsOfMovieLibrary() {
         MovieLibrary movieLibrary = new MovieLibrary();
-
-        assertEquals("The Godfather\t1972\tFrancis Ford Cuppola\t10\nThe Departed\t2006\tMartin Scorsese\t9\n", movieLibrary.toString());
+        String columns = String.format("%-40s %-40s %-40s %s \n", "Movie", "Year", "Director", "Rating");
+        assertEquals(columns + String.format("%-40s %-40s %-40s %s\n", "The Godfather", "1972", "Francis Ford Cuppola", "10") + String.format("%-40s %-40s %-40s %s\n", "The Departed", "2006", "Martin Scorsese", "9"), movieLibrary.toString());
     }
 
     @Test

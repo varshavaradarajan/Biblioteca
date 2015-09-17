@@ -10,18 +10,20 @@ public class ListMoviesTest {
     public void shouldReturnPreExistingSetOfMovies() {
         MovieLibrary movieLibrary = new MovieLibrary();
         ListMovies listMovies = new ListMovies(movieLibrary);
+        String columns = String.format("%-40s %-40s %-40s %s \n", "Movie", "Year", "Director", "Rating");
 
-        assertEquals("Movie\tYear\tDirector\tRating\nThe Godfather\t1972\tFrancis Ford Cuppola\t10\n" +
-                "The Departed\t2006\tMartin Scorsese\t9\n", listMovies.execute());
+        assertEquals(columns + String.format("%-40s %-40s %-40s %s\n", "The Godfather", "1972", "Francis Ford Cuppola", "10")
+                + String.format("%-40s %-40s %-40s %s\n", "The Departed", "2006", "Martin Scorsese", "9"), listMovies.execute());
     }
 
     @Test
     public void shouldReturnPreExistingSetOfMoviesWithColumnHeaders() {
         MovieLibrary movieLibrary = new MovieLibrary();
         ListMovies listMovies = new ListMovies(movieLibrary);
+        String columns = String.format("%-40s %-40s %-40s %s \n", "Movie", "Year", "Director", "Rating");
 
-        assertEquals("Movie\tYear\tDirector\tRating\nThe Godfather\t1972\tFrancis Ford Cuppola\t10\n" +
-                "The Departed\t2006\tMartin Scorsese\t9\n", listMovies.execute());
+        assertEquals(columns + String.format("%-40s %-40s %-40s %s\n", "The Godfather", "1972", "Francis Ford Cuppola", "10")
+                + String.format("%-40s %-40s %-40s %s\n", "The Departed", "2006", "Martin Scorsese", "9"), listMovies.execute());
     }
 
 }

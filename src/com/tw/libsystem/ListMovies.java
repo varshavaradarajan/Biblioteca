@@ -11,8 +11,7 @@ public class ListMovies implements Operations {
 
     @Override
     public String execute() {
-        String details = "Movie\tYear\tDirector\tRating\n";
-        details += movieLibrary.toString();
+        String details = movieLibrary.toString();
         return details;
     }
 

@@ -18,7 +18,7 @@ public class Library {
 
     @Override
     public String toString() {
-        String bookNames = "Book Name\t\t\t\tAuthor Name\t\t\t\tYear\t\t\t\t\n";
+        String bookNames = String.format("%-40s %-40s %s \n", "Bookname", "Author Name", "Year");
         for(Book names : bookList) {
             bookNames += names.toString() + "\n";
         }
