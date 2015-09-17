@@ -1,8 +1,8 @@
-var treeMapJson = {"id":"Clover database Thu Sep 17 2015 08:42:49 IST0","name":"","data":{
-    "$area":440.0,"$color":91.818184,"title":
-    " 440 Elements, 91.8% Coverage"},"children":[{"id":"com.tw.libsystem0",
-      "name":"com.tw.libsystem","data":{"$area":440.0,"$color":91.818184,
-        "title":"com.tw.libsystem 440 Elements, 91.8% Coverage"},"children":[
+var treeMapJson = {"id":"Clover database Thu Sep 17 2015 08:51:18 IST0","name":"","data":{
+    "$area":440.0,"$color":93.181816,"title":
+    " 440 Elements, 93.2% Coverage"},"children":[{"id":"com.tw.libsystem0",
+      "name":"com.tw.libsystem","data":{"$area":440.0,"$color":93.181816,
+        "title":"com.tw.libsystem 440 Elements, 93.2% Coverage"},"children":[
         {"id":"Operations21","name":"Operations","data":{"$area":0.0,
             "$color":-100.0,"path":
             "com/tw/libsystem/Operations.html#Operations","title":
@@ -22,8 +22,8 @@ var treeMapJson = {"id":"Clover database Thu Sep 17 2015 08:42:49 IST0","name":"
             "path":"com/tw/libsystem/Menu.html#Menu","title":
             "Menu 7 Elements, 100% Coverage"},"children":[]},{"id":
           "Factory2625","name":"Factory","data":{"$area":35.0,"$color":
-            82.85715,"path":"com/tw/libsystem/Factory.html#Factory","title":
-            "Factory 35 Elements, 82.9% Coverage"},"children":[]},{"id":
+            100.0,"path":"com/tw/libsystem/Factory.html#Factory","title":
+            "Factory 35 Elements, 100% Coverage"},"children":[]},{"id":
           "Controller2930","name":"Controller","data":{"$area":31.0,"$color":
             51.6129,"path":"com/tw/libsystem/Controller.html#Controller",
             "title":"Controller 31 Elements, 51.6% Coverage"},"children":[]},

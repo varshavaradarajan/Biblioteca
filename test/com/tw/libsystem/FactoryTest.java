@@ -38,10 +38,19 @@ public class FactoryTest {
     }
 
     @Test
-    public void shouldReturnNewMenus() {
+    public void shouldReturnNewGuestMenus() {
         Factory factory = new Factory();
         Session session = mock(Session.class);
         when(session.typeOfUser()).thenReturn("guest");
+
+        assertEquals(Menu.class, factory.buildMenu(session).getClass());
+    }
+
+    @Test
+    public void shouldReturnNewAuthenticatedUsersMenu() {
+        Factory factory = new Factory();
+        Session session = mock(Session.class);
+        when(session.typeOfUser()).thenReturn("customer");
 
         assertEquals(Menu.class, factory.buildMenu(session).getClass());
     }
