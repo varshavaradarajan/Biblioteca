@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class ParserTest {
 
@@ -134,7 +135,7 @@ public class ParserTest {
     }
 
     @Test
-    public void shouldReturnLoginAsOperationOnParsingInputValue6() {
+    public void shouldReturnLoginAsOperationOnParsingInputValue6AndSessionIsGuest() {
         MovieLibrary movieLibrary = new MovieLibrary();
         Library library = new Library();
         Session session = mock(Session.class);
@@ -142,7 +143,7 @@ public class ParserTest {
         Factory factory = mock(Factory.class);
         Authenticator authenticator = mock(Authenticator.class);
         Parser parser = new Parser("6", library, movieLibrary, session, operationsFactory, authenticator, factory);
-
+        when(session.typeOfUser()).thenReturn("guest");
         assertEquals(Login.class, parser.parse().getClass());
     }
 

@@ -50,7 +50,7 @@ public class Parser {
                 return checkOutMovie;
             }
 
-            else if(inputCommand.equals("6")) {
+            else if(inputCommand.equals("6") && session.typeOfUser().equals("guest")) {
                 InputView inputView = new InputView();
                 Login login = operationsFactory.returnNewLoginObject(inputView, authenticator, session);
                 return login;
