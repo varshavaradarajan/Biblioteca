@@ -15,7 +15,7 @@ public class MovieLibrary {
 
     @Override
     public String toString() {
-        String details = String.format("%-25s %-25s %-25s %s \n", "Movie", "Year", "Director", "Rating");
+        String details = String.format("%-25s %-25s %-25s %-25s \n", "Movie", "Year", "Director", "Rating");
         for(Movie movie : movies) {
             details += movie.toString();
         }

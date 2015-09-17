@@ -3,6 +3,8 @@ package com.tw.libsystem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class Library {
 
@@ -21,7 +23,7 @@ public class Library {
 
     @Override
     public String toString() {
-        String bookNames = String.format("%-25s %-25s %s \n", "Bookname", "Author Name", "Year");
+        String bookNames = String.format("%-25s %-25s %-25s \n", "Bookname", "Author Name", "Year");
         for(Book names : bookList) {
             bookNames += names.toString() + "\n";
         }
@@ -68,5 +70,13 @@ public class Library {
             }
         }
         return false;
+    }
+
+    public String returnBorrowerDetails() {
+        String details = String.format("%-25s %-25s %-25s %-25s %-25s %-25s\n", "BookName", "Author Name", "Year", "Name", "Email", "Phone Number");
+        for(String bookInfo : borrowerDetails.keySet()) {
+            details += bookInfo + " " + borrowerDetails.get(bookInfo);
+        }
+        return details;
     }
 }

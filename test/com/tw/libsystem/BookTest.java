@@ -9,7 +9,7 @@ public class BookTest {
     @Test
     public void shouldReturnBookDetails() {
         Book book = new Book("Angels And Demons", "Dan Brown", 2000);
-        String bookDetails = String.format("%-25s %-25s %s", "Angels And Demons", "Dan Brown", "2000");
+        String bookDetails = String.format("%-25s %-25s %-25s", "Angels And Demons", "Dan Brown", "2000");
 
         assertEquals(bookDetails, book.toString());
     }

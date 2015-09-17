@@ -15,7 +15,7 @@ public class Movie {
 
     @Override
     public String toString() {
-        String details = String.format("%-25s %-25s %-25s %s\n", movieName, year, director, rating);
+        String details = String.format("%-25s %-25s %-25s %-25s\n", movieName, year, director, rating);
         return details;
     }
 

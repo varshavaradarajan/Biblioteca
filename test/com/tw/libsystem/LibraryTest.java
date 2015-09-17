@@ -14,8 +14,8 @@ public class LibraryTest {
     @Test
     public void shouldReturnTheContentsOfLibrary() {
         Library library = new Library();
-        String columns = String.format("%-25s %-25s %s \n", "Bookname", "Author Name", "Year");
-        assertEquals(columns + String.format("%-25s %-25s %s\n", "Crime And Punishment", "Fyodor Dostoevsky", "1866") + String.format("%-25s %-25s %s\n", "Wuthering Heights", "Emily Bronte", "1847") + String.format("%-25s %-25s %s\n", "Pragmatic Programmer", "Dave Thomas", "1999"), library.toString());
+        String columns = String.format("%-25s %-25s %-25s \n", "Bookname", "Author Name", "Year");
+        assertEquals(columns + String.format("%-25s %-25s %-25s\n", "Crime And Punishment", "Fyodor Dostoevsky", "1866") + String.format("%-25s %-25s %-25s\n", "Wuthering Heights", "Emily Bronte", "1847") + String.format("%-25s %-25s %-25s\n", "Pragmatic Programmer", "Dave Thomas", "1999"), library.toString());
     }
 
     @Test
@@ -87,7 +87,7 @@ public class LibraryTest {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
         Session session = mock(Session.class);
-        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
+        String details = String.format("%-25s %-25s %-25s\n", "Su", "su@gmail.com", "555-555-5555");
         when(session.currentUserDetails()).thenReturn(details);
         library.removeBook(book, session);
         when(session.currentUserDetails()).thenReturn(details);
@@ -113,7 +113,7 @@ public class LibraryTest {
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
         Book otherBook = new Book("Foo", "Emily Bronte", 2001);
         Session session = mock(Session.class);
-        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
+        String details = String.format("%-25s %-25s %-25s\n", "Su", "su@gmail.com", "555-555-5555");
         when(session.currentUserDetails()).thenReturn(details);
         library.removeBook(book, session);
         when(session.currentUserDetails()).thenReturn(details);
@@ -127,7 +127,7 @@ public class LibraryTest {
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
         Book otherBook = new Book("Crime And Punishment", "Emily Bronte", 2001);
         Session session = mock(Session.class);
-        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
+        String details = String.format("%-25s %-25s %-25s\n", "Su", "su@gmail.com", "555-555-5555");
         when(session.currentUserDetails()).thenReturn(details);
         library.removeBook(book, session);
         when(session.currentUserDetails()).thenReturn(details);
@@ -139,7 +139,7 @@ public class LibraryTest {
     public void shouldRecordTheCurrentUserDetailsOnceBookIsRemoved() {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
-        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
+        String details = String.format("%-25s %-25s %-25s\n", "Su", "su@gmail.com", "555-555-5555");
         Session session = mock(Session.class);
         when(session.currentUserDetails()).thenReturn(details);
 
@@ -151,7 +151,7 @@ public class LibraryTest {
         Library library = new Library();
         Session session = mock(Session.class);
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
-        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
+        String details = String.format("%-25s %-25s %-25s\n", "Su", "su@gmail.com", "555-555-5555");
         when(session.currentUserDetails()).thenReturn(details);
         library.removeBook(book, session);
         when(session.currentUserDetails()).thenReturn(details);
@@ -164,13 +164,26 @@ public class LibraryTest {
         Library library = new Library();
         Session session = mock(Session.class);
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
-        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
-        String otherDetails = String.format("%-25s %-25s %s\n", "Al", "su@gmail.com", "555-555-5555");
+        String details = String.format("%-25s %-25s %-25s\n", "Su", "su@gmail.com", "555-555-5555");
+        String otherDetails = String.format("%-25s %-25s %-25s\n", "Al", "su@gmail.com", "555-555-5555");
         when(session.currentUserDetails()).thenReturn(details);
         library.removeBook(book, session);
         when(session.currentUserDetails()).thenReturn(otherDetails);
 
         assertEquals("That is not a valid book to be returned by you.\n", library.returnBook(book, session));
+    }
+
+    @Test
+    public void shouldReturnAllBorrowerDetails() {
+        Library library = new Library();
+        Session session = mock(Session.class);
+        Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+        String details = String.format("%-25s %-25s %-25s\n", "Su", "su@gmail.com", "555-555-5555");
+        when(session.currentUserDetails()).thenReturn(details);
+        library.removeBook(book, session);
+        String columns = String.format("%-25s %-25s %-25s %-25s %-25s %-25s\n", "BookName", "Author Name", "Year", "Name", "Email", "Phone Number");
+        String borrowerDetails = String.format("%-25s %-25s %-25s %-25s %-25s %-25s\n", "Wuthering Heights", "Emily Bronte", "1847", "Su", "su@gmail.com", "555-555-5555");
+        assertEquals(columns + borrowerDetails, library.returnBorrowerDetails());
     }
 
 }

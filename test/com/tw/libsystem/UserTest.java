@@ -84,7 +84,7 @@ public class UserTest {
     @Test
     public void shouldReturnDetailsNameOfUser() {
         User user = new User("123-4567", "qwerty", "role", "Su", "su@gmail.com", "555-555-5555");
-        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
+        String details = String.format("%-25s %-25s %-25s\n", "Su", "su@gmail.com", "555-555-5555");
 
         assertEquals(details, user.toString());
     }

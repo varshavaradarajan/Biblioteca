@@ -10,7 +10,7 @@ public class UserDetails implements Operations {
     }
     @Override
     public String execute() {
-        String details = String.format("%-25s %-25s %s\n", "Name", "Email", "Phone Number");
+        String details = String.format("%-25s %-25s %-25s\n", "Name", "Email", "Phone Number");
         details += session.currentUserDetails();
         return details;
     }
