@@ -20,4 +20,8 @@ public class Session {
     public void setUser() {
         currentUser = new User("000-0000", "000-0000", "guest", "defaultUser", "noEmail", "noPhoneNumber");
     }
+
+    public String currentUserDetails() {
+        return currentUser.toString();
+    }
 }
