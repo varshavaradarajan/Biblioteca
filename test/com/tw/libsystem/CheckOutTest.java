@@ -38,6 +38,26 @@ public class CheckOutTest {
 
         assertNotEquals("Thank You! Enjoy the book.\n", checkOut.execute());
     }
+
+    @Test
+    public void shouldReturnLoginMessageInInvalidCredentialsAreEnteredWhileLoggingIn() {
+        Library library = mock(Library.class);
+        Session session = mock(Session.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        OperationsFactory operationsFactory = mock(OperationsFactory.class);
+        InputView inputView = mock(InputView.class);
+        Login login = mock(Login.class);
+
+        when(session.typeOfUser()).thenReturn("guest");
+        when(operationsFactory.returnNewLoginObject(inputView, authenticator, session)).thenReturn(login);
+        when(inputView.input()).thenReturn("abc-defg").thenReturn("qwerty");
+        when(login.execute()).thenReturn("Invalid username/password.\n");
+
+        CheckOut checkOut = new CheckOut(library, session, authenticator, operationsFactory, inputView);
+
+        assertEquals("Invalid username/password.\n", checkOut.execute());
+    }
+
     @Test
     public void shouldDelegateTheUserLoginToLoginOperation() {
         Library library = mock(Library.class);

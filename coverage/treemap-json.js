@@ -1,8 +1,8 @@
-var treeMapJson = {"id":"Clover database Thu Sep 17 2015 08:14:20 IST0","name":"","data":{
-    "$area":438.0,"$color":87.89954,"title":
-    " 438 Elements, 87.9% Coverage"},"children":[{"id":"com.tw.libsystem0",
-      "name":"com.tw.libsystem","data":{"$area":438.0,"$color":87.89954,
-        "title":"com.tw.libsystem 438 Elements, 87.9% Coverage"},"children":[
+var treeMapJson = {"id":"Clover database Thu Sep 17 2015 08:21:05 IST0","name":"","data":{
+    "$area":438.0,"$color":88.81279,"title":
+    " 438 Elements, 88.8% Coverage"},"children":[{"id":"com.tw.libsystem0",
+      "name":"com.tw.libsystem","data":{"$area":438.0,"$color":88.81279,
+        "title":"com.tw.libsystem 438 Elements, 88.8% Coverage"},"children":[
         {"id":"Operations21","name":"Operations","data":{"$area":0.0,
             "$color":-100.0,"path":
             "com/tw/libsystem/Operations.html#Operations","title":
@@ -54,9 +54,9 @@ var treeMapJson = {"id":"Clover database Thu Sep 17 2015 08:14:20 IST0","name":"
             100.0,"path":"com/tw/libsystem/Library.html#Library","title":
             "Library 36 Elements, 100% Coverage"},"children":[]},{"id":
           "CheckOut2776","name":"CheckOut","data":{"$area":24.0,"$color":
-            83.33333,"path":"com/tw/libsystem/CheckOut.html#CheckOut",
-            "title":"CheckOut 24 Elements, 83.3% Coverage"},"children":[]},{
-          "id":"CheckIn2684","name":"CheckIn","data":{"$area":22.0,"$color":
+            100.0,"path":"com/tw/libsystem/CheckOut.html#CheckOut","title":
+            "CheckOut 24 Elements, 100% Coverage"},"children":[]},{"id":
+          "CheckIn2684","name":"CheckIn","data":{"$area":22.0,"$color":
             40.909092,"path":"com/tw/libsystem/CheckIn.html#CheckIn","title":
             "CheckIn 22 Elements, 40.9% Coverage"},"children":[]},{"id":
           "Movie1711","name":"Movie","data":{"$area":31.0,"$color":100.0,
