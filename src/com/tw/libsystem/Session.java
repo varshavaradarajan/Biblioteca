@@ -22,6 +22,8 @@ public class Session {
     }
 
     public String currentUserDetails() {
-        return currentUser.toString();
+        String details = String.format("%-40s %-40s %s\n", "Name", "Email", "Phone Number");
+        details += currentUser.toString();
+        return details;
     }
 }
