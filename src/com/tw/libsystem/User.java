@@ -46,7 +46,7 @@ public class User {
 
     @Override
     public String toString() {
-        String details = String.format("%-40s %-40s\n", name, email);
+        String details = String.format("%-40s %-40s %s\n", name, email, phoneNumber);
         return details;
     }
 }
