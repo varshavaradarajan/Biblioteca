@@ -87,7 +87,10 @@ public class LibraryTest {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
         Session session = mock(Session.class);
+        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
+        when(session.currentUserDetails()).thenReturn(details);
         library.removeBook(book, session);
+        when(session.currentUserDetails()).thenReturn(details);
 
         assertEquals("Thank you for returning the book.\n", library.returnBook(book, session));
     }
@@ -108,28 +111,37 @@ public class LibraryTest {
     public void shouldReturnAnotherMessageIfBookIsNotAdded() {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+        Book otherBook = new Book("Foo", "Emily Bronte", 2001);
         Session session = mock(Session.class);
+        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
+        when(session.currentUserDetails()).thenReturn(details);
+        library.removeBook(book, session);
+        when(session.currentUserDetails()).thenReturn(details);
 
-        assertEquals("That is not a valid book to return.\n", library.returnBook(book, session));
+        assertEquals("That is not a valid book to return.\n", library.returnBook(otherBook, session));
     }
 
     @Test
     public void shouldReturnANotValidMessageIfTheBookSpecifiedIsNotInCheckedOutBookList() {
         Library library = new Library();
-        Book book = new Book("Fire", "Emily Bronte", 1847);
+        Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+        Book otherBook = new Book("Crime And Punishment", "Emily Bronte", 2001);
         Session session = mock(Session.class);
+        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
+        when(session.currentUserDetails()).thenReturn(details);
+        library.removeBook(book, session);
+        when(session.currentUserDetails()).thenReturn(details);
 
-        assertEquals("That is not a valid book to return.\n", library.returnBook(book, session));
+        assertEquals("That is not a valid book to return.\n", library.returnBook(otherBook, session));
     }
 
     @Test
     public void shouldRecordTheCurrentUserDetailsOnceBookIsRemoved() {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
-        String columns = String.format("%-25s %-25s %s\n", "Name", "Email", "Phone Number");
         String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
         Session session = mock(Session.class);
-        when(session.currentUserDetails()).thenReturn(columns + details);
+        when(session.currentUserDetails()).thenReturn(details);
 
         assertEquals("Thank You!Enjoy the book.\n", library.removeBook(book, session));
     }
@@ -137,13 +149,12 @@ public class LibraryTest {
     @Test
     public void shouldAllowAParticularUserToReturnAParticularBook() {
         Library library = new Library();
-        Session session = new Session(new User("123-4567", "qwerty", "customer", "Su", "su@gmail.com", "555-555-5555"));
+        Session session = mock(Session.class);
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
-        String columns = String.format("%-25s %-25s %s\n", "Name", "Email", "Phone Number");
         String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
-
-        when(session.currentUserDetails()).thenReturn(columns + details);
+        when(session.currentUserDetails()).thenReturn(details);
         library.removeBook(book, session);
+        when(session.currentUserDetails()).thenReturn(details);
 
         assertEquals("Thank you for returning the book.\n", library.returnBook(book, session));
     }

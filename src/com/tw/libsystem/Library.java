@@ -48,12 +48,25 @@ public class Library {
     }
 
     public String returnBook(Book book, Session session) {
+        if(!compareDetails(session)) {
+            return "That is not a valid book to be returned by you.";
+        }
         if(bookList.contains(book) || !checkedOutBooks.contains(book)) {
             return "That is not a valid book to return.\n";
         }
         Book currentBook = checkedOutBooks.get(checkedOutBooks.indexOf(book));
         checkedOutBooks.remove(book);
         bookList.add(currentBook);
+        borrowerDetails.remove(currentBook);
         return "Thank you for returning the book.\n";
+    }
+
+    private boolean compareDetails(Session session) {
+        for (String details : borrowerDetails.values()) {
+            if(details.equals(session.currentUserDetails())) {
+                return true;
+            }
+        }
+        return false;
     }
 }
