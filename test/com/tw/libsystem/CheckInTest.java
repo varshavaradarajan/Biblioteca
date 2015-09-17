@@ -24,6 +24,44 @@ public class CheckInTest {
     }
 
     @Test
+    public void shouldReturnLoginMessageInInvalidCredentialsAreEnteredWhileLoggingIn() {
+        Library library = mock(Library.class);
+        Session session = mock(Session.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        OperationsFactory operationsFactory = mock(OperationsFactory.class);
+        InputView inputView = mock(InputView.class);
+        Login login = mock(Login.class);
+
+        when(session.typeOfUser()).thenReturn("guest");
+        when(operationsFactory.returnNewLoginObject(inputView, authenticator, session)).thenReturn(login);
+        when(inputView.input()).thenReturn("abc-defg").thenReturn("qwerty");
+        when(login.execute()).thenReturn("Invalid username/password.\n");
+
+        CheckIn checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView);
+
+        assertEquals("Invalid username/password.\n", checkIn.execute());
+    }
+
+    @Test
+    public void shouldReturnACheckInMessageUponExecution() {
+        Library library = mock(Library.class);
+        Session session = mock(Session.class);
+        Authenticator authenticator = mock(Authenticator.class);
+        OperationsFactory operationsFactory = mock(OperationsFactory.class);
+        InputView inputView = mock(InputView.class);
+        Book book = new Book("Wuthering Heights", "bar", 0);
+
+        CheckIn checkIn = spy(new CheckIn(library, session, authenticator, operationsFactory, inputView));
+
+        when(session.typeOfUser()).thenReturn("librarian");
+        when(inputView.input()).thenReturn("Wuthering Heights");
+        when(checkIn.createBook()).thenReturn(book);
+        when(library.returnBook(book)).thenReturn("Thank you for returning the book.\n");
+
+        assertEquals("Thank you for returning the book.\n", checkIn.execute());
+    }
+
+    @Test
     public void shouldDelegateTheUserLoginToLoginOperation() {
         Library library = mock(Library.class);
         Session session = mock(Session.class);
@@ -39,5 +77,4 @@ public class CheckInTest {
 
         verify(login, times(1)).execute();
     }
-
 }

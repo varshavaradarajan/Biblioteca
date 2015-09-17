@@ -9,7 +9,6 @@ public class CheckOut implements Operations {
     private OperationsFactory operationsFactory;
     private Authenticator authenticator;
     private String checkOutMessage = "That book is not available.\n", bookName, loginMessage;
-    private Book book;
 
     public CheckOut(Library library, Session session, Authenticator authenticator, OperationsFactory operationsFactory, InputView inputView) {
         this.library = library;
@@ -26,15 +25,15 @@ public class CheckOut implements Operations {
         }
         if(session.typeOfUser().equals("librarian") || session.typeOfUser().equals("customer")) {
             bookName = inputView.input();
-            createBook();
+            Book book = createBook();
             checkOutMessage = library.removeBook(book);
             return checkOutMessage;
         }
         return loginMessage;
     }
 
-    void createBook() {
-        book = new Book(bookName, "bar", 2015);
+    Book createBook() {
+        return new Book(bookName, "bar", 2015);
     }
 
     void delegateUserLoginToLoginOperation() {

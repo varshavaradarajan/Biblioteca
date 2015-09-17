@@ -1,10 +1,12 @@
 //Job of this class is to return a book to the library.
 package com.tw.libsystem;
 
+import org.jetbrains.annotations.NotNull;
+
 public class CheckIn implements Operations {
 
     private Library library;
-    private String checkInMessage, loginMessage;
+    private String checkInMessage, loginMessage, bookName;
     private InputView inputView;
     private OperationsFactory operationsFactory;
     private Session session;
@@ -24,12 +26,16 @@ public class CheckIn implements Operations {
             delegateUserLoginToLoginOperation();
         }
         if(session.typeOfUser().equals("librarian") || session.typeOfUser().equals("customer")) {
-            String bookName = inputView.input();
-            Book book = new Book(bookName, "bar", 0);
+            bookName = inputView.input();
+            Book book = createBook();
             checkInMessage = library.returnBook(book);
             return checkInMessage;
         }
         return loginMessage;
+    }
+
+    Book createBook() {
+        return new Book(bookName, "bar", 0);
     }
 
     public void delegateUserLoginToLoginOperation() {

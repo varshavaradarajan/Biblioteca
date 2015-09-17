@@ -9,7 +9,7 @@ var Packages = {
     "text": "com.tw.libsystem",
     "package": "com.tw.libsystem",
     "url": "com/tw/libsystem/pkg-summary.html",
-            "coverage": "94.8%",
+            "coverage": "96.2%",
         "icon": "aui-icon aui-icon-small aui-iconfont-devtools-folder-closed",
             "li_attr": {"data-is-link": "true"},
         "a_attr": {"href": "com/tw/libsystem/pkg-summary.html"},

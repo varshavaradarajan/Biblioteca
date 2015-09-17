@@ -30,13 +30,16 @@ public class CheckOutTest {
         Authenticator authenticator = mock(Authenticator.class);
         OperationsFactory operationsFactory = mock(OperationsFactory.class);
         InputView inputView = mock(InputView.class);
+        Book book = new Book("Wuthering Heights", "bar", 0);
+
+        CheckOut checkOut = spy(new CheckOut(library, session, authenticator, operationsFactory, inputView));
 
         when(session.typeOfUser()).thenReturn("librarian");
         when(inputView.input()).thenReturn("Wuthering Heights");
+        when(checkOut.createBook()).thenReturn(book);
+        when(library.removeBook(book)).thenReturn("Thank You! Enjoy the book.\n");
 
-        CheckOut checkOut = new CheckOut(library, session, authenticator, operationsFactory, inputView);
-
-        assertNotEquals("Thank You! Enjoy the book.\n", checkOut.execute());
+        assertEquals("Thank You! Enjoy the book.\n", checkOut.execute());
     }
 
     @Test
