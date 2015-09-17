@@ -4,11 +4,15 @@ package com.tw.libsystem;
 public class User {
 
     private String libraryNumber, password, role;
+    private String name, email, phoneNumber;
 
-    public User(String libraryNumber, String password, String role) {
+    public User(String libraryNumber, String password, String role, String name, String email, String phoneNumber) {
         this.libraryNumber = libraryNumber;
         this.password = password;
         this.role = role;
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
@@ -38,5 +42,11 @@ public class User {
 
     public String roleOfUser() {
         return role;
+    }
+
+    @Override
+    public String toString() {
+        String details = String.format("%-40s\n", name);
+        return details;
     }
 }

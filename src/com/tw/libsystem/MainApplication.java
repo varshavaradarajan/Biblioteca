@@ -19,7 +19,7 @@ public class MainApplication {
         library = new Library();
         operationsFactory = new OperationsFactory();
         movieLibrary = new MovieLibrary();
-        session = new Session(new User("000-0000", "000-0000", "guest"));
+        session = new Session(new User("000-0000", "000-0000", "guest", "defaultUser", "noEmail", "noPhoneNumber"));
         controller = new Controller(factory, library, movieLibrary, operationsFactory, session);
         controller.run();
     }
