@@ -56,6 +56,11 @@ public class Parser {
                 return login;
             }
 
+            else if(inputCommand.equals("6") && !session.typeOfUser().equals("guest")) {
+                UserDetails userDetails = new UserDetails(session);
+                return userDetails;
+            }
+
             else if(inputCommand.equals("7") && !session.typeOfUser().equals("guest")) {
                 Logout logout = new Logout(session);
                 return logout;
