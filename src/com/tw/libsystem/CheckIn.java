@@ -26,7 +26,7 @@ public class CheckIn implements Operations {
         if(session.typeOfUser().equals("librarian") || session.typeOfUser().equals("customer")) {
             bookName = inputView.input();
             Book book = createBook();
-            checkInMessage = library.returnBook(book);
+            checkInMessage = library.returnBook(book, session);
             return checkInMessage;
         }
         return loginMessage;

@@ -47,7 +47,7 @@ public class Library {
         return false;
     }
 
-    public String returnBook(Book book) {
+    public String returnBook(Book book, Session session) {
         if(bookList.contains(book) || !checkedOutBooks.contains(book)) {
             return "That is not a valid book to return.\n";
         }

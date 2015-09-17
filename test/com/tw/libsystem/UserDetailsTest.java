@@ -14,7 +14,7 @@ public class UserDetailsTest {
         UserDetails userDetails = new UserDetails(session);
         String columns = String.format("%-25s %-25s %s\n", "Name", "Email", "Phone Number");
         String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
-        when(session.currentUserDetails()).thenReturn(columns+details);
+        when(session.currentUserDetails()).thenReturn(details);
 
         assertEquals(columns + details, userDetails.execute());
     }

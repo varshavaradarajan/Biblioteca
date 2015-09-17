@@ -56,7 +56,7 @@ public class CheckInTest {
         when(session.typeOfUser()).thenReturn("librarian");
         when(inputView.input()).thenReturn("Wuthering Heights");
         when(checkIn.createBook()).thenReturn(book);
-        when(library.returnBook(book)).thenReturn("Thank you for returning the book.\n");
+        when(library.returnBook(book, session)).thenReturn("Thank you for returning the book.\n");
 
         assertEquals("Thank you for returning the book.\n", checkIn.execute());
     }

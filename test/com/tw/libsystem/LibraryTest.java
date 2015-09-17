@@ -89,7 +89,7 @@ public class LibraryTest {
         Session session = mock(Session.class);
         library.removeBook(book, session);
 
-        assertEquals("Thank you for returning the book.\n", library.returnBook(book));
+        assertEquals("Thank you for returning the book.\n", library.returnBook(book, session));
     }
 
     @Test
@@ -108,16 +108,18 @@ public class LibraryTest {
     public void shouldReturnAnotherMessageIfBookIsNotAdded() {
         Library library = new Library();
         Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+        Session session = mock(Session.class);
 
-        assertEquals("That is not a valid book to return.\n", library.returnBook(book));
+        assertEquals("That is not a valid book to return.\n", library.returnBook(book, session));
     }
 
     @Test
     public void shouldReturnANotValidMessageIfTheBookSpecifiedIsNotInCheckedOutBookList() {
         Library library = new Library();
         Book book = new Book("Fire", "Emily Bronte", 1847);
+        Session session = mock(Session.class);
 
-        assertEquals("That is not a valid book to return.\n", library.returnBook(book));
+        assertEquals("That is not a valid book to return.\n", library.returnBook(book, session));
     }
 
     @Test
@@ -130,6 +132,20 @@ public class LibraryTest {
         when(session.currentUserDetails()).thenReturn(columns + details);
 
         assertEquals("Thank You!Enjoy the book.\n", library.removeBook(book, session));
+    }
+
+    @Test
+    public void shouldAllowAParticularUserToReturnAParticularBook() {
+        Library library = new Library();
+        Session session = new Session(new User("123-4567", "qwerty", "customer", "Su", "su@gmail.com", "555-555-5555"));
+        Book book = new Book("Wuthering Heights", "Emily Bronte", 1847);
+        String columns = String.format("%-25s %-25s %s\n", "Name", "Email", "Phone Number");
+        String details = String.format("%-25s %-25s %s\n", "Su", "su@gmail.com", "555-555-5555");
+
+        when(session.currentUserDetails()).thenReturn(columns + details);
+        library.removeBook(book, session);
+
+        assertEquals("Thank you for returning the book.\n", library.returnBook(book, session));
     }
 
 }
