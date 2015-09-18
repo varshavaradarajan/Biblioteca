@@ -30,13 +30,13 @@ public class Parser {
 
             else if(inputCommand.equals("2")) {
                 InputView inputView = factory.buildInputView();
-                CheckOut checkOut = operationsFactory.returnNewCheckOutObjects(library, session, authenticator, operationsFactory, inputView);
+                CheckOut checkOut = operationsFactory.returnNewCheckOutObjects(library, session, authenticator, operationsFactory, inputView, factory);
                 return checkOut;
             }
 
             else if(inputCommand.equals("3")) {
                 InputView inputView = new InputView();
-                CheckIn checkIn = operationsFactory.returnNewCheckInObject(library, inputView, authenticator, operationsFactory, session);
+                CheckIn checkIn = operationsFactory.returnNewCheckInObject(library, inputView, authenticator, operationsFactory, session, factory);
                 return checkIn;
             }
 
@@ -52,7 +52,7 @@ public class Parser {
 
             else if(inputCommand.equals("6") && session.typeOfUser().equals("guest")) {
                 InputView inputView = factory.buildInputView();
-                Login login = operationsFactory.returnNewLoginObject(inputView, authenticator, session);
+                Login login = operationsFactory.returnNewLoginObject(inputView, authenticator, session, factory);
                 return login;
             }
 

@@ -9,13 +9,15 @@ public class CheckIn implements Operations {
     private OperationsFactory operationsFactory;
     private Session session;
     private Authenticator authenticator;
+    private Factory factory;
 
-    public CheckIn(Library library, Session session, Authenticator authenticator, OperationsFactory operationsFactory, InputView inputView) {
+    public CheckIn(Library library, Session session, Authenticator authenticator, OperationsFactory operationsFactory, InputView inputView, Factory factory) {
         this.library = library;
         this.inputView = inputView;
         this.session =session;
         this.authenticator = authenticator;
         this.operationsFactory = operationsFactory;
+        this.factory = factory;
     }
 
     @Override
@@ -37,7 +39,7 @@ public class CheckIn implements Operations {
     }
 
     public void delegateUserLoginToLoginOperation() {
-        Login login = operationsFactory.returnNewLoginObject(inputView, authenticator, session);
+        Login login = operationsFactory.returnNewLoginObject(inputView, authenticator, session, factory);
         loginMessage = login.execute();
     }
 }

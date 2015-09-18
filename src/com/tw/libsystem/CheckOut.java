@@ -9,13 +9,15 @@ public class CheckOut implements Operations {
     private OperationsFactory operationsFactory;
     private Authenticator authenticator;
     private String checkOutMessage = "That book is not available.\n", bookName, loginMessage;
+    private Factory factory;
 
-    public CheckOut(Library library, Session session, Authenticator authenticator, OperationsFactory operationsFactory, InputView inputView) {
+    public CheckOut(Library library, Session session, Authenticator authenticator, OperationsFactory operationsFactory, InputView inputView, Factory factory) {
         this.library = library;
         this.session = session;
         this.authenticator = authenticator;
         this.operationsFactory = operationsFactory;
         this.inputView = inputView;
+        this.factory = factory;
     }
 
     @Override
@@ -37,7 +39,7 @@ public class CheckOut implements Operations {
     }
 
     void delegateUserLoginToLoginOperation() {
-        Login login = operationsFactory.returnNewLoginObject(inputView, authenticator, session);
+        Login login = operationsFactory.returnNewLoginObject(inputView, authenticator, session, factory);
         loginMessage = login.execute();
     }
 }

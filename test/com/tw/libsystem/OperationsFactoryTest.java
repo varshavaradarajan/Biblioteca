@@ -53,8 +53,9 @@ public class OperationsFactoryTest {
         InputView inputView = mock(InputView.class);
         Authenticator authenticator = mock(Authenticator.class);
         Session session = mock(Session.class);
+        Factory factory = mock(Factory.class);
 
-        assertEquals(Login.class, operationsFactory.returnNewLoginObject(inputView, authenticator, session).getClass());
+        assertEquals(Login.class, operationsFactory.returnNewLoginObject(inputView, authenticator, session, factory).getClass());
     }
 
     @Test
@@ -64,8 +65,9 @@ public class OperationsFactoryTest {
         Session session = mock(Session.class);
         Authenticator authenticator = mock(Authenticator.class);
         InputView inputView = mock(InputView.class);
+        Factory factory = mock(Factory.class);
 
-        assertEquals(CheckOut.class, operationsFactory.returnNewCheckOutObjects(library, session, authenticator, operationsFactory, inputView).getClass());
+        assertEquals(CheckOut.class, operationsFactory.returnNewCheckOutObjects(library, session, authenticator, operationsFactory, inputView, factory).getClass());
     }
 
     @Test
@@ -75,7 +77,8 @@ public class OperationsFactoryTest {
         InputView inputView = mock(InputView.class);
         Session session = mock(Session.class);
         Authenticator authenticator = mock(Authenticator.class);
+        Factory factory = mock(Factory.class);
 
-        assertEquals(CheckIn.class, operationsFactory.returnNewCheckInObject(library, inputView, authenticator, operationsFactory, session).getClass());
+        assertEquals(CheckIn.class, operationsFactory.returnNewCheckInObject(library, inputView, authenticator, operationsFactory, session, factory).getClass());
     }
 }

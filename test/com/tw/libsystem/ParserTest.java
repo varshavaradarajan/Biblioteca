@@ -88,7 +88,7 @@ public class ParserTest {
         Authenticator authenticator = mock(Authenticator.class);
         InputView inputView = mock(InputView.class);
         Parser parser = new Parser("2", library, movieLibrary, session, operationsFactory, authenticator, factory);
-        CheckOut checkOut = new CheckOut(library, session, authenticator, operationsFactory, inputView);
+        CheckOut checkOut = new CheckOut(library, session, authenticator, operationsFactory, inputView, factory);
 
         assertEquals(checkOut.getClass(), parser.parse().getClass());
     }
@@ -103,7 +103,7 @@ public class ParserTest {
         Factory factory = mock(Factory.class);
         Authenticator authenticator = mock(Authenticator.class);
         Parser parser = new Parser("3", library, movieLibrary, session, operationsFactory, authenticator, factory);
-        CheckIn checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView);
+        CheckIn checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView, factory);
 
         assertEquals(checkIn.getClass(), parser.parse().getClass());
     }

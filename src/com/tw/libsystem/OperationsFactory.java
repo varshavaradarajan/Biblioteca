@@ -36,18 +36,18 @@ public class OperationsFactory {
         return invalidCommand;
     }
 
-    public Login returnNewLoginObject(InputView inputView, Authenticator authenticator, Session session) {
-        login = new Login(inputView, authenticator, session);
+    public Login returnNewLoginObject(InputView inputView, Authenticator authenticator, Session session, Factory factory) {
+        login = new Login(inputView, authenticator, session, factory);
         return login;
     }
 
-    public CheckOut returnNewCheckOutObjects(Library library, Session session, Authenticator authenticator, OperationsFactory operationsFactory, InputView inputView) {
-        checkOut = new CheckOut(library, session, authenticator, operationsFactory, inputView);
+    public CheckOut returnNewCheckOutObjects(Library library, Session session, Authenticator authenticator, OperationsFactory operationsFactory, InputView inputView, Factory factory) {
+        checkOut = new CheckOut(library, session, authenticator, operationsFactory, inputView, factory);
         return checkOut;
     }
 
-    public CheckIn returnNewCheckInObject(Library library, InputView inputView, Authenticator authenticator, OperationsFactory operationsFactory, Session session) {
-        checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView);
+    public CheckIn returnNewCheckInObject(Library library, InputView inputView, Authenticator authenticator, OperationsFactory operationsFactory, Session session, Factory factory) {
+        checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView, factory);
         return checkIn;
     }
 }

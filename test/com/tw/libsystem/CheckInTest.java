@@ -29,15 +29,16 @@ public class CheckInTest {
         Session session = mock(Session.class);
         Authenticator authenticator = mock(Authenticator.class);
         OperationsFactory operationsFactory = mock(OperationsFactory.class);
+        Factory factory = mock(Factory.class);
         InputView inputView = mock(InputView.class);
         Login login = mock(Login.class);
 
         when(session.typeOfUser()).thenReturn("guest");
-        when(operationsFactory.returnNewLoginObject(inputView, authenticator, session)).thenReturn(login);
+        when(operationsFactory.returnNewLoginObject(inputView, authenticator, session, factory)).thenReturn(login);
         when(inputView.input()).thenReturn("abc-defg").thenReturn("qwerty");
         when(login.execute()).thenReturn("Invalid username/password.\n");
 
-        CheckIn checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView);
+        CheckIn checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView, factory);
 
         assertEquals("Invalid username/password.\n", checkIn.execute());
     }
@@ -48,10 +49,11 @@ public class CheckInTest {
         Session session = mock(Session.class);
         Authenticator authenticator = mock(Authenticator.class);
         OperationsFactory operationsFactory = mock(OperationsFactory.class);
+        Factory factory = mock(Factory.class);
         InputView inputView = mock(InputView.class);
         Book book = new Book("Wuthering Heights", "bar", 0);
 
-        CheckIn checkIn = spy(new CheckIn(library, session, authenticator, operationsFactory, inputView));
+        CheckIn checkIn = spy(new CheckIn(library, session, authenticator, operationsFactory, inputView, factory));
 
         when(session.typeOfUser()).thenReturn("librarian");
         when(inputView.input()).thenReturn("Wuthering Heights");
@@ -69,9 +71,10 @@ public class CheckInTest {
         Login login = mock(Login.class);
         Authenticator authenticator = mock(Authenticator.class);
         OperationsFactory operationsFactory = mock(OperationsFactory.class);
+        Factory factory = mock(Factory.class);
         when(session.typeOfUser()).thenReturn("guest");
-        when(operationsFactory.returnNewLoginObject(inputView, authenticator, session)).thenReturn(login);
-        CheckIn checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView);
+        when(operationsFactory.returnNewLoginObject(inputView, authenticator, session, factory)).thenReturn(login);
+        CheckIn checkIn = new CheckIn(library, session, authenticator, operationsFactory, inputView, factory);
 
         checkIn.delegateUserLoginToLoginOperation();
 
