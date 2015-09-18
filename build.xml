@@ -2,6 +2,11 @@
 
 <project name="Biblioteca" default="run" basedir=".">
 
+    <property name = "project.name" value="Biblioteca" />
+    <property name = "main.name" value="MainApplication" />
+    <property name = "package.name" value="com.tw.libsystem" />
+
+
     <property name="clover.jar" location="lib/clover.jar"/>
     <taskdef resource="cloverlib.xml" classpath="${clover.jar}"/>
 
@@ -33,6 +38,23 @@
 
     <target name="clean" description="clean previous output directory">
         <delete dir="out"/>
+        <delete file="lib/Biblioteca.jar"/>
+    </target>
+
+    <target name="build-jar" depends="build">
+        <jar destfile="lib/${project.name}.jar"
+             basedir="out"
+             excludes="**/Test.class">
+
+        </jar>
+    </target>
+
+    <target name="makeJar" depends="build-jar">
+        <java fork="true" failonerror="yes" classname="${package.name}.${main.name}">
+            <classpath>
+                <path location="lib/${project.name}.jar"/>
+            </classpath>
+        </java>
     </target>
 
     <target name="run" depends="build" description="runs the junit test cases">
