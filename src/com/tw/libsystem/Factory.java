@@ -4,25 +4,18 @@ package com.tw.libsystem;
 import java.util.ArrayList;
 
 public class Factory {
-
-    private Display display;
-    private InputView inputView;
-    private Parser parser;
-    private Menu menu;
-    private Authenticator authenticator;
-
     public Display buildDisplay(String message) {
-        display = new Display(message);
+        Display display = new Display(message);
         return display;
     }
 
     public InputView buildInputView() {
-        inputView = new InputView();
+        InputView inputView = new InputView();
         return inputView;
     }
 
     public Parser buildParser(String inputMessage, Library library, MovieLibrary movieLibrary, Session session, OperationsFactory operationsFactory, Authenticator authenticator, Factory factory) {
-        parser = new Parser(inputMessage, library, movieLibrary, session, operationsFactory, authenticator, factory);
+        Parser parser = new Parser(inputMessage, library, movieLibrary, session, operationsFactory, authenticator, factory);
         return parser;
     }
 
@@ -44,12 +37,12 @@ public class Factory {
         if(session.typeOfUser().equals("librarian")) {
             menuOptions.add("8. Check Borrowers' Details");
         }
-        menu = new Menu(menuOptions);
+        Menu menu = new Menu(menuOptions);
         return menu;
     }
 
     public Authenticator buildAuthenticator() {
-        authenticator = new Authenticator();
+        Authenticator authenticator = new Authenticator();
         return authenticator;
     }
 }

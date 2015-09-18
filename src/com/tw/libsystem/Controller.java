@@ -6,12 +6,9 @@ public class Controller {
     public static final String WELCOME_MESSAGE = "Welcome to Biblioteca\n";
     private Factory factory;
     private Display display;
-    private Menu menu;
-    private InputView inputView;
     private String userInput, output;
     private Library library;
-    private MovieLibrary movieLibrary;
-    private Parser parser;
+    private MovieLibrary movieLibrary;;
     private Operations operations;
     private Session session;
     private OperationsFactory operationsFactory;
@@ -42,17 +39,17 @@ public class Controller {
 
     void delegateParsingInputToParser() {
         Authenticator authenticator = factory.buildAuthenticator();
-        parser = factory.buildParser(userInput, library, movieLibrary, session, operationsFactory, authenticator, factory);
+        Parser parser = factory.buildParser(userInput, library, movieLibrary, session, operationsFactory, authenticator, factory);
         operations = parser.parse();
     }
 
     void takeInput() {
-        inputView = factory.buildInputView();
+        InputView inputView = factory.buildInputView();
         userInput = inputView.input();
     }
 
     void delegateMenuToBeDisplayed() {
-        menu = factory.buildMenu(session);
+         Menu menu = factory.buildMenu(session);
         display = factory.buildDisplay(menu.toString());
         display.displayMessage();
     }
