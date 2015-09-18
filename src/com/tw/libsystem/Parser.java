@@ -46,7 +46,7 @@ public class Parser {
             }
 
             else if(inputCommand.equals("5")) {
-                CheckOutMovie checkOutMovie = operationsFactory.returnNewCheckOutMoviesObject(movieLibrary);
+                CheckOutMovie checkOutMovie = operationsFactory.returnNewCheckOutMoviesObject(movieLibrary, factory);
                 return checkOutMovie;
             }
 

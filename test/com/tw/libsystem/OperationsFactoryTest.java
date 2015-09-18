@@ -29,8 +29,9 @@ public class OperationsFactoryTest {
     public void shouldReturnNewCheckoutMoviesObjects() {
         OperationsFactory operationsFactory = new OperationsFactory();
         MovieLibrary movieLibrary = mock(MovieLibrary.class);
+        Factory factory = mock(Factory.class);
 
-        assertEquals(CheckOutMovie.class, operationsFactory.returnNewCheckOutMoviesObject(movieLibrary).getClass());
+        assertEquals(CheckOutMovie.class, operationsFactory.returnNewCheckOutMoviesObject(movieLibrary, factory).getClass());
     }
 
     @Test
