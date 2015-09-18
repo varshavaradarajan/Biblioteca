@@ -50,12 +50,14 @@ public class CheckInTest {
         Authenticator authenticator = mock(Authenticator.class);
         OperationsFactory operationsFactory = mock(OperationsFactory.class);
         Factory factory = mock(Factory.class);
+        Display display = mock(Display.class);
         InputView inputView = mock(InputView.class);
         Book book = new Book("Wuthering Heights", "bar", 0);
 
         CheckIn checkIn = spy(new CheckIn(library, session, authenticator, operationsFactory, inputView, factory));
 
         when(session.typeOfUser()).thenReturn("librarian");
+        when(factory.buildDisplay("Enter Book Name: ")).thenReturn(display);
         when(inputView.input()).thenReturn("Wuthering Heights");
         when(checkIn.createBook()).thenReturn(book);
         when(library.returnBook(book, session)).thenReturn("Thank you for returning the book.\n");

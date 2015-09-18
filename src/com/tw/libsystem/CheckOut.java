@@ -26,6 +26,8 @@ public class CheckOut implements Operations {
             delegateUserLoginToLoginOperation();
         }
         if(session.typeOfUser().equals("librarian") || session.typeOfUser().equals("customer")) {
+            Display display = factory.buildDisplay("Enter Book Name: ");
+            display.displayMessage();
             bookName = inputView.input();
             Book book = createBook();
             checkOutMessage = library.removeBook(book, session);

@@ -30,13 +30,16 @@ public class CheckOutTest {
         Authenticator authenticator = mock(Authenticator.class);
         OperationsFactory operationsFactory = mock(OperationsFactory.class);
         Factory factory = mock(Factory.class);
+        Display display = mock(Display.class);
         InputView inputView = mock(InputView.class);
         Book book = new Book("Wuthering Heights", "bar", 0);
 
         CheckOut checkOut = spy(new CheckOut(library, session, authenticator, operationsFactory, inputView, factory));
 
         when(session.typeOfUser()).thenReturn("librarian");
+
         when(inputView.input()).thenReturn("Wuthering Heights");
+        when(factory.buildDisplay("Enter Book Name: ")).thenReturn(display);
         when(checkOut.createBook()).thenReturn(book);
         when(library.removeBook(book, session)).thenReturn("Thank You! Enjoy the book.\n");
 

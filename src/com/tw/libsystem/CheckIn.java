@@ -26,6 +26,8 @@ public class CheckIn implements Operations {
             delegateUserLoginToLoginOperation();
         }
         if(session.typeOfUser().equals("librarian") || session.typeOfUser().equals("customer")) {
+            Display display = factory.buildDisplay("Enter Book Name: ");
+            display.displayMessage();
             bookName = inputView.input();
             Book book = createBook();
             checkInMessage = library.returnBook(book, session);
